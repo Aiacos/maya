@@ -1,0 +1,1438 @@
+{
+    "Base": {
+        "attachments_dicts_list": [],
+        "attributes_dicts_list": [
+            {
+                "attr_type": "note_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "Base:Note",
+                "module_type": "NoteAttributeData",
+                "name": "Note",
+                "value": ""
+            },
+            {
+                "attr_type": "float_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "Base:Ctrls Scale",
+                "module_type": "FloatAttributeData",
+                "name": "Ctrls Scale",
+                "value": 5.5
+            },
+            {
+                "attr_type": "boolean_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "Base:Expose RotateOrder",
+                "module_type": "BooleanAttributeData",
+                "name": "Expose RotateOrder",
+                "value": true
+            },
+            {
+                "attr_type": "boolean_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "Base:Skinning Joint",
+                "module_type": "BooleanAttributeData",
+                "name": "Skinning Joint",
+                "value": false
+            },
+            {
+                "attr_type": "boolean_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "Base:Joints Visibility",
+                "module_type": "BooleanAttributeData",
+                "name": "Joints Visibility",
+                "value": true
+            },
+            {
+                "attr_type": "boolean_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "Base:Geometry Display",
+                "module_type": "BooleanAttributeData",
+                "name": "Geometry Display",
+                "value": false
+            },
+            {
+                "attr_type": "node_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "Base:Geometry Group",
+                "module_type": "NodeAttributeData",
+                "name": "Geometry Group",
+                "value": "geometry_grp"
+            },
+            {
+                "attr_type": "drop_down_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "Base:Display Value",
+                "module_type": "DropDownAttributeData",
+                "name": "Display Value",
+                "value": "Normal"
+            },
+            {
+                "attr_type": "driver_connection_attribute",
+                "connection_source_attr": null,
+                "is_promoted": true,
+                "long_name": "Base:Output",
+                "module_type": "DriverConnectionAttributeData",
+                "name": "Output",
+                "value": "Base:Output"
+            },
+            {
+                "attr_type": "name_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "Base:Name",
+                "module_type": "NameAttributeData",
+                "name": "Name",
+                "value": "Base"
+            },
+            {
+                "attr_type": "version_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "Base:Module Version",
+                "module_type": "VersionAttributeData",
+                "name": "Module Version",
+                "value": "001"
+            }
+        ],
+        "enabled": true,
+        "guides_manager": {
+            "backup_dict": {},
+            "offsets_dict": {
+                "Base": {
+                    "rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scaleX": 1.0,
+                    "translate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "type": "IoGuide"
+                },
+                "parent_guide": {
+                    "offset_grp_scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scaleX": 1.0,
+                    "translate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "type": "IoParentGuide"
+                }
+            }
+        },
+        "module_type": "Base",
+        "name": "Base",
+        "obj_type": "Node_Data",
+        "pos": [
+            5385.7820131030385,
+            5658.401727218585
+        ],
+        "uuid": "9ee0f397653a4d03b9857711bb7fbfc5",
+        "version": 1
+    },
+    "Car": {
+        "attributes_dicts_list": [
+            {
+                "attr_type": "note_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "Car:Note",
+                "module_type": "NoteAttributeData",
+                "name": "Note",
+                "value": ""
+            },
+            {
+                "attr_type": "rgb_color_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "Car:BG Color",
+                "module_type": "RgbColorAttributeData",
+                "name": "BG Color",
+                "value": [
+                    0.10196078431372549,
+                    0.6823529411764706,
+                    0.6039215686274509
+                ]
+            },
+            {
+                "attr_type": "path_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "Car:BG image",
+                "module_type": "PathAttributeData",
+                "name": "BG image",
+                "value": ""
+            },
+            {
+                "attr_type": "float_multiplier_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "Car:BG image opacity",
+                "module_type": "FloatMultiplierAttributeData",
+                "name": "BG image opacity",
+                "value": 0.44
+            },
+            {
+                "attr_type": "name_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "Car:Name",
+                "module_type": "NameAttributeData",
+                "name": "Name",
+                "value": "Car"
+            }
+        ],
+        "enabled": true,
+        "module_type": "GroupData",
+        "name": "Car",
+        "obj_type": "Group_Data",
+        "pos": [
+            5126.36680365577,
+            5260.458320554497
+        ],
+        "size": [
+            737.3796233821986,
+            473.54167944550136
+        ],
+        "uuid": "c383a526e51d4a05959f9dd4c83f0614"
+    },
+    "L_Back_Wheel": {
+        "attachments_dicts_list": [],
+        "attributes_dicts_list": [
+            {
+                "attr_type": "note_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "L_Back_Wheel:Note",
+                "module_type": "NoteAttributeData",
+                "name": "Note",
+                "value": ""
+            },
+            {
+                "attr_type": "float_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "L_Back_Wheel:Ctrls Scale",
+                "module_type": "FloatAttributeData",
+                "name": "Ctrls Scale",
+                "value": 1.0
+            },
+            {
+                "attr_type": "boolean_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "L_Back_Wheel:Expose RotateOrder",
+                "module_type": "BooleanAttributeData",
+                "name": "Expose RotateOrder",
+                "value": true
+            },
+            {
+                "attr_type": "boolean_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "L_Back_Wheel:Secondary Ctrls",
+                "module_type": "BooleanAttributeData",
+                "name": "Secondary Ctrls",
+                "value": true
+            },
+            {
+                "attr_type": "boolean_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "L_Back_Wheel:Auto Roll",
+                "module_type": "BooleanAttributeData",
+                "name": "Auto Roll",
+                "value": true
+            },
+            {
+                "attr_type": "driven_connection_attribute",
+                "connection_source_attr": "M_Car_Body:Back Wheels Output",
+                "connection_type": "matrix_constraint",
+                "force_connection": false,
+                "force_when_locked": false,
+                "is_promoted": true,
+                "long_name": "L_Back_Wheel:Input",
+                "maintain_offset": true,
+                "module_type": "DrivenConnectionAttributeData",
+                "name": "Input",
+                "skip_attrs": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "value": ""
+            },
+            {
+                "attr_type": "driver_connection_attribute",
+                "connection_source_attr": null,
+                "is_promoted": true,
+                "long_name": "L_Back_Wheel:Output",
+                "module_type": "DriverConnectionAttributeData",
+                "name": "Output",
+                "value": "L_Back_Wheel:Output"
+            },
+            {
+                "attr_type": "name_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "L_Back_Wheel:Name",
+                "module_type": "NameAttributeData",
+                "name": "Name",
+                "value": "L_Back_Wheel"
+            },
+            {
+                "attr_type": "version_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "L_Back_Wheel:Module Version",
+                "module_type": "VersionAttributeData",
+                "name": "Module Version",
+                "value": "001"
+            }
+        ],
+        "enabled": true,
+        "guides_manager": {
+            "backup_dict": {},
+            "offsets_dict": {
+                "parent_guide": {
+                    "offset_grp_scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scaleX": 1.0,
+                    "translate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "type": "IoParentGuide"
+                },
+                "wheel_bottom": {
+                    "rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scaleX": 1.0,
+                    "side_rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "side_scaleX": 1.0,
+                    "translate": [
+                        86.25102639544417,
+                        0.0,
+                        -90.0
+                    ],
+                    "type": "IoAimGuide"
+                },
+                "wheel_center": {
+                    "rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scaleX": 1.0,
+                    "side_rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "side_scaleX": 1.0,
+                    "translate": [
+                        86.25102639544417,
+                        19.0,
+                        -90.0
+                    ],
+                    "type": "IoAimGuide"
+                }
+            }
+        },
+        "module_type": "Wheel",
+        "name": "L_Back_Wheel",
+        "obj_type": "Node_Data",
+        "pos": [
+            5631.81639671998,
+            5308.369003176307
+        ],
+        "uuid": "1c8b34433d2f49dbbe3d2a5758a3d691",
+        "version": 1
+    },
+    "L_Front_Wheel": {
+        "attachments_dicts_list": [],
+        "attributes_dicts_list": [
+            {
+                "attr_type": "note_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "L_Front_Wheel:Note",
+                "module_type": "NoteAttributeData",
+                "name": "Note",
+                "value": ""
+            },
+            {
+                "attr_type": "float_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "L_Front_Wheel:Ctrls Scale",
+                "module_type": "FloatAttributeData",
+                "name": "Ctrls Scale",
+                "value": 1.0
+            },
+            {
+                "attr_type": "boolean_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "L_Front_Wheel:Expose RotateOrder",
+                "module_type": "BooleanAttributeData",
+                "name": "Expose RotateOrder",
+                "value": true
+            },
+            {
+                "attr_type": "boolean_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "L_Front_Wheel:Secondary Ctrls",
+                "module_type": "BooleanAttributeData",
+                "name": "Secondary Ctrls",
+                "value": true
+            },
+            {
+                "attr_type": "boolean_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "L_Front_Wheel:Auto Roll",
+                "module_type": "BooleanAttributeData",
+                "name": "Auto Roll",
+                "value": true
+            },
+            {
+                "attr_type": "driven_connection_attribute",
+                "connection_source_attr": "M_Car_Body:Front Wheels Output",
+                "connection_type": "matrix_constraint",
+                "force_connection": false,
+                "force_when_locked": false,
+                "is_promoted": true,
+                "long_name": "L_Front_Wheel:Input",
+                "maintain_offset": true,
+                "module_type": "DrivenConnectionAttributeData",
+                "name": "Input",
+                "skip_attrs": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "value": ""
+            },
+            {
+                "attr_type": "driver_connection_attribute",
+                "connection_source_attr": null,
+                "is_promoted": true,
+                "long_name": "L_Front_Wheel:Output",
+                "module_type": "DriverConnectionAttributeData",
+                "name": "Output",
+                "value": "L_Front_Wheel:Output"
+            },
+            {
+                "attr_type": "name_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "L_Front_Wheel:Name",
+                "module_type": "NameAttributeData",
+                "name": "Name",
+                "value": "L_Front_Wheel"
+            },
+            {
+                "attr_type": "version_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "L_Front_Wheel:Module Version",
+                "module_type": "VersionAttributeData",
+                "name": "Module Version",
+                "value": "001"
+            }
+        ],
+        "enabled": true,
+        "guides_manager": {
+            "backup_dict": {},
+            "offsets_dict": {
+                "parent_guide": {
+                    "offset_grp_scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scaleX": 1.0,
+                    "translate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "type": "IoParentGuide"
+                },
+                "wheel_bottom": {
+                    "rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scaleX": 1.0,
+                    "side_rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "side_scaleX": 1.0,
+                    "translate": [
+                        86.25102639544417,
+                        0.0,
+                        90.0
+                    ],
+                    "type": "IoAimGuide"
+                },
+                "wheel_center": {
+                    "rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scaleX": 1.0,
+                    "side_rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "side_scaleX": 1.0,
+                    "translate": [
+                        86.25102639544417,
+                        19.0,
+                        90.0
+                    ],
+                    "type": "IoAimGuide"
+                }
+            }
+        },
+        "module_type": "Wheel",
+        "name": "L_Front_Wheel",
+        "obj_type": "Node_Data",
+        "pos": [
+            5619.518009623207,
+            5501.283414356156
+        ],
+        "uuid": "9b119d2ebd8b4a1c95bc8bbe5d8ae860",
+        "version": 1
+    },
+    "M_Car_Body": {
+        "attachments_dicts_list": [
+            {
+                "attributes_dicts_list": [
+                    {
+                        "attr_type": "note_attribute",
+                        "connection_source_attr": null,
+                        "is_promoted": false,
+                        "long_name": "M_Car_Body:MovablePivot:Note",
+                        "module_type": "NoteAttributeData",
+                        "name": "Note",
+                        "value": ""
+                    },
+                    {
+                        "attr_type": "tree",
+                        "connection_source_attr": null,
+                        "is_promoted": false,
+                        "long_name": "M_Car_Body:MovablePivot:Movable Pivot",
+                        "module_type": "TreeData",
+                        "name": "Movable Pivot",
+                        "value": {
+                            "drive": {
+                                "add_movable_pivot": true
+                            }
+                        }
+                    },
+                    {
+                        "attr_type": "version_attribute",
+                        "connection_source_attr": null,
+                        "is_promoted": false,
+                        "long_name": "M_Car_Body:MovablePivot:Module Version",
+                        "module_type": "VersionAttributeData",
+                        "name": "Module Version",
+                        "value": "001"
+                    }
+                ],
+                "enabled": true,
+                "internal_database": {},
+                "module_type": "MovablePivot",
+                "name": "MovablePivot",
+                "obj_type": "Attachment_Data",
+                "uuid": "789c9c9d018648c9812bebd4b87eb491",
+                "version": 1
+            }
+        ],
+        "attributes_dicts_list": [
+            {
+                "attr_type": "note_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "M_Car_Body:Note",
+                "module_type": "NoteAttributeData",
+                "name": "Note",
+                "value": ""
+            },
+            {
+                "attr_type": "float_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "M_Car_Body:Ctrls Scale",
+                "module_type": "FloatAttributeData",
+                "name": "Ctrls Scale",
+                "value": 1.0
+            },
+            {
+                "attr_type": "boolean_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "M_Car_Body:Expose RotateOrder",
+                "module_type": "BooleanAttributeData",
+                "name": "Expose RotateOrder",
+                "value": true
+            },
+            {
+                "attr_type": "boolean_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "M_Car_Body:Secondary Ctrls",
+                "module_type": "BooleanAttributeData",
+                "name": "Secondary Ctrls",
+                "value": true
+            },
+            {
+                "attr_type": "boolean_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "M_Car_Body:Tilt",
+                "module_type": "BooleanAttributeData",
+                "name": "Tilt",
+                "value": true
+            },
+            {
+                "attr_type": "boolean_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "M_Car_Body:Handling",
+                "module_type": "BooleanAttributeData",
+                "name": "Handling",
+                "value": true
+            },
+            {
+                "attr_type": "boolean_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "M_Car_Body:Shake",
+                "module_type": "BooleanAttributeData",
+                "name": "Shake",
+                "value": true
+            },
+            {
+                "attr_type": "float_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "M_Car_Body:Shake Up Down Amount",
+                "module_type": "FloatAttributeData",
+                "name": "Shake Up Down Amount",
+                "value": 0.2
+            },
+            {
+                "attr_type": "float_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "M_Car_Body:Shake Rotate Amount",
+                "module_type": "FloatAttributeData",
+                "name": "Shake Rotate Amount",
+                "value": 0.2
+            },
+            {
+                "attr_type": "driven_connection_attribute",
+                "connection_source_attr": "Path:Output",
+                "connection_type": "matrix_constraint",
+                "force_connection": false,
+                "force_when_locked": false,
+                "is_promoted": true,
+                "long_name": "M_Car_Body:Input",
+                "maintain_offset": true,
+                "module_type": "DrivenConnectionAttributeData",
+                "name": "Input",
+                "skip_attrs": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "value": ""
+            },
+            {
+                "attr_type": "driver_connection_attribute",
+                "connection_source_attr": null,
+                "is_promoted": true,
+                "long_name": "M_Car_Body:Body Output",
+                "module_type": "DriverConnectionAttributeData",
+                "name": "Body Output",
+                "value": "M_Car_Body:Body Output"
+            },
+            {
+                "attr_type": "driver_connection_attribute",
+                "connection_source_attr": null,
+                "is_promoted": true,
+                "long_name": "M_Car_Body:Front Wheels Output",
+                "module_type": "DriverConnectionAttributeData",
+                "name": "Front Wheels Output",
+                "value": "M_Car_Body:Front Wheels Output"
+            },
+            {
+                "attr_type": "driver_connection_attribute",
+                "connection_source_attr": null,
+                "is_promoted": true,
+                "long_name": "M_Car_Body:Back Wheels Output",
+                "module_type": "DriverConnectionAttributeData",
+                "name": "Back Wheels Output",
+                "value": "M_Car_Body:Back Wheels Output"
+            },
+            {
+                "attr_type": "name_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "M_Car_Body:Name",
+                "module_type": "NameAttributeData",
+                "name": "Name",
+                "value": "M_Car_Body"
+            },
+            {
+                "attr_type": "version_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "M_Car_Body:Module Version",
+                "module_type": "VersionAttributeData",
+                "name": "Module Version",
+                "value": "001"
+            }
+        ],
+        "enabled": true,
+        "guides_manager": {
+            "backup_dict": {},
+            "offsets_dict": {
+                "back": {
+                    "rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scaleX": 1.0,
+                    "translate": [
+                        0.0,
+                        0.0,
+                        -162.0
+                    ],
+                    "type": "IoGuide"
+                },
+                "center": {
+                    "rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scaleX": 1.0,
+                    "translate": [
+                        0.0,
+                        66.0,
+                        0.0
+                    ],
+                    "type": "IoGuide"
+                },
+                "front": {
+                    "rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scaleX": 1.0,
+                    "translate": [
+                        0.0,
+                        0.0,
+                        162.0
+                    ],
+                    "type": "IoGuide"
+                },
+                "left": {
+                    "rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scaleX": 1.0,
+                    "translate": [
+                        90.0,
+                        0.0,
+                        0.0
+                    ],
+                    "type": "IoGuide"
+                },
+                "parent_guide": {
+                    "offset_grp_scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scaleX": 1.0,
+                    "translate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "type": "IoParentGuide"
+                },
+                "right": {
+                    "rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scaleX": 1.0,
+                    "translate": [
+                        -90.0,
+                        0.0,
+                        0.0
+                    ],
+                    "type": "IoGuide"
+                },
+                "tilt_ctrl": {
+                    "rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scaleX": 1.0,
+                    "translate": [
+                        0.0,
+                        235.0,
+                        0.0
+                    ],
+                    "type": "IoGuide"
+                }
+            }
+        },
+        "module_type": "Vehicle_Body",
+        "name": "M_Car_Body",
+        "obj_type": "Node_Data",
+        "pos": [
+            5387.146266018561,
+            5369.318411496859
+        ],
+        "uuid": "d6a4a1b172234d338a40e7d93eb1c4cf",
+        "version": 1
+    },
+    "Path": {
+        "attachments_dicts_list": [],
+        "attributes_dicts_list": [
+            {
+                "attr_type": "note_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "Path:Note",
+                "module_type": "NoteAttributeData",
+                "name": "Note",
+                "value": ""
+            },
+            {
+                "attr_type": "float_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "Path:Ctrls Scale",
+                "module_type": "FloatAttributeData",
+                "name": "Ctrls Scale",
+                "value": 1.0
+            },
+            {
+                "attr_type": "integer_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "Path:Bezier Ctrls Count",
+                "module_type": "IntegerAttributeData",
+                "name": "Bezier Ctrls Count",
+                "value": 8
+            },
+            {
+                "attr_type": "boolean_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "Path:Add Position Ctrl",
+                "module_type": "BooleanAttributeData",
+                "name": "Add Position Ctrl",
+                "value": true
+            },
+            {
+                "attr_type": "boolean_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "Path:Primary Ctrls Vis",
+                "module_type": "BooleanAttributeData",
+                "name": "Primary Ctrls Vis",
+                "value": false
+            },
+            {
+                "attr_type": "boolean_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "Path:Auto Steer",
+                "module_type": "BooleanAttributeData",
+                "name": "Auto Steer",
+                "value": true
+            },
+            {
+                "attr_type": "float_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "Path:Wheels Pos Offset",
+                "module_type": "FloatAttributeData",
+                "name": "Wheels Pos Offset",
+                "value": 50.0
+            },
+            {
+                "attr_type": "driven_connection_attribute",
+                "connection_source_attr": "Base:Output",
+                "connection_type": "matrix_constraint",
+                "force_connection": false,
+                "force_when_locked": false,
+                "is_promoted": true,
+                "long_name": "Path:Input",
+                "maintain_offset": true,
+                "module_type": "DrivenConnectionAttributeData",
+                "name": "Input",
+                "skip_attrs": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "value": ""
+            },
+            {
+                "attr_type": "driver_connection_attribute",
+                "connection_source_attr": null,
+                "is_promoted": true,
+                "long_name": "Path:Output",
+                "module_type": "DriverConnectionAttributeData",
+                "name": "Output",
+                "value": "Path:Output"
+            },
+            {
+                "attr_type": "name_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "Path:Name",
+                "module_type": "NameAttributeData",
+                "name": "Name",
+                "value": "Path"
+            },
+            {
+                "attr_type": "version_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "Path:Module Version",
+                "module_type": "VersionAttributeData",
+                "name": "Module Version",
+                "value": "001"
+            }
+        ],
+        "enabled": true,
+        "guides_manager": {
+            "backup_dict": {},
+            "offsets_dict": {
+                "curve_root": {
+                    "rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scaleX": 1.0,
+                    "side_rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "side_scaleX": 1.0,
+                    "translate": [
+                        0.0,
+                        0.0,
+                        40.0
+                    ],
+                    "type": "IoAimGuide"
+                },
+                "curve_tip": {
+                    "rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scaleX": 1.0,
+                    "side_rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "side_scaleX": 1.0,
+                    "translate": [
+                        0.0,
+                        0.0,
+                        1840.0
+                    ],
+                    "type": "IoAimGuide"
+                },
+                "parent_guide": {
+                    "offset_grp_scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scaleX": 1.0,
+                    "translate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "type": "IoParentGuide"
+                }
+            }
+        },
+        "module_type": "Path",
+        "name": "Path",
+        "obj_type": "Node_Data",
+        "pos": [
+            5385.0,
+            5557.0
+        ],
+        "uuid": "30d4fb376f9d44c7b1f6f46ad473b658",
+        "version": 1
+    },
+    "R_Back_Wheel": {
+        "attachments_dicts_list": [],
+        "attributes_dicts_list": [
+            {
+                "attr_type": "note_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "R_Back_Wheel:Note",
+                "module_type": "NoteAttributeData",
+                "name": "Note",
+                "value": ""
+            },
+            {
+                "attr_type": "float_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "R_Back_Wheel:Ctrls Scale",
+                "module_type": "FloatAttributeData",
+                "name": "Ctrls Scale",
+                "value": 1.0
+            },
+            {
+                "attr_type": "boolean_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "R_Back_Wheel:Expose RotateOrder",
+                "module_type": "BooleanAttributeData",
+                "name": "Expose RotateOrder",
+                "value": true
+            },
+            {
+                "attr_type": "boolean_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "R_Back_Wheel:Secondary Ctrls",
+                "module_type": "BooleanAttributeData",
+                "name": "Secondary Ctrls",
+                "value": true
+            },
+            {
+                "attr_type": "boolean_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "R_Back_Wheel:Auto Roll",
+                "module_type": "BooleanAttributeData",
+                "name": "Auto Roll",
+                "value": true
+            },
+            {
+                "attr_type": "driven_connection_attribute",
+                "connection_source_attr": "M_Car_Body:Back Wheels Output",
+                "connection_type": "matrix_constraint",
+                "force_connection": false,
+                "force_when_locked": false,
+                "is_promoted": true,
+                "long_name": "R_Back_Wheel:Input",
+                "maintain_offset": true,
+                "module_type": "DrivenConnectionAttributeData",
+                "name": "Input",
+                "skip_attrs": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "value": ""
+            },
+            {
+                "attr_type": "driver_connection_attribute",
+                "connection_source_attr": null,
+                "is_promoted": true,
+                "long_name": "R_Back_Wheel:Output",
+                "module_type": "DriverConnectionAttributeData",
+                "name": "Output",
+                "value": "R_Back_Wheel:Output"
+            },
+            {
+                "attr_type": "name_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "R_Back_Wheel:Name",
+                "module_type": "NameAttributeData",
+                "name": "Name",
+                "value": "R_Back_Wheel"
+            },
+            {
+                "attr_type": "version_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "R_Back_Wheel:Module Version",
+                "module_type": "VersionAttributeData",
+                "name": "Module Version",
+                "value": "001"
+            }
+        ],
+        "enabled": true,
+        "guides_manager": {
+            "backup_dict": {},
+            "offsets_dict": {
+                "parent_guide": {
+                    "offset_grp_scale": [
+                        -1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scaleX": 1.0,
+                    "translate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "type": "IoParentGuide"
+                },
+                "wheel_bottom": {
+                    "rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scaleX": 1.0,
+                    "side_rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "side_scaleX": 1.0,
+                    "translate": [
+                        86.25102639544417,
+                        0.0,
+                        -90.0
+                    ],
+                    "type": "IoAimGuide"
+                },
+                "wheel_center": {
+                    "rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scaleX": 1.0,
+                    "side_rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "side_scaleX": 1.0,
+                    "translate": [
+                        86.25102639544417,
+                        19.0,
+                        -90.0
+                    ],
+                    "type": "IoAimGuide"
+                }
+            }
+        },
+        "module_type": "Wheel",
+        "name": "R_Back_Wheel",
+        "obj_type": "Node_Data",
+        "pos": [
+            5159.307647594891,
+            5312.842555821044
+        ],
+        "uuid": "38fb1adb8013465c9ea4396af930b2bc",
+        "version": 1
+    },
+    "R_Front_Wheel": {
+        "attachments_dicts_list": [],
+        "attributes_dicts_list": [
+            {
+                "attr_type": "note_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "R_Front_Wheel:Note",
+                "module_type": "NoteAttributeData",
+                "name": "Note",
+                "value": ""
+            },
+            {
+                "attr_type": "float_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "R_Front_Wheel:Ctrls Scale",
+                "module_type": "FloatAttributeData",
+                "name": "Ctrls Scale",
+                "value": 1.0
+            },
+            {
+                "attr_type": "boolean_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "R_Front_Wheel:Expose RotateOrder",
+                "module_type": "BooleanAttributeData",
+                "name": "Expose RotateOrder",
+                "value": true
+            },
+            {
+                "attr_type": "boolean_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "R_Front_Wheel:Secondary Ctrls",
+                "module_type": "BooleanAttributeData",
+                "name": "Secondary Ctrls",
+                "value": true
+            },
+            {
+                "attr_type": "boolean_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "R_Front_Wheel:Auto Roll",
+                "module_type": "BooleanAttributeData",
+                "name": "Auto Roll",
+                "value": true
+            },
+            {
+                "attr_type": "driven_connection_attribute",
+                "connection_source_attr": "M_Car_Body:Front Wheels Output",
+                "connection_type": "matrix_constraint",
+                "force_connection": false,
+                "force_when_locked": false,
+                "is_promoted": true,
+                "long_name": "R_Front_Wheel:Input",
+                "maintain_offset": true,
+                "module_type": "DrivenConnectionAttributeData",
+                "name": "Input",
+                "skip_attrs": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "value": ""
+            },
+            {
+                "attr_type": "driver_connection_attribute",
+                "connection_source_attr": null,
+                "is_promoted": true,
+                "long_name": "R_Front_Wheel:Output",
+                "module_type": "DriverConnectionAttributeData",
+                "name": "Output",
+                "value": "R_Front_Wheel:Output"
+            },
+            {
+                "attr_type": "name_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "R_Front_Wheel:Name",
+                "module_type": "NameAttributeData",
+                "name": "Name",
+                "value": "R_Front_Wheel"
+            },
+            {
+                "attr_type": "version_attribute",
+                "connection_source_attr": null,
+                "is_promoted": false,
+                "long_name": "R_Front_Wheel:Module Version",
+                "module_type": "VersionAttributeData",
+                "name": "Module Version",
+                "value": "001"
+            }
+        ],
+        "enabled": true,
+        "guides_manager": {
+            "backup_dict": {},
+            "offsets_dict": {
+                "parent_guide": {
+                    "offset_grp_scale": [
+                        -1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scaleX": 1.0,
+                    "translate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "type": "IoParentGuide"
+                },
+                "wheel_bottom": {
+                    "rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scaleX": 1.0,
+                    "side_rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "side_scaleX": 1.0,
+                    "translate": [
+                        86.25102639544417,
+                        0.0,
+                        89.86830112072224
+                    ],
+                    "type": "IoAimGuide"
+                },
+                "wheel_center": {
+                    "rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scaleX": 1.0000000000000016,
+                    "side_rotate": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "side_scaleX": 1.0,
+                    "translate": [
+                        86.25102639544427,
+                        19.0,
+                        89.86830112072224
+                    ],
+                    "type": "IoAimGuide"
+                }
+            }
+        },
+        "module_type": "Wheel",
+        "name": "R_Front_Wheel",
+        "obj_type": "Node_Data",
+        "pos": [
+            5154.49191041861,
+            5499.356492129025
+        ],
+        "uuid": "5a697c485ada46ce97e9c6c459517861",
+        "version": 1
+    },
+    "__metadata__": {
+        "arise_version": "1.0300",
+        "date": "08 08 2023 15:54:58",
+        "lic": true,
+        "maya_version": 20230200,
+        "name": "",
+        "operating_system": "win64",
+        "qt_version": "5.15.2"
+    }
+}

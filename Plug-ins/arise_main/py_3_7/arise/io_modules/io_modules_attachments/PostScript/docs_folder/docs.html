@@ -1,0 +1,90 @@
+<div class="readonly threshold-input-field kbase-content__title">
+    <h1 class="readonly threshold-input-field kbase-content__title"><span data-test-id="article-title"
+            class="kbase-content__title--readonly" id="article_title">PostScript</span></h1>
+    <div class="text__content kbase-content__description" dir="ltr">
+        <p dir="ltr"><span>A rigger who knows Python code can modify the rig after it is built using
+                'PostScript'.&nbsp;<br /></span><span>The attachment has its own script editor with code highlight, pep8
+                errors, and many more features.</span><span></span></p>
+        <p dir="ltr"><span><strong dir="ltr">Using A Different Code Editor:</strong></span></p>
+        <p dir="ltr"><span>You can use a different code editor if you wish:</span></p>
+        <ol>
+            <li dir="ltr"><span>Use your preferred code editor to write your code.</span></li>
+            <li dir="ltr"><span>Save the code in a Python file (<em>.py</em>).</span></li>
+            <li dir="ltr"><span>Tick the attachment '<strong>Use File</strong>' checkbox attribute.</span></li>
+            <li dir="ltr"><span>Enter the path to the file in the&nbsp;<strong>'Script file
+                        path'</strong>&nbsp;attribute.</span></li>
+        </ol>
+        <p dir="ltr"><span dir="ltr"><u>When you write code, you can use the variables passed to the PostScript
+                    code</u>:</span><span dir="ltr"><br />Please note that the following variables are only accessible
+                during the node build process and are not available when using the '<em>Execute All</em>', '<em>Execute
+                    Selected</em>', or '<em>Execute Current Line</em>' buttons within the PostScript attachment
+                UI.</span></p>
+        <ul>
+            <li dir="ltr"><span><strong>node_name</strong>&nbsp;- (str) The name of the parent node this attachment
+                    belongs to.</span></li>
+            <li dir="ltr"><span><strong>module_grp</strong>&nbsp;- (str) Parent node group's full name. E.g.
+                    '<em>|rig_root_grp|modules_grp|&lt;&lt;node_name&gt;&gt;_grp</em>'.</span></li>
+            <li dir="ltr"><span><strong>ctrls_list</strong>&nbsp;- (list) Long names of all the ctrls.</span></li>
+            <li dir="ltr"><span><strong>joints_list</strong>&nbsp;- (list) Long names of all the joints.</span></li>
+            <li dir="ltr"><span>Additionally, it imports 'maya.cmds' as '<strong>cmds</strong>' and as
+                    '<strong>mc</strong>'.</span></li>
+        </ul>
+        <p dir="ltr"><span><u dir="ltr">PythonCodeEditor keyboard shortcuts</u>:&nbsp;</span></p>
+        <ul>
+            <li dir="ltr"><span>'Ctrl + Shift + A' - New File.</span></li>
+            <li dir="ltr"><span>'Ctrl+ Shift + O' - Open File.</span></li>
+            <li dir="ltr"><span>'Ctrl + S' - Save.</span></li>
+            <li dir="ltr"><span>'Ctrl + Shift + S' - Save As.</span></li>
+            <li dir="ltr"><span>'Ctrl + G' - open Go To Line Window.</span></li>
+            <li dir="ltr"><span>'Ctrl + F' - open Find/Replace Window.</span></li>
+            <li dir="ltr"><span>'Ctrl + Shift + P' - Open Settings Window.</span></li>
+            <li dir="ltr"><span>'Ctrl + Shift + E' - Execute All.&nbsp;<strong dir="ltr">**</strong></span></li>
+            <li dir="ltr"><span>'Ctrl + E' - Execute Selected.&nbsp;<strong dir="ltr">**</strong></span></li>
+            <li dir="ltr"><span>'Ctrl + Alt + E' - Execute Current Line.&nbsp;<strong dir="ltr">**</strong></span></li>
+            <li dir="ltr"><span>'Ctrl + Shift + H' - Open Quick Help For Maya Flags.</span></li>
+        </ul>
+        <p dir="ltr"><span><u dir="ltr">Editor Shortcuts</u>:</span></p>
+        <ul>
+            <li dir="ltr"><span>'Shift + Tab' - removes indentation from row start.</span></li>
+            <li dir="ltr"><span>'Ctrl + /' - comment out line.</span></li>
+            <li dir="ltr"><span>'Ctrl + L' - select line.</span></li>
+            <li dir="ltr"><span>'Ctrl + Shift + D' - duplicate line.</span></li>
+            <li dir="ltr"><span>'Ctrl + Shift + Arrow_Up' - move the line up one row.</span></li>
+            <li dir="ltr"><span>'Ctrl + Shift + Arrow_Down' - move the line down one row.</span></li>
+            <li dir="ltr"><span>'Ctrl + Spacebar '- open autocomplete.</span></li>
+            <li dir="ltr"><span>'Ctrl + [' - removes&nbsp;indentation&nbsp;from row start.</span></li>
+            <li dir="ltr"><span>'Ctrl + ]' - add&nbsp;indentation&nbsp;to row start.</span></li>
+            <li dir="ltr"><span>'Ctrl + Shift + {' - decrease font size.</span></li>
+            <li dir="ltr"><span>'Ctrl + Shift + }' - increase font size.</span></li>
+            <li dir="ltr"><span>'Keypad_Enter' - execute code.&nbsp;<strong dir="ltr">**</strong></span></li>
+        </ul>
+        <p dir="ltr"><span><u dir="ltr">The 'PostScript' editor tries to provide as many features as a standard
+                    IDE</u>:</span></p>
+        <ul>
+            <li dir="ltr"><span><strong dir="ltr">'Go-To Line'</strong>&nbsp;- Focus the view on a specific line
+                    number.&nbsp;</span></li>
+            <li dir="ltr"><span><strong dir="ltr">'Find/Replace'</strong>&nbsp;- Find and replace text in the
+                    editor.&nbsp;</span></li>
+            <li dir="ltr"><span><strong dir="ltr">'Insert SetAttr Code Snippet'</strong>&nbsp;- If you are new to
+                    scripting, you can change an attribute on a Maya node, such as changing the default
+                    '<em>IK_FK_Switch</em>' attribute to FK (value=1), by manually changing it, then with the attribute
+                    selected click this button, this will add a line of code to set the '<em>IK_FK_Switch</em>'
+                    attribute to 1 every time the node rebuilds.</span></li>
+            <li dir="ltr"><span><strong dir="ltr">'Show Quick Help'</strong>&nbsp;- Opens a window to the right of the
+                    editor; any maya.cmds commands you enter into the top bar will display their flags below;
+                    double-clicking a flag will add that flag to the editor.&nbsp;</span></li>
+        </ul>
+        <p dir="ltr"><span><u>Notes</u>:</span></p>
+        <ul>
+            <li dir="ltr"><span>'PostScript' cannot be used to reference scenes since referenced nodes cannot be deleted
+                    during cleanup.</span></li>
+            <li dir="ltr"><span>You should only use 'PostScript' to modify Maya nodes that belong to the parent node of
+                    the attachment.<br />If other Arise nodes are not being rebuilt, code that modifies Maya nodes
+                    belonging to those Arise nodes is likely to fail.</span></li>
+        </ul>
+        <p dir="ltr"><span>_____________________________________________</span></p>
+        <p dir="ltr"><span>Get Arise at:&nbsp;<a dir="ltr"
+                    href="https://www.ariserigging.com/">https://www.ariserigging.com</a></span></p>
+    </div>
+    <div class="text__content kbase-content__description" dir="ltr"></div>
+</div>

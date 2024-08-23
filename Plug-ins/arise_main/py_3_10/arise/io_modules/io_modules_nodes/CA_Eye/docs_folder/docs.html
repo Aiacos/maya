@@ -1,0 +1,69 @@
+<h1 class="readonly threshold-input-field kbase-content__title"><span data-test-id="article-title"
+        class="kbase-content__title--readonly collab-annotatable" id="article_title">CA Eye</span></h1>
+<div class="text__content kbase-content__description" dir="ltr">
+    <p dir="ltr"><span>Creates a cartoon eye and eyelids rig.<br /></span><span></span><span>There are three layers of
+            control over the eyelids:</span></p>
+    <ul>
+        <li dir="ltr"><span>The first layer consists of two corner ctrls and two mid ctrls.</span></li>
+        <li dir="ltr"><span>The second layer consists of minor ctrls.</span></li>
+        <li dir="ltr"><span>And an optional third layer of micro ctrls.</span></li>
+    </ul>
+    <p dir="ltr"><span>Each layer gives you more control over smaller areas of the eyelids.<br /></span><span>The
+            eyeball can move, rotate, and scale freely with or without the eyelids.</span><span></span></p>
+    <p dir="ltr"><span><u>Notes</u>:</span></p>
+    <ul>
+        <li dir="ltr"><span>The eyelids should be modeled open.</span></li>
+        <li dir="ltr"><span>For best results, the upper eyelid and lower eyelid edge count should match.</span></li>
+    </ul>
+    <p dir="ltr"><span><u>Guides</u>:</span></p>
+    <ul>
+        <li dir="ltr"><span><strong>'Eyeball Center Guide'</strong>&nbsp;- Position it at the eyeball's center and align
+                its arrow with the pupil's direction.</span></li>
+        <li dir="ltr"><span><strong>'Aim At Guide'</strong>&nbsp;- Position where you want the 'eye_aim_at_ctrl'.</span>
+        </li>
+        <li dir="ltr"><span><strong dir="ltr">'Inner Corner Guide'</strong>&nbsp;- Position and orient at the eyelids'
+                inner corner.</span></li>
+        <li dir="ltr"><span>&nbsp;<strong dir="ltr">'Outer Corner Guide'</strong>&nbsp;- Position and orient at the
+                eyelids' outer corner.</span></li>
+        <li dir="ltr"><span><strong dir="ltr">'Upper ## Gu</strong><strong>ides'</strong>&nbsp;- Position along the
+                upper eyelid edge. When you position one guide on each vertex (not including the corners), skinning will
+                be easier. The '<u>Upper Lid Jnts</u>' attribute controls how many guides are created<span
+                    dir="ltr">.</span></span></li>
+        <li dir="ltr"><span><strong dir="ltr">'Lower ## Guides'</strong>&nbsp;- Position along the lower eyelid edge.
+                When you position one guide on each vertex (not including the corners), skinning will be easier. The
+                '<u>Lower Lid Jnts</u>' attribute controls how many guides are created.</span></li>
+    </ul>
+    <p><span><img
+                src="eyelids_guides.png"
+                class="fr-fic fr-fil fr-dib inline-image" data-attachment="[object Object]" data-id="69005794608"
+                width="265" height="158" /></span><span></span></p>
+    <p dir="ltr"><span><u>Attributes</u>:</span></p>
+    <ol>
+        <li dir="ltr"><span dir="ltr"><strong>'Ctrls Scale'</strong><span>&nbsp;</span>- Scale all the node ctrls. Note
+                that the attachments<span>&nbsp;</span><a dir="ltr"
+                    href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000440777"
+                    rel="noopener noreferrer" target="_blank"><strong>'Ctrls
+                        Settings'</strong></a><span>&nbsp;</span>and<span>&nbsp;</span><a dir="ltr"
+                    href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000440812"
+                    rel="noopener noreferrer" target="_blank"><strong>'CtrlsShape'</strong></a><span>&nbsp;</span>will
+                override this.<span>&nbsp;</span><a dir="ltr" href="https://youtu.be/-1fpRw6oJME?t=31"
+                    rel="noopener noreferrer" target="_blank"><strong>[Video]</strong></a></span></li>
+        <li dir="ltr"><span><strong dir="ltr">'Upper Lid Jnts'&nbsp;</strong>- Number of guides/skinning joints for the
+                upper eyelid. Each edge loop should have a guide.</span></li>
+        <li dir="ltr"><span><strong dir="ltr">'Lower Lid Jnts'&nbsp;</strong>- Number of guides/skinning joints for the
+                lower eyelid. Each edge loop should have a guide.</span></li>
+        <li dir="ltr"><span><strong>'Minor Ctrls'</strong>&nbsp;- Number of minor ctrls for EACH eyelid.</span></li>
+        <li dir="ltr"><span dir="ltr"><strong>'Micro Ctrls'</strong><span>&nbsp;</span>- Adds a third layer of ctrls for
+                each skinning joint.<span>&nbsp;</span><a dir="ltr" href="https://youtu.be/-1fpRw6oJME?t=211"
+                    rel="noopener noreferrer" target="_blank"><strong>[Video]</strong></a></span></li>
+    </ol>
+    <p dir="ltr"><span><u>Connections</u>:</span></p>
+    <ul>
+        <li dir="ltr"><span><strong>'Root Input'</strong>&nbsp;- Drives the eyelids and the eyeball.</span></li>
+        <li dir="ltr"><span><strong>'Aim Ctrl'&nbsp;</strong>- Drives the 'eye_aim_at_ctrl'.</span></li>
+        <li dir="ltr"><span><strong>'Eyeball Output'</strong>&nbsp;- An output at 'eyeball_jnt'.</span></li>
+    </ul>
+    <p dir="ltr"><span>_____________________________________________</span></p>
+    <p dir="ltr"><span>Get Arise at:&nbsp;<a dir="ltr"
+                href="https://www.ariserigging.com/">https://www.ariserigging.com</a></span></p>
+</div>

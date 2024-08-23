@@ -1,0 +1,119 @@
+<h1 class="readonly threshold-input-field kbase-content__title"><span data-test-id="article-title"
+        class="kbase-content__title--readonly collab-annotatable" id="article_title">Dynamic FK Chain</span></h1>
+<div class="text__content kbase-content__description" dir="ltr">
+    <p dir="ltr"><span>Does the same as adding a&nbsp;<a dir="ltr"
+                href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000440891"
+                rel="noopener noreferrer" target="_blank"><strong>'MakeDynamic'</strong></a><span
+                dir="ltr">&nbsp;attachment</span>&nbsp;to an&nbsp;<a dir="ltr"
+                href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000546121"
+                rel="noopener noreferrer" target="_blank"><strong>'FK_Chain'</strong></a>&nbsp;node, but slightly faster
+            and with control over the simulation space (see below).</span></p>
+    <p dir="ltr"><span><u>Guides</u>:</span></p>
+    <ul>
+        <li dir="ltr"><span><strong dir="ltr">'{number} Guide'&nbsp;</strong>- Position where the FK joints will be. The
+                attribute '<u>Joints</u>' controls the number of guides.&nbsp;</span></li>
+    </ul>
+    <p dir="ltr"><span><u>Attributes</u>:</span></p>
+    <ol>
+        <li dir="ltr"><span dir="ltr"><strong>'Single Side Guide'</strong><span>&nbsp;</span>- For
+                some<span>&nbsp;</span><a dir="ltr"
+                    href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000434042"
+                    rel="noopener noreferrer" target="_blank"><strong>Aim Guides</strong></a>, the 'side_vector' (twist)
+                is locked and driven by a single 'side_vector', which keeps the orientation consistent. Uncheck this
+                attribute to unlock them if you need more control over the twist. Re-template is required when changes
+                are made.<span>&nbsp;</span><a href="https://youtu.be/-1fpRw6oJME?t=233" rel="noopener noreferrer"
+                    target="_blank"><strong>[Video]</strong></a></span></li>
+        <li dir="ltr"><span dir="ltr"><strong>'Ctrls Scale'</strong><span>&nbsp;</span>- Scale all the node ctrls. Note
+                that the attachments<span>&nbsp;</span><a dir="ltr"
+                    href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000440777"
+                    rel="noopener noreferrer" target="_blank"><strong>'Ctrls
+                        Settings'</strong></a><span>&nbsp;</span>and<span>&nbsp;</span><a dir="ltr"
+                    href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000440812"
+                    rel="noopener noreferrer" target="_blank"><strong>'CtrlsShape'</strong></a><span>&nbsp;</span>will
+                override this.<span>&nbsp;</span><a dir="ltr" href="https://youtu.be/-1fpRw6oJME?t=31"
+                    rel="noopener noreferrer" target="_blank"><strong>[Video]</strong></a>&nbsp;</span></li>
+        <li dir="ltr"><span dir="ltr"><strong>'Clean Transformations'</strong><span>&nbsp;</span>- &nbsp;If checked,
+                the<span>&nbsp;</span><a dir="ltr"
+                    href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000433385"
+                    rel="noopener noreferrer" target="_blank"><strong>zeroed pose</strong></a><span>&nbsp;</span>will be
+                the same as the<span>&nbsp;</span><a dir="ltr"
+                    href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000433385"
+                    rel="noopener noreferrer" target="_blank"><strong>bind pose</strong></a>; if unchecked, when zeroing
+                the ctrls, they will align with a world axis specified in the following two
+                attributes.<span>&nbsp;</span><strong><a href="https://youtu.be/-1fpRw6oJME?t=61"
+                        rel="noopener noreferrer" target="_blank">[Video]</a></strong></span></li>
+        <li dir="ltr"><span dir="ltr"><strong>'World Orientation'</strong><span>&nbsp;</span>- The world axis the ctrls
+                will align with when zeroed. Usually, this attribute's default value is the correct
+                value.<span>&nbsp;</span><strong><a href="https://youtu.be/-1fpRw6oJME?t=61" rel="noopener noreferrer"
+                        target="_blank">[Video]</a></strong></span></li>
+        <li dir="ltr"><span dir="ltr"><strong>'World Orient Twist'</strong><span>&nbsp;</span>- Along with 'World
+                Orientation', defines the ctrls zeroed pose. Usually, the default value of 0 is the correct
+                value.<span>&nbsp;</span><strong><a href="https://youtu.be/-1fpRw6oJME?t=61" rel="noopener noreferrer"
+                        target="_blank">[Video]</a></strong></span></li>
+        <li dir="ltr"><span dir="ltr"><strong>'Expose RotateOrder'</strong><span>&nbsp;</span>- Exposes all the ctrls
+                '<u>RotateOrder</u>' attribute in the Channel Box.<span>&nbsp;</span><a dir="ltr"
+                    href="https://youtu.be/-1fpRw6oJME?t=149" rel="noopener noreferrer"
+                    target="_blank"><strong>[Video]</strong></a></span></li>
+        <li dir="ltr"><span dir="ltr"><strong>'Secondary Ctrls'</strong><span>&nbsp;</span>- Secondary ctrls are added
+                under some ctrls to help prevent gimbal lock.<br />A visibility attribute is added to the parent
+                ctrl.<span>&nbsp;</span><a dir="ltr" href="https://youtu.be/-1fpRw6oJME?t=157" rel="noopener noreferrer"
+                    target="_blank"><strong>[Video]</strong></a></span></li>
+        <li dir="ltr"><span><strong>'Joints'&nbsp;</strong><span dir="ltr">- The number of joints/guides to
+                    create;&nbsp;modifying this attribute requires a 're-template'.&nbsp;</span></span></li>
+        <li dir="ltr"><span><strong dir="ltr">'Ctrls Translate'</strong>&nbsp;- If checked, animators will also be able
+                to translate the FK ctrls.</span></li>
+        <li dir="ltr"><span><strong>'Sim Ctrl Offset'</strong><span dir="ltr">&nbsp;-</span> The position offset of
+                'simulation_ctrl' from the first chain joint.</span></li>
+    </ol>
+    <p><span><u>Connections</u>:</span></p>
+    <ul>
+        <li><span><strong>'Root Input'</strong>&nbsp;- Drives the whole node.</span></li>
+        <li><span><strong>'Root Output'</strong>&nbsp;- An output at 'dyn_chain_0_jnt'.</span></li>
+        <li dir="ltr"><span><strong>'Tip Output'</strong>&nbsp;- An output at the last joint of the chain.</span></li>
+    </ul>
+    <p><span>&nbsp;</span></p>
+    <p><span><img
+                src="sim_ctrl.png"
+                class="fr-fic fr-fil fr-dib inline-image" data-attachment="[object Object]" data-id="69005370721"
+                width="94" height="81" /></span></p>
+    <p dir="ltr"><span><u>The 'simulation_ctrl' settings are</u>:</span></p>
+    <ul>
+        <li dir="ltr"><span><strong>Enable Dynamics</strong>&nbsp;- By default off, the animator can choose when to turn
+                it on.</span></li>
+        <li dir="ltr"><span><strong>Display Sim Curves</strong>&nbsp;- Display the simulation curves.</span></li>
+        <li dir="ltr"><span><span dir="ltr"><strong>Sim Space</strong>&nbsp;-&nbsp;'<u>World</u>' space behaves
+                    like&nbsp;</span><span dir="ltr"><a dir="ltr"
+                        href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000440891"
+                        rel="noopener noreferrer"
+                        target="_blank"><strong>'MakeDynamic'</strong></a></span>&nbsp;attachments, where any movement
+                to the chain, regardless of whether it originates from a parent node animation or from its own ctrls,
+                will affect the simulation, whereas '<u>Local</u>' space ignores any movement from its parent nodes and
+                simulates based on the animation originating from its own ctrls.</span></li>
+        <li dir="ltr"><span><strong>Point Lock</strong>&nbsp;- Indicates how the simulation curve is attached: "No
+                Attach", "Base", "Tip" and "Both Ends".</span></li>
+        <li dir="ltr"><span><strong>Start Frame</strong>&nbsp;- The simulation's start frame.</span></li>
+        <li dir="ltr"><span><strong>Anim Follow Base</strong>&nbsp;- The amount by which the base of the simulation
+                curve follows the original animation.</span></li>
+        <li dir="ltr"><span><strong>Anim Follow Tip</strong>&nbsp;- The amount by which the tip of the simulation curve
+                follows the original animation.</span></li>
+        <li dir="ltr"><span><strong>Anim Follow Damp</strong>&nbsp;- The damp applied to following the original
+                animation.</span></li>
+        <li dir="ltr"><span><strong>Mass</strong>&nbsp;- The weight of the curve; high values will make it act more like
+                a metal chain.</span></li>
+        <li dir="ltr"><span><strong>Damp</strong>&nbsp;- Affects how the curve bends and stretches.</span></li>
+        <li dir="ltr"><span><strong>Stiffness</strong>&nbsp;- The amount the curve flexes with regard to the rest
+                position.</span></li>
+        <li dir="ltr"><span><strong>Turbulence Intensity</strong>&nbsp;- Simulates wind. Off by default.</span></li>
+        <li dir="ltr"><span><strong>Turbulence Frequency</strong>&nbsp;- The scale of the wind.</span></li>
+        <li dir="ltr"><span><strong>Turbulence Speed</strong>&nbsp;- Rate at which wind pattern changes over
+                time.</span></li>
+    </ul>
+    <p dir="ltr"><span>For more info:&nbsp;<a dir="ltr"
+                href="https://help.autodesk.com/view/MAYAUL/2018/ENU/?contextId=NODES-HAIRSYSTEM"
+                rel="noopener noreferrer" target="_blank">Maya's docs</a></span></p>
+    <p dir="ltr"><span>_____________________________________________</span></p>
+    <p dir="ltr"><span>Get Arise at:&nbsp;<a dir="ltr"
+                href="https://www.ariserigging.com/">https://www.ariserigging.com</a></span></p>
+</div>
+<div class="text__content kbase-content__description" dir="ltr"></div>
+<div class="text__content kbase-content__description" dir="ltr"></div>

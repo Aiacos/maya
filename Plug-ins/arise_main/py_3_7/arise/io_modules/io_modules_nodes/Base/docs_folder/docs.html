@@ -1,0 +1,77 @@
+<h1 class="readonly threshold-input-field kbase-content__title"><span data-test-id="article-title"
+        class="kbase-content__title--readonly collab-annotatable" id="article_title">Base Node</span></h1>
+<div class="text__content kbase-content__description" dir="ltr">
+    <p data-identifyelement="475" dir="ltr"><span>A Base node is at the root of every rig.<br /></span><span>The base
+            node creates the master ctrls that move the entire rig, which is why all connections lead to
+            it.<br /></span><span>Each character should have only one Base node.</span></p>
+    <p data-identifyelement="478"><span><img
+                src="ctrls.png"
+                class="fr-fic fr-fil fr-dib inline-image" data-attachment="[object Object]" data-id="69003449406"
+                data-identifyelement="479" width="280" height="146" /></span><span></span></p>
+    <p data-identifyelement="482" dir="ltr"><span><u data-identifyelement="483">Attributes</u>:</span></p>
+    <ul data-identifyelement="484">
+        <li data-identifyelement="485" dir="ltr"><span dir="ltr"><strong data-identifyelement="486" dir="ltr">'Ctrls
+                    Scale'</strong><span>&nbsp;</span>- Scale all the node ctrls. Note that the
+                attachments<span>&nbsp;</span><a data-identifyelement="487" dir="ltr"
+                    href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000440777"
+                    rel="noopener noreferrer" target="_blank"><strong data-identifyelement="488">'Ctrls
+                        Settings'</strong></a><span>&nbsp;</span>and<span>&nbsp;</span><a data-identifyelement="489"
+                    dir="ltr" href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000440812"
+                    rel="noopener noreferrer" target="_blank"><strong
+                        data-identifyelement="490">'CtrlsShape'</strong></a><span>&nbsp;</span>will override
+                this.<span>&nbsp;</span><a dir="ltr" href="https://youtu.be/-1fpRw6oJME?t=31" rel="noopener noreferrer"
+                    target="_blank"><strong>[Video]</strong></a></span></li>
+        <li data-identifyelement="491" dir="ltr"><span dir="ltr"><strong data-identifyelement="492" dir="ltr">'Expose
+                    RotateOrder'</strong><span>&nbsp;</span>- Exposes all the ctrls '<u
+                    data-identifyelement="493">RotateOrder</u>' attribute in the Channel Box.<span>&nbsp;</span><a
+                    dir="ltr" href="https://youtu.be/-1fpRw6oJME?t=149" rel="noopener noreferrer"
+                    target="_blank"><strong>[Video]</strong></a></span></li>
+        <li data-identifyelement="491" dir="ltr"><span dir="ltr"><strong>'Skinning Joint'</strong><span>&nbsp;</span>-
+                If checked, the 'Base' joint will be tagged as a skinning joint, which is necessary for attachments like
+                '<a dir="ltr"
+                    href="https://newaccount1619350932681.freshdesk.com/support/solutions/articles/69000444015-followskeleton"
+                    rel="noopener noreferrer" target="_blank"><strong>FollowSkeleton</strong></a>' to operate
+                correctly.</span></li>
+        <li data-identifyelement="494" dir="ltr"><span><strong data-identifyelement="495" dir="ltr">'Joints
+                    Visibility'</strong>&nbsp;- The base node controls the visibility of all the joints from all the
+                nodes connected to it.<br data-identifyelement="496" />Selecting the 'base_ctrl' and changing its '<u
+                    data-identifyelement="497">Joints Visibility</u>' attribute does the same thing as changing this
+                value.</span></li>
+        <li data-identifyelement="498" dir="ltr"><span><strong data-identifyelement="499" dir="ltr">'Geometry
+                    Display'</strong>- Add a dropdown attribute to 'base_ctrl' called '<u
+                    data-identifyelement="500">Geometry Display</u>' with these options:&nbsp;</span>
+            <ul data-identifyelement="501">
+                <li data-identifyelement="502" dir="ltr"><span><strong data-identifyelement="503"><em
+                                data-identifyelement="504" dir="ltr">'Normal'</em></strong>: Character meshes can be
+                        selected.</span></li>
+                <li data-identifyelement="505" dir="ltr"><span><strong data-identifyelement="506"><em
+                                data-identifyelement="507" dir="ltr">'Template'</em></strong>: Character meshes are not
+                        selectable and appear as gray wireframes.</span></li>
+                <li data-identifyelement="508" dir="ltr"><span><strong data-identifyelement="509"><em
+                                data-identifyelement="510" dir="ltr">'Reference'</em></strong>: Character meshes are not
+                        selectable, but they appear normal.<br data-identifyelement="511" />The next attribute,
+                        'Geometry Group', will also need to be set up in order for this to work.<span
+                            data-identifyelement="512" dir="ltr"><br data-identifyelement="513" /></span></span></li>
+            </ul>
+        </li>
+        <li data-identifyelement="514" dir="ltr"><span><strong data-identifyelement="515" dir="ltr">'Geometry
+                    Group'</strong>&nbsp;- Specify the group under which the character meshes are located.<br
+                    data-identifyelement="516" />You can select the group and press the arrow button to the right of the
+                attribute instead of typing the group's name.<br data-identifyelement="517" />When you hover over
+                the&nbsp;<strong data-identifyelement="518">*</strong>&nbsp;indicator, you'll see tooltip information
+                about whether the name is a valid transform.<br data-identifyelement="519" />It is best to parent the
+                character meshes under 'rig_root_grp'|'geometry_grp'.<br /><img
+                    src="attribute.png"
+                    class="fr-fic fr-fil fr-dib inline-image" data-attachment="[object Object]" data-id="69003451383"
+                    data-identifyelement="520" /></span></li>
+        <li data-identifyelement="521" dir="ltr"><span><strong data-identifyelement="522" dir="ltr">'Display
+                    Value'</strong>&nbsp;- Select the value for '<u data-identifyelement="523">Geometry
+                    Display</u>'.</span></li>
+    </ul>
+    <p data-identifyelement="524"><span>&nbsp;</span></p>
+    <p data-identifyelement="526"><span>&nbsp;</span></p>
+    <p data-identifyelement="528"><span>&nbsp;</span></p>
+    <p data-identifyelement="530" dir="ltr"><span>_____________________________________________</span></p>
+    <p data-identifyelement="531" dir="ltr"><span>Get Arise at:&nbsp;</span><a data-identifyelement="532" dir="ltr"
+            href="https://www.ariserigging.com/"><span>https://www.ariserigging.com</span></a></p>
+</div>

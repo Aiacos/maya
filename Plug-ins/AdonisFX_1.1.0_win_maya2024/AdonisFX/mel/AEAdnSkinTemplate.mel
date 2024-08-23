@@ -1,0 +1,410 @@
+global proc AEAdnSkinMaterialsNew( string $attrName )
+{
+  // Create an option menu for materials.
+  attrEnumOptionMenuGrp
+    -l "Material"
+    -annotation ("Defines the solver stiffness:" +
+                 "\nFat 1e+3;\nMuscle 5e+3;\nRubber 1e+6;\nTendon 5e+7;" +
+                 "\nLeather 1e+8;\nWood 6e+9;\nConcrete 2.5e+10.")
+    -columnAlign 1 "right"
+    -at $attrName
+    AdnSkinMaterialsEnumOptionMenu;
+}
+
+global proc AEAdnSkinMaterialsReplace( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  // Disable de material option menu if the attribute is not present.
+  if ( `attributeQuery -node $nodeName[0] -exists "material"` )
+    attrEnumOptionMenuGrp -e -enable true -attribute $attrName AdnSkinMaterialsEnumOptionMenu;
+  else
+    attrEnumOptionMenuGrp -e -enable false AdnSkinMaterialsEnumOptionMenu;
+}
+
+global proc AEAdnSkinStiffnessMultiplierNew( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  // Create a custom slider for the stiffness multiplier.
+  attrFieldSliderGrp 
+    -l "Stiffness Multiplier"
+    -annotation "Sets the scaling factor applied to the stiffness."
+    -columnAlign 1 "right"
+    -at $attrName
+    -enable true
+    AdnSkinStiffnessMultiplierSliderGrp;
+}
+
+global proc AEAdnSkinStiffnessMultiplierReplace( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  // Disable de material stiffness multiplier if the attribute is not present.
+  if ( `attributeQuery -node $nodeName[0] -exists "stiffnessMultiplier"` )
+    attrFieldSliderGrp -e -enable true -attribute $attrName AdnSkinStiffnessMultiplierSliderGrp;
+  else
+    attrFieldSliderGrp -e -enable false AdnSkinStiffnessMultiplierSliderGrp;
+}
+
+global proc AEAdnSkinPointMassModeNew( string $attrName )
+{
+  // Create an option menu for the point mass mode.
+  attrEnumOptionMenuGrp
+    -l "Point Mass Mode"
+    -annotation ("Defines how masses should be used in the solver:" +
+                 "\nBy Density estimates the mass value by multiplying the Density * Area." +
+                 "\nBy Uniform Value sets a uniform mass value.")
+    -columnAlign 1 "right"
+    -at $attrName
+    AdnSkinPointMassModeEnumOptionMenu;
+}
+
+global proc AEAdnSkinPointMassModeReplace( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  // Disable the point mass mode option menu if the attribute is not present.
+  if ( `attributeQuery -node $nodeName[0] -exists "pointMassMode"` )
+    attrEnumOptionMenuGrp -e -enable true -attribute $attrName AdnSkinPointMassModeEnumOptionMenu;
+  else
+    attrEnumOptionMenuGrp -e -enable false AdnSkinPointMassModeEnumOptionMenu;
+}
+
+global proc AEAdnSkinPointMassChanged( string $nodeName )
+{
+  // Read the values
+  string $attr = ($nodeName + ".pointMassMode");
+  int $pointMassMode = `getAttr $attr`;
+
+  // Enable/disable density slider
+  if ( `attrFieldSliderGrp -exists "AdnSkinDensitySliderGrp"` )
+  {
+    // NOTE: We have to change this entry if we ever reorder the pointMassMode menu
+    $kByDensity = 0; 
+    attrFieldSliderGrp -e -enable ($pointMassMode == $kByDensity) AdnSkinDensitySliderGrp;
+  }
+}
+
+global proc AEAdnSkinDensityNew( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  // Create a custom slider for the density.
+  attrFieldSliderGrp 
+    -l "Density"
+    -annotation ("Sets the density value in kg/m3 to be able to estimate mass values with By Density mode. " +
+                 "The value is internally converted to g/cm3.")
+    -columnAlign 1 "right"
+    -at $attrName
+    -enable true
+    AdnSkinDensitySliderGrp;
+}
+
+global proc AEAdnSkinDensityReplace( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  // Disable de density if the attribute is not present.
+  if ( `attributeQuery -node $nodeName[0] -exists "density"` )
+    attrFieldSliderGrp -e -enable true -attribute $attrName AdnSkinDensitySliderGrp;
+  else
+    attrFieldSliderGrp -e -enable false AdnSkinDensitySliderGrp;
+}
+
+global proc AEAdnSkinSolverStiffnessNew( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  // Create a custom slider for the stiffness.
+  attrFieldSliderGrp 
+    -l "Stiffness"
+    -annotation "Sets the custom stiffness value."
+    -columnAlign 1 "right"
+    -at $attrName
+    -enable false
+    AdnSkinSolverStiffnessSliderGrp;
+}
+
+global proc AEAdnSkinSolverStiffnessReplace( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  // Disable de material stiffness if the attribute is not present.
+  if ( `attributeQuery -node $nodeName[0] -exists "stiffness"` )
+    attrFieldSliderGrp -e -enable true -attribute $attrName AdnSkinSolverStiffnessSliderGrp;
+  else
+    attrFieldSliderGrp -e -enable false AdnSkinSolverStiffnessSliderGrp;
+}
+
+global proc AEAdnSkinShapePreservationStiffnessNew( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  // Create a custom slider for the stiffness.
+  attrFieldSliderGrp 
+    -l "Shape Preserve Stiffness"
+    -annotation ("Sets the override for the shape preservation stiffness to control " +
+                 "the amount of shape preservation to be applied.")
+    -columnAlign 1 "right"
+    -at $attrName
+    -enable false
+    AdnSkinShapePreservationStiffnessSliderGrp;
+}
+
+global proc AEAdnSkinShapePreservationStiffnessReplace( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  // Disable de shape preservation stiffness if the attribute is not present.
+  if ( `attributeQuery -node $nodeName[0] -exists "stiffnessShapePreservation"` )
+    attrFieldSliderGrp -e -enable true -attribute $attrName AdnSkinShapePreservationStiffnessSliderGrp;
+  else
+    attrFieldSliderGrp -e -enable false AdnSkinShapePreservationStiffnessSliderGrp;
+}
+
+global proc AEAdnSkinDebugColorChanged(string $nodeName)
+{
+  // Callback method for the color widget on the attribute template.
+  // Will update the deformer values based on the widget.
+  float $rgbValues[];
+  $rgbValues = `colorSliderGrp -q -rgb AdnSkinDebugColorWidgetGrp`;
+
+  setAttr ($nodeName + ".debugColorRed")   $rgbValues[0];
+  setAttr ($nodeName + ".debugColorGreen") $rgbValues[1];
+  setAttr ($nodeName + ".debugColorBlue")  $rgbValues[2];
+}
+
+global proc AEAdnSkinDebugColorNew( string $attrName )
+{
+  // This method is called when the attribute editor is opened the first time.
+  // Creates a color slider group.
+  // Assigns callback method to color slider group and defaults to a red color.
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  string $changeCommand = ("AEAdnSkinDebugColorChanged(\"" + $nodeName[0] + "\")");
+
+  colorSliderGrp
+    -l "Color"
+    -annotation "Set the draw color for debug purposes."
+    -rgb 1 0 0
+    -cc $changeCommand
+    AdnSkinDebugColorWidgetGrp;
+}
+
+global proc AEAdnSkinDebugColorReplace( string $attrName )
+{
+  // Method called everytime we change between deformers of the same type.
+  // Will update the references to now update the new deformer.
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  string $changeCommand = ("AEAdnSkinDebugColorChanged(\"" + $nodeName[0] + "\")");
+  float $component_r = `getAttr ($nodeName[0] + ".debugColorRed")`;
+  float $component_g = `getAttr ($nodeName[0] + ".debugColorGreen")`;
+  float $component_b = `getAttr ($nodeName[0] + ".debugColorBlue")`;
+
+  colorSliderGrp
+    -e
+    -rgb $component_r $component_g $component_b
+    -cc $changeCommand
+    AdnSkinDebugColorWidgetGrp;
+}
+
+global proc AEAdnSkinHandleSolverStiffnessUI( string $nodeName )
+{
+  if ( `attributeQuery -node $nodeName -exists "useCustomStiffness"` )
+  {
+    $useCustomStiffness = `getAttr ($nodeName + ".useCustomStiffness")`;
+    $showCustomStiffness = !$useCustomStiffness;
+
+    // Disable the material stiffness option menu if the custom stiffness is activated.
+    if ( `attrEnumOptionMenuGrp -exists "AdnSkinMaterialsEnumOptionMenu"` )
+      attrEnumOptionMenuGrp -e -enable $showCustomStiffness AdnSkinMaterialsEnumOptionMenu;
+
+    // Enable the stiffness multiplier if the custom stiffness is deactivated.
+    if ( `attrFieldSliderGrp -exists "AdnSkinStiffnessMultiplierSliderGrp"` )
+      attrFieldSliderGrp -e -enable $showCustomStiffness AdnSkinStiffnessMultiplierSliderGrp;
+
+    // Enable the stiffness if the custom stiffness is activated.
+    if ( `attrFieldSliderGrp -exists "AdnSkinSolverStiffnessSliderGrp"` )
+      attrFieldSliderGrp -e -enable $useCustomStiffness AdnSkinSolverStiffnessSliderGrp;
+  }
+}
+
+global proc AEAdnSkinHandleShapePreservationStiffnessUI( string $nodeName )
+{
+  if ( `attributeQuery -node $nodeName -exists "overrideShapePreservationStiffness"` )
+  {
+    $overrideShapePreservationStiffness = `getAttr ($nodeName + ".overrideShapePreservationStiffness")`;
+    $showShapePreservationStiffness = $overrideShapePreservationStiffness;
+
+    // Enable the shape preservation stiffness slider if the override checkbox is activated.
+    if ( `attrFieldSliderGrp -exists "AdnSkinShapePreservationStiffnessSliderGrp"` )
+      attrFieldSliderGrp -e -enable $showShapePreservationStiffness AdnSkinShapePreservationStiffnessSliderGrp;
+  }
+}
+
+global proc AEAdnSkinTemplate ( string $nodeName )
+{
+  editorTemplate -beginScrollLayout;
+
+    // Solver Attributes section
+    editorTemplate -beginLayout "Solver Attributes" -collapse 0;
+      editorTemplate -label "Enable"
+        -annotation "Flag to toggle the solver execution."
+        -addControl "enable";
+      editorTemplate -label "Iterations"
+        -annotation ("Sets the number of solver iterations." +
+                     "\nHigher values produce more accurate results but may impact the performance.")
+        -addControl "iterations";
+      editorTemplate -callCustom 
+        "AEAdnSkinMaterialsNew"
+        "AEAdnSkinMaterialsReplace" 
+        "material";
+      editorTemplate -callCustom 
+        "AEAdnSkinStiffnessMultiplierNew"
+        "AEAdnSkinStiffnessMultiplierReplace"
+        "stiffnessMultiplier";
+    editorTemplate -endLayout;
+
+    editorTemplate -beginLayout "Time Attributes" -collapse 0;
+      editorTemplate -label "Preroll Start Time"
+        -annotation "Sets the frame at which the preroll begins. The preroll ends at Start Time."
+        -addControl "prerollStartTime";
+      editorTemplate -label "Start Time"
+        -annotation "Determines the frame at which the simulation starts."
+        -addControl "startTime";
+      editorTemplate -label "Current Time"
+        -annotation "Current frame of the simulation."
+        -addControl "currentTime";
+    editorTemplate -endLayout;
+
+    editorTemplate -beginLayout "Scale Attributes";
+      editorTemplate -label "Time Scale"
+        -annotation "Sets the scaling factor applied to the simulation time step."
+        -addControl "timeScale";
+      editorTemplate -label "Space Scale"
+        -annotation "Sets the scaling factor applied to the masses and/or the forces."
+        -addControl "spaceScale";
+      editorTemplate -label "Space Scale Mode"
+        -annotation "Determines if the spatial scaling affects the masses, the forces, or both."
+        -addControl "spaceScaleMode";
+    editorTemplate -endLayout;
+
+    editorTemplate -beginLayout "Gravity";
+      editorTemplate -label "Gravity"
+        -annotation "Sets the magnitude of the gravity acceleration."
+        -addControl "gravity";
+      editorTemplate -label "Gravity Direction"
+        -annotation "Sets the direction of the gravity acceleration."
+        -addControl "gravityDirection";
+    editorTemplate -endLayout;
+
+    // Advanced Settings section
+    editorTemplate -beginLayout "Advanced Settings" -collapse 1;
+      // Advanced Stiffness Parameters subsection
+      editorTemplate -beginLayout "Stiffness Settings" -collapse 1;
+        editorTemplate -label "Use Custom Stiffness"
+          -annotation ("Toggles the use of a custom stiffness value." +
+                       "\nIf enabled, the Material stiffness value is ignored and the " +
+                       "Stiffness attribute below is used instead.")
+          -addControl "useCustomStiffness" "AEAdnSkinHandleSolverStiffnessUI";
+        editorTemplate -callCustom
+          "AEAdnSkinSolverStiffnessNew"
+          "AEAdnSkinSolverStiffnessReplace"
+          "stiffness";
+        editorTemplate -label "Override Shape Preserve Stiffness"
+          -annotation ("Override the shape preservation stiffness with a custom value. If off it will use " +
+                       "either the material stiffness or the custom stiffness value.")
+          -addControl "overrideShapePreservationStiffness" "AEAdnSkinHandleShapePreservationStiffnessUI";
+        editorTemplate -callCustom 
+          "AEAdnSkinShapePreservationStiffnessNew"
+          "AEAdnSkinShapePreservationStiffnessReplace"
+          "stiffnessShapePreservation";
+      editorTemplate -endLayout;
+      editorTemplate -beginLayout "Mass Properties" -collapse 1;
+        // Advanced Mass Properties subsection
+        editorTemplate
+          -addControl "pointMassMode" "AEAdnSkinPointMassChanged"
+          -suppress
+          -callCustom "AEAdnSkinPointMassModeNew" "AEAdnSkinPointMassModeReplace" "pointMassMode";
+        editorTemplate -callCustom 
+          "AEAdnSkinDensityNew"
+          "AEAdnSkinDensityReplace"
+          "density";
+        editorTemplate -label "Global Mass Multiplier"
+          -annotation "Sets the scaling factor applied to the mass of every point."
+          -addControl "globalMassMultiplier";
+      editorTemplate -endLayout;
+      editorTemplate -beginLayout "Dynamic Properties" -collapse 1;
+        editorTemplate -label "Global Damp. Multiplier"
+          -annotation "Sets the scaling factor applied to the global damping of every point."
+          -addControl "globalDampingMultiplier";
+        editorTemplate -label "Inertia Damper"
+          -annotation "Sets the linear damping applied to the dynamics of every point.\nRange 0 to 1."
+          -addControl "inertiaDamper";
+        editorTemplate -label "Rest Length Multiplier"
+          -annotation "Sets the scaling factor applied to the edge lengths at rest."
+          -addControl "restLengthMultiplier";
+        editorTemplate -label "Max Sliding Distance"
+          -annotation ("Determines the size of the sliding area. It corresponds to the maximum distance" +
+                       "\nto the closest point on the reference mesh computed on initialization." +
+                       "\nThe higher this value is, the higher quality and the lower performance.")
+          -addControl "maxSlidingDistance";
+        editorTemplate -label "Compression Multiplier"
+          -annotation "Sets the scaling factor applied to the compression resistance of every point."
+          -addControl "compressionMultiplier";
+        editorTemplate -label "Stretching Multiplier"
+          -annotation "Sets the scaling factor applied to the stretching resistance of every point."
+          -addControl "stretchingMultiplier";
+        editorTemplate -label "Attenuation Vel. Factor"
+          -annotation ("Sets the attenuation factor that drives how much velocity attenuation is" +
+                       "\napplied based on a matrix provided to the plug 'AttenuationMatrix'.\nRange 0 to 1.")
+          -addControl "attenuationVelocityFactor";
+        editorTemplate -label "Sliding Constraints Mode"
+          -annotation ("Defines the mode of execution for the sliding constraints:" +
+                       "\nQuality, is more accurate, recommended for final results;" +
+                       "\nFast, provides higher performance, recommended for preview.")
+          -addControl "slidingConstraintsMode";
+      editorTemplate -endLayout;
+    editorTemplate -endLayout;
+
+    // Deformer Attributes section
+    editorTemplate -beginLayout "Deformer Attributes" -collapse 1;
+      editorTemplate -label "Envelope" -addControl "envelope";
+    editorTemplate -endLayout;
+
+    // Debug section
+    editorTemplate -beginLayout "Debug" -collapse 1;
+      editorTemplate -label "Debug"
+        -annotation "Toggles visualization of debugger."
+        -addControl "debug";
+      editorTemplate -label "Feature"
+        -annotation "Sets the feature to debug."
+        -addControl "debugFeature";
+      editorTemplate -label "Width Scale"
+        -annotation "Sets the scaling factor applied to the width of the debug lines."
+        -addControl "debugWidth";
+      editorTemplate -callCustom
+        "AEAdnSkinDebugColorNew"
+        "AEAdnSkinDebugColorReplace"
+        "debugColor";
+    editorTemplate -endLayout;
+
+  // suppressed attributes
+
+  editorTemplate -addExtraControls;
+  editorTemplate -endScrollLayout;
+}

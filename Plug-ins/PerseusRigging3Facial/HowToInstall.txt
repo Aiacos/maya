@@ -1,0 +1,14 @@
+First place the PerseusRigging folder where you want it to be.
+for example: "C:/PerseusRigging".
+
+This folder is a good place to keep it, but it can be anywhere.
+
+Once you have the PerseusRigging folder where you want it to be,
+then just drag`n`drop the "install.mel" file into Maya (drop in any viewport).
+
+This will add the PerseusRigging tool to the current shelf.
+
+
+For support, go to: www.perseusrigging.com
+
+Example of rig created with perseus auto rig, can be found in the "exampleFile" folder.
