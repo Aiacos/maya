@@ -1,0 +1,145 @@
+<div class="readonly threshold-input-field kbase-content__title">
+        <h1 class="readonly threshold-input-field kbase-content__title"><span data-test-id="article-title"
+                        class="kbase-content__title--readonly collab-annotatable" id="article_title">MakeDynamic</span>
+        </h1>
+        <div class="readonly threshold-input-field kbase-content__title">Add dynamic joints on top of the node joints,
+                which can be simulated.</div>
+        <div class="text__content kbase-content__description" dir="ltr">
+                <p dir="ltr"><span></span></p>
+                <p dir="ltr"><span><u>Attributes</u>:</span></p>
+                <ul>
+                        <li dir="ltr"><span><strong dir="ltr">'Switch Skinning Tag'</strong>&nbsp;- Transfer the
+                                        skinning tag from the original joints to the new dynamic joints.<br />Some
+                                        attachments use tagged skinning joints in their logic.<br />For example,
+                                        'MakeDynamic' and '<a dir="ltr"
+                                                href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000444015"
+                                                rel="noopener noreferrer"
+                                                target="_blank"><strong>FollowSkeleton</strong></a>' create their joints
+                                        only for skinning-tagged joints.<br />Also, they are used to select joints in
+                                        Arise's '<a
+                                                href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000434169"
+                                                rel="noopener noreferrer" target="_blank"><strong>Helper
+                                                        Tools</strong></a>'.</span></li>
+                        <li dir="ltr"><span dir="ltr"><strong dir="ltr">'Enable Joints
+                                                Color'</strong><span>&nbsp;</span>- Enable changing the color of the new
+                                        dynamic joints.</span></li>
+                        <li dir="ltr"><span dir="ltr"><strong dir="ltr">'Joints
+                                                Color'</strong><span>&nbsp;</span>-<span>&nbsp;</span>Specify the color
+                                        of the new dynamic joints.</span></li>
+                        <li dir="ltr"><span dir="ltr"><strong dir="ltr">'Dynamic Joints'&nbsp;</strong>-</span>
+                                <ul>
+                                        <li dir="ltr"><span>'<u>create_dynamic_joint</u>' - which joint will get a
+                                                        dynamic joint.</span></li>
+                                        <li dir="ltr"><span>'<u>parent_joint</u>' - specify its parent in the chain.
+                                                        'None' means a top parent joint.<br />One node can have several
+                                                        dynamic chains, but each chain must have at least three joints.
+                                                        Also joints cannot share the same parent_joint.</span></li>
+                                </ul>
+                        </li>
+                        <li dir="ltr"><span><strong dir="ltr">'Reset Changes'</strong>&nbsp;- Remove any changes to the
+                                        above 'Dynamic Joints' table.</span></li>
+                        <li dir="ltr"><span><strong dir="ltr">'Sim Ctrl Parent'</strong>&nbsp;- This attachment creates
+                                        a 'simulation_ctrl'; here, you specify under which ctrl to parent it.</span>
+                        </li>
+                        <li dir="ltr"><span><strong dir="ltr">'Sim Ctrl Offset'</strong>&nbsp;- Offset position of the
+                                        simulation ctrl from its ctrl parent.</span></li>
+                        <li dir="ltr"><span dir="ltr"><strong dir="ltr">'Create a Nucleus
+                                                Node'</strong><span>&nbsp;</span>- A connivance button to create a
+                                        nucleus node in the Maya scene. Does not get deleted on cleanup or recreated on
+                                        build.</span></li>
+                        <li dir="ltr"><span dir="ltr"><strong dir="ltr">'Connect To
+                                                Nucleus'</strong><span>&nbsp;</span>- Displays a dropdown of all the
+                                        nucleus nodes in the Maya scene. Choosing any will connect the simulation system
+                                        to that nucleus node which enables collisions (Read more below).</span></li>
+                </ul>
+                <p><span><img src="sim_ctrl_image.png"
+                                        class="fr-fic fr-fil fr-dib inline-image" data-attachment="[object Object]"
+                                        data-id="69003515743" width="80" height="83" /></span></p>
+                <p dir="ltr"><span><u>Settings on 'simulation_ctrl'</u>:</span></p>
+                <ul>
+                        <li dir="ltr"><span><strong dir="ltr">'Enable Dynamics'</strong>&nbsp;- By default off, the
+                                        animator can choose when to turn it on.</span></li>
+                        <li dir="ltr"><span><strong dir="ltr">'Display Sim Curves'</strong>&nbsp;- Display the curves
+                                        driving the simulation.</span></li>
+                        <li dir="ltr"><span><strong dir="ltr">'Point Lock'</strong>&nbsp;- Where the curve driving the
+                                        simulation is attached. 'No Attach', 'Base', 'Tip' 'BothEnds'.</span></li>
+                        <li dir="ltr"><span><strong dir="ltr">'Start Frame'</strong>&nbsp;- Simulation start frame. (If
+                                        using a nucleus, will not appear)</span></li>
+                        <li dir="ltr"><span><strong dir="ltr">'Anim Follow Base Pos'</strong>&nbsp;- Control the
+                                        starting position along the curve from which the 'anim follow base' falloff
+                                        starts.</span></li>
+                        <li dir="ltr"><span><strong dir="ltr">'Anim Follow Base'</strong>&nbsp;- How much does the base
+                                        of the simulation curve follow the original animation.</span></li>
+                        <li dir="ltr"><span dir="ltr"><strong dir="ltr">'Anim Follow Tip
+                                                Pos'</strong><span>&nbsp;</span>- Control the position along the curve
+                                        to which the 'anim follow tip' affects.</span></li>
+                        <li dir="ltr"><span><strong dir="ltr">'Anim Follow Tip'</strong>&nbsp;- How much does the tip of
+                                        the simulation curve follow the original animation.</span></li>
+                        <li dir="ltr"><span><strong dir="ltr">'Anim Follow Damp'</strong>&nbsp;- The damp applied to
+                                        following the original animation.</span></li>
+                        <li dir="ltr"><span><strong dir="ltr">'Mass'</strong>&nbsp;- Weight of simulation curve; high
+                                        values will cause it to act more like a metal chain.</span></li>
+                        <li dir="ltr"><span><strong dir="ltr">'Damp'</strong>&nbsp;- Affects how the&nbsp;simulation
+                                        curve&nbsp;bends and stretches.</span></li>
+                        <li dir="ltr"><span><strong dir="ltr">'Stiffness'</strong>&nbsp;- The amount the&nbsp;simulation
+                                        curve&nbsp;flex with regard to the rest position.</span></li>
+                        <li dir="ltr"><span><strong dir="ltr">'Turbulence Intensity'</strong>&nbsp;- Simulates wind; off
+                                        by default.</span></li>
+                        <li dir="ltr"><span><strong dir="ltr">'Turbulence Frequency'</strong>&nbsp;- The scale of the
+                                        wind.</span></li>
+                        <li dir="ltr"><span><strong dir="ltr">'Turbulence Speed'</strong>&nbsp;- Rate at which wind
+                                        pattern changes over time.</span></li>
+                </ul>
+                <p dir="ltr"><span>For more info:&nbsp;<a dir="ltr"
+                                        href="https://help.autodesk.com/view/MAYAUL/2018/ENU/?contextId=NODES-HAIRSYSTEM"
+                                        rel="noopener noreferrer" target="_blank">Maya's docs</a></span><span></span>
+                </p>
+                <p dir="ltr"><span><strong>Core</strong>:</span></p>
+                <p dir="ltr"><span>This attachment works by creating a curve with CVs attached to each
+                                joint.<br /></span><span>Then create a hair simulation system for that
+                                curve.<br /></span><span>Then finally, have the new dynamic joints follow the simulated
+                                curve.</span></p>
+                <p dir="ltr"><span><strong>Collisions</strong>:</span></p>
+                <p dir="ltr"><span dir="ltr">With the release of version<span>&nbsp;</span><em>1.03.00</em>, MakeDynamic
+                                now supports collisions by connecting to a nucleus node in the Maya scene.<br />To add
+                                collisions, follow these steps:</span></p>
+                <ol>
+                        <li><span>Find the nucleus node in the dropdown attribute '<em>Connect To Nucleus</em>' on the
+                                        MakeDynamic attachment. If there is no nucleus node in the scene, you can create
+                                        one by using the '<em>Create a Nucleus Node</em>' button located above the
+                                        dropdown.</span></li>
+                        <li><span>Rebuild your node. This step will connect the simulation to the nucleus node.</span>
+                        </li>
+                        <li><span>To add a mesh as a collider, In Maya, navigate in Maya to the 'FX' menus and then
+                                        select 'NCloth'&gt;'Create Passive Collider (Options)'.</span></li>
+                        <li><span>In the options window, choose the appropriate nucleus node, select the collider mesh,
+                                        and click 'Make Collide'.</span></li>
+                </ol>
+                <p dir="ltr"><span>By following these steps, you can easily set up collisions with MakeDynamic.</span>
+                </p>
+                <p dir="ltr"><span><u dir="ltr">Notes</u>:</span></p>
+                <ul>
+                        <li dir="ltr"><span>You can transfer skinning to the new dynamic joints using the&nbsp;<a
+                                                dir="ltr"
+                                                href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000434169"
+                                                rel="noopener noreferrer" target="_blank"><strong dir="ltr">'Transfer
+                                                        Weights Tool'</strong></a>.</span></li>
+                        <li dir="ltr"><span>This attachment creates dynamic joints only for joints with
+                                        'skinning_tag'.</span></li>
+                        <li dir="ltr"><span>A node can have multiple dynamic joint chains, for example, the fingers node
+                                        can simulate each finger. Since a joint can only be part of one simulation joint
+                                        chain, the same 'parent_joint' value cannot be shared by more than one joint
+                                        value.</span></li>
+                        <li dir="ltr"><span>When 'create_dynamic_joint' for a joint is unchecked, other joints will
+                                        still have it listed as an option in the 'parent_joint' dropdown. Choosing that
+                                        joint as a 'parent_joint' will instead result in it becoming a top joint.</span>
+                        </li>
+                        <li dir="ltr"><span dir="ltr">When using a nucleus node, the 'Start Frame' will be managed by it
+                                        and won't appear on the 'simulation_ctrl'.</span></li>
+                </ul>
+                <p dir="ltr"><span>_____________________________________________</span></p>
+                <p dir="ltr"><span>Get Arise at:&nbsp;<a dir="ltr"
+                                        href="https://www.ariserigging.com/">https://www.ariserigging.com</a></span></p>
+        </div>
+        <div class="text__content kbase-content__description" dir="ltr"></div>
+</div>

@@ -1,0 +1,16 @@
+2024-03-07 19:54:46 : Begin installation
+2024-03-07 19:54:46 : Show EULA
+2024-03-07 19:54:48 : Setting automatic paths:
+2024-03-07 19:54:48 : Using the default user preferences path to install the module.
+2024-03-07 19:54:48 : C:\Users\unilo\Documents\maya\modules
+2024-03-07 19:54:48 : C:\Users\unilo\Documents\maya\modules
+2024-03-07 19:54:54 : Installing files to: C:\Users\unilo\Documents\maya\modules
+2024-03-07 19:54:54 : Copying: C:\Users\unilo\Documents\maya\Plug-ins\iDeform\modules\iDeform to: C:\Users\unilo\Documents\maya\modules\iDeform
+2024-03-07 19:54:54 : Creating module file in: C:\Users\unilo\Documents\maya\modules
+2024-03-07 19:54:54 : Writing module file: C:\Users\unilo\Documents\maya\modules\iDeform.mod
+2024-03-07 19:54:54 : Installation complete.
+2024-03-07 20:03:47 : Begin installation
+2024-03-07 20:03:47 : Show EULA
+2024-03-07 20:03:48 : Found loaded plug-in: iDeform.mll
+2024-03-07 20:03:53 : Error: Unable to perform the installation with loaded plug-ins.
+2024-03-07 20:03:53 : Installation cancelled because an error has occurred.

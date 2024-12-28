@@ -1,0 +1,93 @@
+<div class="readonly threshold-input-field kbase-content__title">
+    <h1 class="readonly threshold-input-field kbase-content__title"><span data-test-id="article-title"
+            class="kbase-content__title--readonly collab-annotatable" id="article_title">SpaceSwitch</span></h1>
+    <div class="text__content kbase-content__description" dir="ltr">
+        <p dir="ltr"><span>A SpaceSwitch creates an attribute or attributes on a ctrl that the animator can use to
+                switch between spaces.<br /></span><span>For Example, to have the wrist ctrl move with the head or with
+                the hips.</span></p>
+        <p dir="ltr"><span></span><span><u dir="ltr"></u></span><span><u dir="ltr">Attributes</u>:</span></p>
+        <ul>
+            <li dir="ltr"><span><strong dir="ltr">'Switch Type'</strong>&nbsp;- Affects only the rotations
+                    (<u>orient</u>), only the position (<u>point</u>), or both (<u>parent</u>).</span></li>
+            <li dir="ltr"><span><strong dir="ltr">'Ctrl'</strong>&nbsp;- The ctrl to add the space switch to.</span>
+            </li>
+            <li dir="ltr"><span><strong dir="ltr">'Style'</strong>&nbsp;- '<u>enum_attr</u>' creates a single dropdown
+                    attribute, while '<u>float_attrs</u>' creates several float attributes allowing blending between
+                    spaces.<br /><img
+                        src="dropdown.png"
+                        class="fr-fic fr-fil fr-dii inline-image" data-attachment="[object Object]"
+                        data-id="69034726482" /><img
+                        src="float_attrs.png"
+                        class="fr-fic fr-fil fr-dib inline-image" data-attachment="[object Object]"
+                        data-id="69034726501" /><br />(on the left - '<u>enum_attr</u>', on the right -
+                    '<u>float_attrs</u>')</span></li>
+            <li dir="ltr"><span><strong dir="ltr">'Add Parent Space'</strong>&nbsp;- If checked, will add the parent of
+                    the ctrl as the first space called 'local'.</span></li>
+            <li dir="ltr"><span><strong dir="ltr">'Number Of Extra Spaces'</strong>&nbsp;- The number of spaces; this
+                    enables the space attributes below.</span></li>
+            <li dir="ltr"><span><strong dir="ltr">'Space # Name'</strong>&nbsp;- Name of this space.</span></li>
+            <li dir="ltr"><span dir="ltr"><strong dir="ltr">'Space #'</strong><span>&nbsp;</span>- The transform that
+                    the ctrl will move/rotate within his space.<br />You can use a connection, input a Maya transform
+                    name, or a 'tracked node':</span>
+                <ul>
+                    <li dir="ltr"><span><u>String Input</u>&nbsp;- You can select any Maya transform in the scene and
+                            press the arrow button next to the attribute. The indicator '<strong dir="ltr">*</strong>'
+                            color and tooltip will tell you if the transform is valid.<br />Note that if the transform
+                            gets renamed, you'll need to update this attribute with his new name.<br /><span
+                                dir="ltr"><img
+                                    src="input_string.png"
+                                    class="fr-fic fr-fil fr-dib inline-image" data-attachment="[object Object]"
+                                    data-id="69034998421" /></span></span></li>
+                    <li dir="ltr"><span><u>Connection</u>&nbsp;- Right-click on the attribute name to promote it, then,
+                            using a<span dir="ltr">&nbsp;'</span><a
+                                href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000444546">CustomDriver</a>',&nbsp;draw
+                            a connection between them.<br /><img
+                                src="connection.png"
+                                class="fr-fic fr-fil fr-dii inline-image" data-attachment="[object Object]"
+                                data-id="69034998277" /></span><span dir="ltr"><u dir="ltr"><br /></u></span></li>
+                    <li dir="ltr"><span dir="ltr"><u dir="ltr">Tracked nodes</u>&nbsp;</span><span>- As of version
+                            1.02.00, you can select a driver for this space by right-clicking on the attribute field.
+                            This will bring up a list of options from which you can choose a node. Once you have
+                            selected a node, you can choose any of its ctrls or joints as the driver for this
+                            space.</span>
+                        <p><span>Unlike string input tracked nodes, tracked ctrls or joints do not require updating if
+                                the node they are attached to has been renamed. This is because tracked nodes are linked
+                                to their node by a unique identifier, rather than the node's name. This is different
+                                from string inputs that rely on the node's name and will need to be updated if the name
+                                is changed.</span></p>
+                        <p><span dir="ltr"><img
+                                    src="right_click_01.png"
+                                    class="fr-fic fr-fil fr-dii inline-image" data-attachment="[object Object]"
+                                    data-id="69072274785" width="388" height="137" /><img
+                                    src="right_click_02.png"
+                                    class="fr-fic fr-fil fr-dib inline-image" data-attachment="[object Object]"
+                                    data-id="69072274886" width="388" height="93" /></span></p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p dir="ltr"><span><strong>SpaceSwitch Search &amp; Replace</strong>:</span></p>
+        <p dir="ltr"><span dir="ltr">As of version 1.02.00, a '<em dir="ltr">Replace L &gt; R</em>', '<em>Replace R &gt;
+                    L</em>', and an '<em>Options</em>' buttons will appear when you right-click on a SpaceSwitch
+                attachment.</span></p>
+        <p dir="ltr"><span dir="ltr"><img
+                    src="replace.png"
+                    class="fr-fic fr-fil fr-dib inline-image" data-attachment="[object Object]" data-id="69072276067"
+                    width="286" height="259" /><br />The '<em>Options</em>' button presents a table where you can enter
+                "Left string terms" and "Right string terms". Once you've entered these values, pressing the
+                '<em>Replace L &gt; R</em>' button will trigger Arise to search for the "Left string terms" within the
+                "SpaceSwitch" space attributes. Arise will then replace any instances of the "Left string terms" found
+                in these attributes with the corresponding "Right string terms".</span></p>
+        <p dir="ltr"><span><img
+                    src="replace_options.png"
+                    class="fr-fic fr-fil fr-dib inline-image" data-attachment="[object Object]" data-id="69072276297"
+                    width="298" height="247" /></span></p>
+        <p dir="ltr"><span dir="ltr">In addition, Arise can assist you in replacing tracked ctrls and joints located on
+                nodes with the prefix "L_" or "R_" to their mirrored nodes. To do this, simply check the "<em>Replace
+                    tracked nodes with their mirrored nodes</em>" checkbox.</span></p>
+        <p dir="ltr"><span>_____________________________________________</span></p>
+        <p dir="ltr"><span>Get Arise at:&nbsp;</span><a dir="ltr"
+                href="https://www.ariserigging.com/"><span>https://www.ariserigging.com</span></a></p>
+    </div>
+    <div class="text__content kbase-content__description" dir="ltr"></div>
+</div>

@@ -1,0 +1,552 @@
+global proc shelf_ZooToolsPro () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Modeling Tools" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Modeling Menu" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -overlayLabelColor 0.9 0.9 0.9 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_modeling_tools\\1.6.30/icons\\zoo_modeling_tools_icons\\modelingMenu_shlf_64.png" 
+        -image1 "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_modeling_tools\\1.6.30/icons\\zoo_modeling_tools_icons\\modelingMenu_shlf_64.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -overlayLabelColor 0.9 0.9 0.9 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_core\\2.3.46/icons\\shelves\\riggingMenu_shlf_64.png" 
+        -image1 "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_core\\2.3.46/icons\\shelves\\riggingMenu_shlf_64.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Asset Tools" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Asset Menu" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -overlayLabelColor 0.9 0.9 0.9 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_model_assets\\1.1.22/icons\\packageAssetsMenu_shlf_64.png" 
+        -image1 "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_model_assets\\1.1.22/icons\\packageAssetsMenu_shlf_64.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -overlayLabelColor 0.9 0.9 0.9 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_core\\2.3.46/icons\\shelves\\utilsMenu_shlf_64.png" 
+        -image1 "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_core\\2.3.46/icons\\shelves\\utilsMenu_shlf_64.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Camera Tools" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Camera Tools" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -overlayLabelColor 0.9 0.9 0.9 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_camera_tools\\1.4.15/icons\\cameraMenu_shlf_64.png" 
+        -image1 "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_camera_tools\\1.4.15/icons\\cameraMenu_shlf_64.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -overlayLabelColor 0.9 0.9 0.9 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_animation_tools\\1.1.27/icons\\animationMenu_shlf_64.png" 
+        -image1 "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_animation_tools\\1.1.27/icons\\animationMenu_shlf_64.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Dynamics Tools" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Dynamics Menu" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -overlayLabelColor 0.9 0.9 0.9 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_dynamics_tools\\1.0.17/icons\\fxDynamicsMenu_shlf_64.png" 
+        -image1 "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_dynamics_tools\\1.0.17/icons\\fxDynamicsMenu_shlf_64.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -overlayLabelColor 0.9 0.9 0.9 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_core\\2.3.46/icons\\shelves\\lightMenu_shlf_64.png" 
+        -image1 "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_core\\2.3.46/icons\\shelves\\lightMenu_shlf_64.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -overlayLabelColor 0.9 0.9 0.9 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_uv_tools\\1.1.23/icons\\uvMenu_shlf_64.png" 
+        -image1 "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_uv_tools\\1.1.23/icons\\uvMenu_shlf_64.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Renderer Tools" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Renderer Tools" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -overlayLabelColor 0.9 0.9 0.9 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_renderer_tools\\1.0.20/icons\\renderingMenu_shlf_64.png" 
+        -image1 "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_renderer_tools\\1.0.20/icons\\renderingMenu_shlf_64.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -overlayLabelColor 0.9 0.9 0.9 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_shader_tools\\1.2.29/icons\\shaderMenu_shlf_64.png" 
+        -image1 "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_shader_tools\\1.2.29/icons\\shaderMenu_shlf_64.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    separator
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -style "shelf" 
+        -horizontal 0
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -overlayLabelColor 0.9 0.9 0.9 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_core\\2.3.46/icons\\shelves\\hiveWindow_shlf_64.png" 
+        -image1 "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_core\\2.3.46/icons\\shelves\\hiveWindow_shlf_64.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Opens the Zoo Chat GPT Window" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Zoo Chat GPT" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -overlayLabelColor 0.9 0.9 0.9 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_chatgpt\\1.0.2/icons\\chatGPT_shlf_64.png" 
+        -image1 "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_chatgpt\\1.0.2/icons\\chatGPT_shlf_64.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "\nfrom zoo.apps.toolpalette import run as _paletterun\n_zooPalette = _paletterun.currentInstance()\n_zooPalette.executePluginById(**{'pluginId': 'zoo.chatgpt.ui'})\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -overlayLabelColor 0.9 0.9 0.9 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_core\\2.3.46/icons\\shelves\\devMenu_shlf_64.png" 
+        -image1 "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_core\\2.3.46/icons\\shelves\\devMenu_shlf_64.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Loads the zootools preferences GUI" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Preferences" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -overlayLabelColor 0.9 0.9 0.9 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_core\\2.3.46/icons\\shelves\\preferencesWindow_shlf_64.png" 
+        -image1 "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_core\\2.3.46/icons\\shelves\\preferencesWindow_shlf_64.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "\nfrom zoo.apps.toolpalette import run as _paletterun\n_zooPalette = _paletterun.currentInstance()\n_zooPalette.executePluginById(**{'pluginId': 'zoo.preferencesui'})\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create custom hotkeys" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Hotkey Editor" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -overlayLabelColor 0.9 0.9 0.9 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_core\\2.3.46/icons\\shelves\\hotkeysWindow_shlf_64.png" 
+        -image1 "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_core\\2.3.46/icons\\shelves\\hotkeysWindow_shlf_64.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "\nfrom zoo.apps.toolpalette import run as _paletterun\n_zooPalette = _paletterun.currentInstance()\n_zooPalette.executePluginById(**{'pluginId': 'zoo.hotkeyeditorui'})\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Help Menu" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Help Menu" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -overlayLabelColor 0.9 0.9 0.9 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_core\\2.3.46/icons\\shelves\\helpMenu_shlf_64.png" 
+        -image1 "C:\\Users\\unilo\\Documents\\maya\\scripts\\zootoolspro\\install\\packages\\zoo_core\\2.3.46/icons\\shelves\\helpMenu_shlf_64.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

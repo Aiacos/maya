@@ -1,0 +1,22 @@
+{
+  "toolsetGroups": [
+    {
+      "type": "hiveArtistUiVisible",
+      "name": "Hive",
+      "color": [
+        115,
+        187,
+        211
+      ],
+      "hidden": false,
+      "hueShift": 0,
+      "toolsets": [
+        "hiveFbxRigExport",
+        "hiveMayaReferenceExport",
+        "hiveMirrorPasteAnim",
+        "hiveGuideAlignMirror",
+        "planeOrient"
+      ]
+    }
+  ]
+}

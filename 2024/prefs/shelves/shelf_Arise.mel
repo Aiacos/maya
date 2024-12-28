@@ -1,0 +1,178 @@
+global proc shelf_Arise () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Arise Rigging System" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Arise" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -imageOverlayLabel "Arise" 
+        -overlayLabelColor 0.95 0.95 0.95 
+        -overlayLabelBackColor 0 0 0 0.4 
+        -image "C:/Users/unilo/Documents/maya/Plug-ins/arise_main\\py_3_10\\arise\\resources\\icons\\arise_logo_32pix.png" 
+        -image1 "C:/Users/unilo/Documents/maya/Plug-ins/arise_main\\py_3_10\\arise\\resources\\icons\\arise_logo_32pix.png" 
+        -style "iconOnly" 
+        -marginWidth 0
+        -marginHeight 1
+        -command "\nimport sys\nimport os\n\nLOCAL_PATH = r\"C:/Users/unilo/Documents/maya/Plug-ins/arise_main\"\nversion_folder = 'py_' + str(sys.version_info.major) + '_' + str(sys.version_info.minor)\npath = os.path.join(LOCAL_PATH, version_folder)\n\nif path not in sys.path:\n    sys.path.append(path)\n\nfrom arise.ui_elements import ior_main_window\n\n# load UI.\ntry:\n    Arise.deleteLater()\n    print(\"deleting old UI\")\nexcept:\n    pass\n\nArise = ior_main_window.IORMainWindow(\n    parent_to_maya=None, # can be (True, False, None)\n    always_on_top=None, # can be (True, False, None)\n    log_feedback_level=\"info\",\n    default_settings=False,\n    )\nArise.show_()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Model Validation Checks" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Model Validation" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -imageOverlayLabel "Valid" 
+        -overlayLabelColor 0.95 0.95 0.95 
+        -overlayLabelBackColor 0 0 0 0.4 
+        -image "C:/Users/unilo/Documents/maya/Plug-ins/arise_main\\py_3_10\\arise\\model_updater\\model_validation\\resources\\model_validation_icon.png" 
+        -image1 "C:/Users/unilo/Documents/maya/Plug-ins/arise_main\\py_3_10\\arise\\model_updater\\model_validation\\resources\\model_validation_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 0
+        -marginHeight 1
+        -command "\nimport sys\nimport os\n\nLOCAL_PATH = r\"C:/Users/unilo/Documents/maya/Plug-ins/arise_main\"\nversion_folder = 'py_' + str(sys.version_info.major) + '_' + str(sys.version_info.minor)\npath = os.path.join(LOCAL_PATH, version_folder)\n\nif path not in sys.path:\n    sys.path.append(path)\n\nfrom arise.model_updater.model_validation.ui import validation_main_window\n\n# load UI.\ntry:\n    validation_ui.deleteLater()\nexcept:\n    pass\n\nvalidation_ui = validation_main_window.ValidationMainWindow()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Set all ctrls in scene to bind pose" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "BindPose" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -imageOverlayLabel "BindPose" 
+        -overlayLabelColor 0.95 0.95 0.95 
+        -overlayLabelBackColor 0 0 0 0.4 
+        -image "C:/Users/unilo/Documents/maya/Plug-ins/arise_main\\py_3_10\\arise\\resources\\icons\\bind_pose_icon.png" 
+        -image1 "C:/Users/unilo/Documents/maya/Plug-ins/arise_main\\py_3_10\\arise\\resources\\icons\\bind_pose_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 0
+        -marginHeight 1
+        -command "\nimport sys\nimport os\n\nLOCAL_PATH = r\"C:/Users/unilo/Documents/maya/Plug-ins/arise_main\"\nversion_folder = 'py_' + str(sys.version_info.major) + '_' + str(sys.version_info.minor)\npath = os.path.join(LOCAL_PATH, version_folder)\n\nif path not in sys.path:\n    sys.path.append(path)\n\nfrom arise.utils.ctrls_utils import apply_bind_pose_all\n\napply_bind_pose_all(silent=True)\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Set all ctrls in scene to bind pose (Transformation values only)" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "BP TRANS" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -imageOverlayLabel "BP (Trans)" 
+        -overlayLabelColor 0.95 0.95 0.95 
+        -overlayLabelBackColor 0 0 0 0.4 
+        -image "C:/Users/unilo/Documents/maya/Plug-ins/arise_main\\py_3_10\\arise\\resources\\icons\\bind_pose_icon.png" 
+        -image1 "C:/Users/unilo/Documents/maya/Plug-ins/arise_main\\py_3_10\\arise\\resources\\icons\\bind_pose_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 0
+        -marginHeight 1
+        -command "\nimport sys\nimport os\n\nLOCAL_PATH = r\"C:/Users/unilo/Documents/maya/Plug-ins/arise_main\"\nversion_folder = 'py_' + str(sys.version_info.major) + '_' + str(sys.version_info.minor)\npath = os.path.join(LOCAL_PATH, version_folder)\n\nif path not in sys.path:\n    sys.path.append(path)\n\nfrom arise.utils.ctrls_utils import apply_bind_pose_all\n\napply_bind_pose_all(silent=True, only_trans=True)\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Set all ctrls in scene to zero pose" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "ZeroPose" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -imageOverlayLabel "ZeroPose" 
+        -overlayLabelColor 0.95 0.95 0.95 
+        -overlayLabelBackColor 0 0 0 0.4 
+        -image "C:/Users/unilo/Documents/maya/Plug-ins/arise_main\\py_3_10\\arise\\resources\\icons\\zero_pose_icon.png" 
+        -image1 "C:/Users/unilo/Documents/maya/Plug-ins/arise_main\\py_3_10\\arise\\resources\\icons\\zero_pose_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 0
+        -marginHeight 1
+        -command "\nimport sys\nimport os\n\nLOCAL_PATH = r\"C:/Users/unilo/Documents/maya/Plug-ins/arise_main\"\nversion_folder = 'py_' + str(sys.version_info.major) + '_' + str(sys.version_info.minor)\npath = os.path.join(LOCAL_PATH, version_folder)\n\nif path not in sys.path:\n    sys.path.append(path)\n\nfrom arise.utils.ctrls_utils import apply_zero_pose_all\n\napply_zero_pose_all(silent=True)\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

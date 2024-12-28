@@ -1,0 +1,109 @@
+<h1 class="readonly threshold-input-field kbase-content__title"><span data-test-id="article-title"
+        class="kbase-content__title--readonly collab-annotatable" id="article_title">CA_Mouth</span></h1>
+<div class="text__content kbase-content__description" dir="ltr">
+    <p dir="ltr"><span>Creates a cartoon jaw and lips. Features include lips seal, zipper, auto volume, thickness, upper
+            lip push, etc.</span><span></span></p>
+    <p dir="ltr"><span><u>Guides</u>:</span></p>
+    <ul>
+        <li dir="ltr"><span><strong>'Jaw'</strong>&nbsp;- Jaw pivot position, usually positioned in the middle of the
+                head on the X axis and slightly in front of and below the ears on the Y and Z
+                axes.</span><span><br /><img
+                    src="jaw_guide.png"
+                    class="fr-fic fr-fil fr-dib inline-image" data-attachment="[object Object]" data-id="69010014634"
+                    width="154" height="150" /></span></li>
+        <li dir="ltr"><span><strong dir="ltr">'L/R_mouth_corner'</strong>&nbsp;- Place at the lip corners and align with
+                the lips.</span></li>
+        <li dir="ltr"><span><strong>'M_upper_lip', 'M_lower_lip'</strong>&nbsp;- Position at the center of the upper lip
+                or lower lip.</span></li>
+        <li dir="ltr"><span><strong dir="ltr">'L/R_upper_lip_minor', 'L/R_lower_lip_minor'</strong>&nbsp;- Placed evenly
+                between middle and corner guides on the lips.</span></li>
+        <li dir="ltr"><span><strong>'L/R_mouth_shape_A', '</strong><span dir="ltr"><strong
+                        dir="ltr">L/R_mouth_shape_B'</strong>&nbsp;-&nbsp;</span>Place these guides past the lips and
+                inside the cheek. A curve will be driven by them, and the corner ctrls will move along that
+                curve.</span></li>
+    </ul>
+    <p><span><img
+                src="mouth_guides.png"
+                class="fr-fic fr-fil fr-dii inline-image" data-attachment="[object Object]" data-id="69033724120"
+                width="357" height="215" /></span></p>
+    <p><span><img
+                src="cheeks_guides.png"
+                class="fr-fic fr-fil fr-dib inline-image" data-attachment="[object Object]" data-id="69033725175"
+                width="357" height="215" /></span><span></span></p>
+    <p dir="ltr"><span><u dir="ltr">Guide's Important Notes</u>:</span></p>
+    <ul>
+        <li dir="ltr"><span>The&nbsp;<strong>'Mirror Mouth Guides'</strong>&nbsp;button makes the right side guides
+                mirror the left side.<br />So with a symmetrical character, you only need to place the guides on the
+                left side.<br />Using this button in&nbsp;<a dir="ltr"
+                    href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000434042"
+                    rel="noopener noreferrer" target="_blank"><strong>'Solo Mode'</strong></a>&nbsp;will mirror the
+                guides in world space.</span></li>
+        <li dir="ltr"><span>Both upper and lower guides display two curves; the lips skinning joints will be created on
+                those curves. Ensure the curves are on the edges of the lips that are closest to each
+                other.</span><span><br /><img
+                    src="lips_curves.png"
+                    class="fr-fic fr-fil fr-dib inline-image" data-attachment="[object Object]" data-id="69010011608"
+                    width="327" height="161" /></span></li>
+        <li dir="ltr">
+            <p dir="ltr"><span>The guides also drive a thinner curve and this curve controls the movement of the corner
+                    ctrls.</span></p>
+        </li>
+    </ul>
+    <p dir="ltr"><span><u>Attributes</u>:</span></p>
+    <ol>
+        <li dir="ltr"><span><strong>'Mirror Mouth Guides'</strong>&nbsp;- This button positions the right side guides in
+                a mirror image of the left side.<br />In&nbsp;<a dir="ltr"
+                    href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000434042"
+                    rel="noopener noreferrer" target="_blank"><strong>'Solo Mode'</strong></a>, they will be mirrored in
+                world space.</span></li>
+        <li dir="ltr"><span><strong>'Ctrls Scale'</strong>&nbsp;-&nbsp;Scale all the node ctrls. Note that the
+                attachments&nbsp;<a data-identifyelement="488" dir="ltr"
+                    href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000440777"
+                    rel="noopener noreferrer" target="_blank"><strong data-identifyelement="489">'Ctrls
+                        Settings'</strong></a>&nbsp;and&nbsp;<a data-identifyelement="490" dir="ltr"
+                    href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000440812"
+                    rel="noopener noreferrer" target="_blank"><strong
+                        data-identifyelement="491">'CtrlsShape'</strong></a><span dir="ltr">&nbsp;will override
+                    this.&nbsp;<a dir="ltr" href="https://youtu.be/-1fpRw6oJME?t=31" rel="noopener noreferrer"
+                        target="_blank"><strong>[Video]</strong></a>&nbsp;</span></span></li>
+        <li dir="ltr"><span><strong>'Ctrls Offset Position'</strong>&nbsp;- Offset of lips ctrls for when the ctrls are
+                hidden inside the lips mesh.</span></li>
+        <li dir="ltr"><span><strong>'Jaw Ctrl Offset'</strong>&nbsp;- Offsets the jaw ctrl relative to its pivot. Use
+                this attribute to position the 'jaw_ctrl' under the chin.<br /><img
+                    src="jaw_offset.png"
+                    class="fr-fic fr-fil fr-dib inline-image" data-attachment="[object Object]" data-id="69033725488"
+                    width="277" height="233" /></span></li>
+        <li dir="ltr"><span><strong dir="ltr">'Lips Skinning Joints'</strong>&nbsp;- The number of skinning joints per
+                lip, not including corner joints.</span></li>
+        <li dir="ltr"><span><strong dir="ltr">'Lips Bias'</strong>&nbsp;- Use this to control how much the lips move
+                with 'M_upper/lower_lip_ctrl'.<br /><img
+                    src="bias_1_5.png"
+                    data-id="69015533907" class="fr-fil fr-dib inline-image" data-attachment="[object Object]"
+                    width="263" height="166" /><span dir="ltr">value of 1.5</span><br /><img
+                    src="bias_1_0.png"
+                    class="fr-fil fr-dib inline-image" data-attachment="[object Object]" data-id="69015533940"
+                    width="262" height="133" />value of 1.0<br /><br /></span></li>
+        <li dir="ltr"><span>'<strong>Create Roll'</strong>&nbsp;- All minor and mid controls will have the '<u>Roll</u>'
+                and '<u>Roll loc Vis</u>' attributes, which allow them to be rotated from a different position. The
+                '<u>Roll Loc Vis</u>' attribute will display a locator that controls from where the roll
+                rotates.<br />(roll offset positions)&nbsp;</span></li>
+        <li dir="ltr"><span><strong>'Upper Roll Offset', 'Lower Roll Offset'</strong>&nbsp;- The initial roll offset
+                position from the ctrls. In other words, translation values of the roll locators.</span></li>
+        <li dir="ltr"><span><strong dir="ltr">'Upper Lip Push'</strong>&nbsp;- T<span dir="ltr">he lower lip will push
+                    the upper lip when they collide. Has an on/off attribute on 'M_upper_lip_ctrl'.</span></span></li>
+        <li dir="ltr"><span><strong>'Micro Ctrls'</strong>&nbsp;- Add a ctrl for every lip skinning joint.</span></li>
+    </ol>
+    <p dir="ltr"><span><u>Connections</u>:</span></p>
+    <ul>
+        <li dir="ltr"><span><strong>'Root Input'</strong>&nbsp;- Drives the whole node, usually driven by the
+                head.</span></li>
+        <li dir="ltr"><span><strong>'Head Output'</strong>&nbsp;- An output at the 'Root Input' usually drives the upper
+                teeth.</span></li>
+        <li dir="ltr"><span><strong>'Jaw Output'</strong>&nbsp;- An output at the jaw joint usually drives the lower
+                teeth.</span></li>
+    </ul>
+    <p dir="ltr"><span>_____________________________________________</span></p>
+    <p dir="ltr"><span>Get Arise at:&nbsp;</span><a dir="ltr"
+            href="https://www.ariserigging.com/"><span>https://www.ariserigging.com</span></a></p>
+</div>
+<div class="text__content kbase-content__description" dir="ltr"></div>

@@ -1,0 +1,42 @@
+source MCPXutils;
+
+global string $MCPX_ctr_name;
+global string $MCPXLastAttrCollectionUuid;
+
+global proc AEMCPXAttributeCollectionTemplate( string $nodeName ){
+    
+    editorTemplate -beginScrollLayout;
+
+	editorTemplate -beginLayout "Rest values for attributes" -collapse false;
+
+	   editorTemplate -callCustom "MCPXtransCircleScaleNew" "MCPXtransCircleScaleReplace" "attrs";
+
+	editorTemplate -endLayout;
+
+    AEobjectSetNoScroll $nodeName;
+
+	editorTemplate -addExtraControls;
+
+	editorTemplate -endScrollLayout;
+}
+
+global proc MCPXtransCircleScaleNew(string $attrName){
+    python("from mocapx.ui.ae.attribute_collection import attribute_collection_create_view");
+    string $par = `setParent -q`;
+
+    python("attribute_collection_create_view('" + $par + "', '" + $attrName + "')");
+
+    global string $MCPXLastAttrCollectionUuid;
+    $MCPXLastAttrCollectionUuid = MCPXGetNodeUUID($attrName);
+}
+
+global proc MCPXtransCircleScaleReplace( string $attrName ){
+    python("from mocapx.ui.ae.attribute_collection import attribute_collection_update_view");
+    string $par = `setParent -q`;
+
+    global string $MCPXLastAttrCollectionUuid;
+
+    python("attribute_collection_update_view('" + $par + "', '" + $attrName + "', '" + $MCPXLastAttrCollectionUuid + "')");
+
+    $MCPXLastAttrCollectionUuid = MCPXGetNodeUUID($attrName);
+}

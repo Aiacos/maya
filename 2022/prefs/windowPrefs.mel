@@ -1,0 +1,44 @@
+//Maya Preference 2022 (Release 1)
+//
+//
+windowPref -topLeftCorner 225 150 -widthHeight 250 400 -maximized true -parentMain true outlinerPanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 700 400 -maximized true -parentMain true hyperGraphPanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 660 400 -maximized true -parentMain true graphEditor1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 1400 400 -maximized true -parentMain true timeEditorPanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 660 400 -maximized true -parentMain true dopeSheetPanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 1040 600 -maximized true -parentMain true nodeEditorPanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 660 400 -maximized true -parentMain true shapePanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 1040 600 -maximized true -parentMain true posePanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 660 400 -maximized true -parentMain true clipEditorPanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 524 470 -maximized true -parentMain true devicePanel1Window;
+windowPref -topLeftCorner 75 75 -widthHeight 1440 900 -maximized true -parentMain true hyperShadePanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 700 400 -maximized true -parentMain true dynPaintScriptedPanelWindow;
+windowPref -topLeftCorner 250 200 -widthHeight 550 562 -maximized true -parentMain true blindDataEditor1Window;
+windowPref -topLeftCorner 150 200 -widthHeight 1120 640 -maximized true -parentMain true polyTexturePlacementPanel1Window;
+windowPref -topLeftCorner 235 230 -widthHeight 1000 495 -maximized true -parentMain true contentBrowserPanel1Window;
+windowPref -topLeftCorner -13 -2 -widthHeight 2560 2048 -maximized true -parentMain false MayaWindow;
+windowPref -topLeftCorner 688 1280 -widthHeight 640 480 -maximized false -parentMain true czTempReporterWnd;
+windowPref -topLeftCorner 688 1280 -widthHeight 928 1041 -maximized false -parentMain true shelfEditor;
+windowPref -topLeftCorner 450 2355 -widthHeight 1092 700 -maximized false -parentMain true OptionBoxWindow;
+windowPref -topLeftCorner 638 91 -widthHeight 571 699 -maximized false -parentMain true colorSetEditor;
+windowPref -topLeftCorner 584 687 -widthHeight 808 974 -maximized false -parentMain true Viewport20OptionsWindow;
+windowPref -topLeftCorner 688 1280 -widthHeight 1040 1240 -maximized false -parentMain true connectWindowModal;
+windowPref -topLeftCorner 692 2429 -widthHeight 714 551 -maximized false -parentMain true namespaceEditor;
+windowPref -topLeftCorner 688 1280 -widthHeight 680 560 -maximized false -parentMain true PluginInfoWin;
+windowPref -topLeftCorner 688 1280 -widthHeight 1000 1000 -maximized false -parentMain true FbxWarningWindow;
+windowPref -topLeftCorner 743 436 -widthHeight 1238 822 -maximized false -parentMain true FilePathEditor;
+windowPref -topLeftCorner 688 1280 -widthHeight 1000 800 -maximized false -parentMain true LockingKeyable;
+windowPref -topLeftCorner 461 835 -widthHeight 858 407 -maximized false -parentMain true ZivaPaintAttachmentsByProximityUI;
+windowPref -topLeftCorner 688 1280 -widthHeight 716 384 -maximized false -parentMain true LayerEditorQuickEditWindow;
+windowPref -topLeftCorner 688 1280 -widthHeight 810 400 -maximized false -parentMain true fpeRepathWin;
+windowPref -topLeftCorner 688 1280 -widthHeight 1126 900 -maximized false -parentMain true fpeAutoResolveWin;
+windowPref -topLeftCorner 272 242 -widthHeight 3268 1098 -maximized false -parentMain true Edit_Preset;
+windowPref -topLeftCorner 688 1280 -widthHeight 1300 1616 -maximized false -parentMain true asHelpImageWindow;
+windowPref -topLeftCorner 688 1280 -widthHeight 566 827 -maximized false -parentMain true asWalkDesigner;
+windowPref -topLeftCorner 688 1280 -widthHeight 585 680 -maximized false -parentMain true asAnimationTester;
+windowPref -topLeftCorner 688 1280 -widthHeight 512 457 -maximized false -parentMain true uvSetEditor;
+windowPref -topLeftCorner 210 390 -widthHeight 1634 1062 -maximized false -parentMain true PreferencesWindow;
+windowPref -topLeftCorner 688 1280 -widthHeight 724 244 -maximized false -parentMain true zBoneWarpOptions;
+windowPref -topLeftCorner 755 2396 -widthHeight 1200 700 -maximized false -parentMain true window1;
+windowPref -topLeftCorner 816 2490 -widthHeight 500 640 -maximized false -parentMain true intersectionSolver;
+windowPref -topLeftCorner 741 2098 -widthHeight 758 720 -maximized false -parentMain true Muscle_Tool;
