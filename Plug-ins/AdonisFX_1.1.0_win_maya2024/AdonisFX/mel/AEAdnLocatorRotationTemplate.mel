@@ -1,0 +1,25 @@
+global proc AEAdnLocatorRotationTemplate ( string $nodeName )
+{
+	editorTemplate -beginScrollLayout;
+		editorTemplate -beginLayout "Input" -collapse 0;
+			editorTemplate -addControl "startPosition";
+			editorTemplate -addControl "midPosition";
+			editorTemplate -addControl "endPosition";
+		editorTemplate -endLayout;
+
+		editorTemplate -beginLayout "Activation Values" -collapse 0;
+			editorTemplate -label "Angle"        -addControl "activationAngle";
+			editorTemplate -label "Velocity"     -addControl "activationVelocity";
+			editorTemplate -label "Acceleration" -addControl "activationAcceleration";
+		editorTemplate -endLayout;
+
+		editorTemplate -beginLayout "Draw" -collapse 0;
+			editorTemplate -addControl "scale";
+			editorTemplate -addControl "drawOutput";
+		editorTemplate -endLayout;
+
+		// suppressed attributes
+
+	editorTemplate -addExtraControls;
+	editorTemplate -endScrollLayout;
+}

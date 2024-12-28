@@ -1,0 +1,143 @@
+<h1 class="readonly threshold-input-field kbase-content__title"><span data-test-id="article-title"
+        class="kbase-content__title--readonly collab-annotatable" id="article_title">CA Quadruped Back Leg</span></h1>
+<div class="text__content kbase-content__description" dir="ltr">
+    <p dir="ltr"><span>Creates the back leg of a 4-legged animal (quadruped). Features include IK/FK, ribbon, twist,
+            soft IK, stretch, pin ctrl, etc.</span><span></span></p>
+    <p dir="ltr"><span><u>Guides</u>:</span></p>
+    <p dir="ltr"><span><img
+                src="guides_pic.png"
+                class="fr-fic fr-fil fr-dii inline-image" data-attachment="[object Object]" data-id="69005326037"
+                width="193" height="320" /><img
+                src="horse_anatomy.png"
+                class="fr-fil fr-dib inline-image" data-attachment="[object Object]" data-id="69005326045" width="168"
+                height="320" /></span><span></span></p>
+    <p dir="ltr"><span><u dir="ltr">Attributes</u>:</span></p>
+    <ol>
+        <li dir="ltr"><span dir="ltr"><strong>'Ctrls Scale'</strong><span>&nbsp;</span>- Scale all the node ctrls. Note
+                that the attachments<span>&nbsp;</span><a dir="ltr"
+                    href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000440777"
+                    rel="noopener noreferrer" target="_blank"><strong>'Ctrls
+                        Settings'</strong></a><span>&nbsp;</span>and<span>&nbsp;</span><a dir="ltr"
+                    href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000440812"
+                    rel="noopener noreferrer" target="_blank"><strong>'CtrlsShape'</strong></a><span>&nbsp;</span>will
+                override this.&nbsp;<a dir="ltr" href="https://youtu.be/-1fpRw6oJME?t=31" rel="noopener noreferrer"
+                    target="_blank"><strong>[Video]</strong></a>&nbsp;</span></li>
+        <li dir="ltr"><span dir="ltr"><strong>'Clean Transformations'</strong><span>&nbsp;</span>- If checked,
+                the<span>&nbsp;</span><a dir="ltr"
+                    href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000433385"
+                    rel="noopener noreferrer" target="_blank"><strong>zeroed pose</strong></a><span>&nbsp;</span>will be
+                the same as the<span>&nbsp;</span><a dir="ltr"
+                    href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000433385"
+                    rel="noopener noreferrer" target="_blank"><strong>bind pose</strong></a>; if unchecked, when zeroing
+                the ctrls, they will align with a world axis specified in the following two
+                attributes.<span>&nbsp;</span><strong><a href="https://youtu.be/-1fpRw6oJME?t=61"
+                        rel="noopener noreferrer" target="_blank">[Video]</a></strong>&nbsp;</span></li>
+        <li dir="ltr"><span dir="ltr"><strong>'World Orientation'</strong><span>&nbsp;</span>- The world axis the ctrls
+                will align with when zeroed. Usually, this attribute's default value is the correct
+                value.<span>&nbsp;</span><strong><a href="https://youtu.be/-1fpRw6oJME?t=61" rel="noopener noreferrer"
+                        target="_blank">[Video]</a></strong></span></li>
+        <li dir="ltr"><span dir="ltr"><strong>'World Orient Twist'</strong><span>&nbsp;</span>- Along with 'World
+                Orientation', defines the ctrls zeroed pose. Usually, the default value of 0 is the correct
+                value.<span>&nbsp;</span><strong><a href="https://youtu.be/-1fpRw6oJME?t=61" rel="noopener noreferrer"
+                        target="_blank">[Video]</a></strong>&nbsp;</span></li>
+        <li dir="ltr"><span dir="ltr"><strong>'Expose RotateOrder'</strong><span>&nbsp;</span>- Exposes all the ctrls
+                '<u>RotateOrder</u>' attribute in the Channel Box.<span>&nbsp;</span><a dir="ltr"
+                    href="https://youtu.be/-1fpRw6oJME?t=149" rel="noopener noreferrer"
+                    target="_blank"><strong>[Video]</strong></a></span></li>
+        <li dir="ltr"><span dir="ltr"><strong>'Secondary Ctrls'</strong><span>&nbsp;</span>- Secondary ctrls are added
+                under some ctrls to help prevent gimbal lock.<br />A visibility attribute is added to the parent
+                ctrl.<span>&nbsp;</span><a dir="ltr" href="https://youtu.be/-1fpRw6oJME?t=157" rel="noopener noreferrer"
+                    target="_blank"><strong>[Video]</strong></a>&nbsp;</span></li>
+        <li dir="ltr"><span dir="ltr"><strong>'Ik Fk Switch'</strong><span>&nbsp;</span>- Select where the '<u>Ik Fk
+                    Switch</u>' attribute and other shared attributes are placed:<span>&nbsp;</span><a dir="ltr"
+                    href="https://youtu.be/-1fpRw6oJME?t=171" rel="noopener noreferrer"
+                    target="_blank"><strong>[Video]</strong></a></span>
+            <ul>
+                <li dir="ltr"><span>'<u>switch_ctrl</u>' - Places them on a ctrl that follows the leg tip
+                        (default).</span></li>
+                <li dir="ltr"><span>'<u>proxy_attrs</u>' - places them as shared attributes (proxy attributes), on both
+                        the IK tip ctrl and the FK tip ctrl.</span></li>
+            </ul>
+        </li>
+        <li dir="ltr"><span><span dir="ltr"><strong>'Switch Ctrl Offset'</strong>&nbsp;- Position offset of
+                    'switch_ctrl'&nbsp;</span>from<span dir="ltr">&nbsp;the 'tip_jnt'.</span></span></li>
+        <li dir="ltr"><span><span dir="ltr"><strong>'Volume'</strong>&nbsp;- Adds '<u>Auto Volume</u>' and '<u>Manual
+                        Volume</u>' a</span>ttributes<span dir="ltr">.</span></span></li>
+        <li dir="ltr"><span><span dir="ltr"><strong dir="ltr">'Pin Ctrl'</strong>&nbsp;-&nbsp;&nbsp;Add a 'pin_ctrl'
+                    that&nbsp;constrains&nbsp;'mid_ctrl' w</span>hen activated. To activate t<span dir="ltr">his ctrl
+                    use the '<u dir="ltr">Pin</u>' attribute on 'mid_ctrl'.<br />Use a&nbsp;<a
+                        href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000440934"
+                        rel="noopener noreferrer"
+                        target="_blank"><strong>'SpaceSwitch'</strong></a>&nbsp;attachment&nbsp;</span>for 'pin_ctrl' to
+                properly use this feature.</span></li>
+        <li dir="ltr"><span><span dir="ltr"><strong dir="ltr">'Mirror Behaviour'</strong>&nbsp;-</span>Only affects
+                mirrored nodes.</span>
+            <ul>
+                <li dir="ltr"><span><u dir="ltr">Unchecked</u>&nbsp;- The IK ctrls of mirrored nodes will align with the
+                        world, meaning that both legs will move and rotate in the same direction (default for
+                        legs).</span></li>
+                <li dir="ltr"><span><u>Checked</u>&nbsp;- The IK ctrls of mirrored nodes will mirror orientations,
+                        meaning that both legs will reflect each other (default for arms).</span></li>
+            </ul>
+        </li>
+        <li dir="ltr"><span><strong dir="ltr">'IK Twist'</strong>&nbsp;-&nbsp;The attribute '<u>Twist</u><span
+                    dir="ltr">' is added to 'ik_tip_ctrl', giving you another control over the IK chain
+                    twist.</span></span></li>
+        <li dir="ltr"><span><strong dir="ltr">'Stretch'</strong>&nbsp;- The attributes '<u>Auto Stretch</u>' and
+                '<u>Manual Stretch</u><span dir="ltr">' are added to 'ik_tip_ctrl' for control over the leg
+                    length.</span></span></li>
+        <li dir="ltr"><span><strong dir="ltr">'Toggle Pole Vector'</strong>&nbsp;-&nbsp;<span dir="ltr">The attribute
+                    '</span><u>Toggle Pole Vector</u><span dir="ltr">' is added to 'ik_tip_ctrl', which can turn off the
+                    pole vector constraint.</span></span></li>
+        <li dir="ltr"><span><strong dir="ltr">'Soft IK'</strong>&nbsp;-&nbsp;<span dir="ltr">The attribute '<u>Soft
+                        Ik</u>' is added to 'ik_tip_ctrl', which helps fix the 'pop' in the animation when the IK chain
+                    gets fully extended.</span></span></li>
+        <li dir="ltr"><span><strong dir="ltr">'Ctrls Translate'</strong>&nbsp;-&nbsp;If checked, animators will also be
+                able to translate the FK ctrls.</span></li>
+        <li dir="ltr"><span dir="ltr"><strong dir="ltr">'Ribbon Joints'</strong><span>&nbsp;</span>- How many skinning
+                joints each ribbon will have (total x2; upper ribbon and lower ribbon).<span>&nbsp;</span><a dir="ltr"
+                    href="https://youtu.be/-1fpRw6oJME?t=198" rel="noopener noreferrer"
+                    target="_blank"><strong>[Video]</strong></a></span></li>
+        <li dir="ltr"><span><strong dir="ltr">'Ribbon Twist'</strong>&nbsp;- Allow the ribbon joints to twist. Turn this
+                off for creatures with external skeletons, such as spiders, or for characters wearing rigid
+                armor.</span></li>
+        <li dir="ltr"><span dir="ltr"><strong dir="ltr">'Ribbon Micro
+                    Ctrls'</strong><span>&nbsp;</span>-<span>&nbsp;</span>Add a ctrl for every ribbon skinning
+                joint.<span>&nbsp;</span><a dir="ltr" href="https://youtu.be/-1fpRw6oJME?t=211"
+                    rel="noopener noreferrer" target="_blank"><strong>[Video]</strong></a></span></li>
+        <li dir="ltr"><span dir="ltr"><strong dir="ltr">'Bezier Ctrls'</strong><span>&nbsp;</span>- Adds ctrls that
+                deform the ribbon like a Bezier curve.<span>&nbsp;</span><a href="https://youtu.be/-1fpRw6oJME?t=222"
+                    rel="noopener noreferrer" target="_blank"><strong>[Video]</strong></a></span></li>
+        <li dir="ltr"><span><strong dir="ltr">'Bezier Ctrls Offset'</strong>&nbsp;- Position offset of the Bezier ctrls
+                from the joint chain.</span></li>
+    </ol>
+    <p><span><u>Connections</u>:</span></p>
+    <ul>
+        <li><span><strong dir="ltr">'Root Input'</strong>&nbsp;- Drives the ctrls of this node except the 'ik_tip_ctrl'
+                and the 'ik_pv_ctrl'. Usually driven by the spine node.</span></li>
+        <li><span><strong dir="ltr">'IK Tip Input'</strong>&nbsp;- Drives the&nbsp;<span dir="ltr">'ik_tip_ctrl' and the
+                    'ik_pv_ctrl'. Separate from 'Root Input' because we often want the IK ctrls to move with
+                    the&nbsp;</span><strong><span dir="ltr"><a dir="ltr"
+                            href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000436626"
+                            rel="noopener noreferrer" target="_blank"></a></span></strong><span dir="ltr"><a dir="ltr"
+                        href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000436626"
+                        rel="noopener noreferrer" target="_blank"></a><a dir="ltr"
+                        href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000436626"
+                        rel="noopener noreferrer" target="_blank"><strong>'Base'</strong></a><a dir="ltr"
+                        href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000436626"
+                        rel="noopener noreferrer" target="_blank"></a></span><strong><span dir="ltr"><a dir="ltr"
+                            href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000436626"
+                            rel="noopener noreferrer" target="_blank"></a></span></strong><span
+                    dir="ltr">&nbsp;node.</span></span></li>
+        <li><span><span dir="ltr"><strong dir="ltr">'Root Output'</strong>&nbsp;- An output at the 'root_jnt'
+                    (pelvis).</span></span></li>
+        <li><span><span dir="ltr"><strong dir="ltr">'Ankle Output'</strong>&nbsp;- An output at the
+                    'tip_jnt'.</span></span></li>
+        <li><span><span dir="ltr"><strong dir="ltr">'Toes Tip Output'</strong>&nbsp;-&nbsp;</span>An output at the
+                'toes_tip_root_jnt'.</span></li>
+    </ul>
+    <p dir="ltr"><span>_____________________________________________</span></p>
+    <p dir="ltr"><span>Get Arise at:&nbsp;<a dir="ltr"
+                href="https://www.ariserigging.com/">https://www.ariserigging.com</a></span></p>
+</div>
+<div class="text__content kbase-content__description" dir="ltr"></div>

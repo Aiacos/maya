@@ -1,0 +1,109 @@
+source MCPXutils;
+
+global string $MCPXLastClipReaderUuid;
+global string $MCPX_clip_start_dir;
+
+
+global proc AEMCPXClipReaderTemplate( string $nodeName ){
+    
+    editorTemplate -beginScrollLayout;
+
+	editorTemplate -beginLayout "MocapX clip file" -collapse false;
+
+	    editorTemplate -callCustom "MCPXClipReaderCreateLoader" "MCPXClipReaderUpdateLoader" "clipFilepath";
+       
+        editorTemplate -addControl "clipFrameOffset";
+
+	editorTemplate -endLayout;
+
+    editorTemplate -beginLayout "Connection control" -collapse false;
+
+	    editorTemplate -callCustom "MCPXConnectionEditorButtonCreate" "MCPXConnectionEditorButtonUpdate";
+
+	editorTemplate -endLayout;
+
+	editorTemplate -beginLayout "Incoming attributes" -collapse false;
+        
+        editorTemplate -callCustom "MCPXClipReaderCreateAttrList" "MCPXClipReaderUpdateAttrList" "time";
+
+    editorTemplate -endLayout;
+
+    editorTemplate -suppress "caching";
+    editorTemplate -suppress "frozen";
+    editorTemplate -suppress "nodeState";
+
+	editorTemplate -addExtraControls;
+
+	editorTemplate -endScrollLayout;
+}
+
+
+global proc MCPXConnectionEditorButtonCreate(){
+       rowLayout -nc 1 ;
+           button -width 120 -height 28 -label "Connection Editor" -command "ConnectionEditor;" showConnectEditorCtrl;
+       setParent ..;
+}
+
+
+global proc MCPXConnectionEditorButtonUpdate(){}
+
+
+global proc MCPXLoadMocapXClip( string $filepathAttr){
+	string $value = getAttr($filepathAttr);
+	string $buffer[];
+    tokenize($filepathAttr, ".", $buffer);
+    string $node = $buffer[0];
+	python("from mocapx.lib.utils import clipreader_load_clip");
+	python("clipreader_load_clip('"+ $node + "', '" + $value + "')");
+}
+
+global proc MCPXPickMocapXClip( string $filepathAttr){
+	string $basicFilter = "*.mcpx";
+	global string $MCPX_clip_start_dir;
+	string $results[] = `fileDialog2 -dir $MCPX_clip_start_dir -fileFilter $basicFilter -fileMode 1 -caption "Select MocapX clip"`;
+
+	if (size($results)){
+        string $result = $results[0];
+        setAttr -type "string" $filepathAttr $result;
+        MCPXLoadMocapXClip($filepathAttr);
+        $MCPX_clip_start_dir = "";
+    }
+}
+
+global proc MCPXClipReaderCreateLoader( string $filepathAttr ){
+    global string $MCPX_clip_start_dir;
+    $MCPX_clip_start_dir = `workspace -q -rd`;
+
+	string $value = getAttr($filepathAttr);
+    rowLayout -nc 4 -adjustableColumn 2;
+    text -l "Pick MocapX clip";
+    textField -fileName $value clipFilepathCtrl;
+    connectControl clipFilepathCtrl $filepathAttr;
+	symbolButton -image "MCPXOpen.png" -command ("MCPXPickMocapXClip(\"" + $filepathAttr + "\")") clipPickFilepathCtrl;
+	symbolButton -image "MCPXRefresh.png" -command ("MCPXLoadMocapXClip(\"" + $filepathAttr + "\")") clipLoadFilepathCtrl;
+}
+
+global proc MCPXClipReaderUpdateLoader( string $filepathAttr ){
+	string $value = getAttr($filepathAttr);
+    textField -e -fileName $value clipFilepathCtrl;
+    connectControl clipFilepathCtrl $filepathAttr;
+	symbolButton -e -command ("MCPXPickMocapXClip(\"" + $filepathAttr + "\")") clipPickFilepathCtrl;
+	symbolButton -e -command ("MCPXLoadMocapXClip(\"" + $filepathAttr + "\")") clipLoadFilepathCtrl;
+}
+
+global proc MCPXClipReaderCreateAttrList( string $attrName ){
+    python("from mocapx.ui.ae.datasource import attr_list_create_view");
+    string $par = `setParent -q`;
+    python("attr_list_create_view('" + $par + "', '" + $attrName  + "')");
+}
+
+global proc MCPXClipReaderUpdateAttrList( string $attrName ){
+    python("from mocapx.ui.ae.datasource import attr_list_update_view");
+    string $par = `setParent -q`;
+
+    global string $MCPXLastClipReaderUuid; //value will be updated after last panel refresh
+
+    python("attr_list_update_view('" + $par + "', '" + $attrName +  "', '" + $MCPXLastClipReaderUuid + "')");
+
+    $MCPXLastClipReaderUuid = MCPXGetNodeUUID($attrName);
+}

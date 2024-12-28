@@ -1,0 +1,103 @@
+<!-- ####### HEY, I AM THE SOURCE EDITOR! #########-->
+<h1 class="readonly threshold-input-field kbase-content__title"><span
+                class="kbase-content__title--readonly collab-annotatable" data-test-id="article-title">Vehicle
+                Body</span></h1>
+<div class="readonly threshold-input-field kbase-content__title">Create a vehicle body (chassis) with features such as
+        steering ctrls, shake attributes, understeer, oversteer, and more.</div>
+<div class="text__content kbase-content__description" dir="ltr">
+        <p dir="ltr">&nbsp;</p>
+        <p dir="ltr"><u>Guides</u>:</p>
+        <ul>
+                <li dir="ltr"><strong dir="ltr">'Center Guide'</strong>&nbsp;- &nbsp;Position this guide at the center
+                        of the car. This is where the '<em>Body_drive_ctrl</em>' will be placed, which serves as the
+                        main control of the vehicle.</li>
+                <li dir="ltr"><strong>'Tilt Ctrl Guide'</strong>&nbsp;- Place this guide where the tilt control will be
+                        located. This guide will not have any effect if the '<em>Tilt</em>' attribute is unticked.</li>
+                <li dir="ltr"><strong>'Front Guide', 'Back Guide', 'Left Guide',</strong>&nbsp;and&nbsp;<strong>'Right
+                                Guide'</strong>&nbsp;- Position these guides on the ground at the outer edges of the
+                        vehicle.</li>
+        </ul>
+        <p dir="ltr"><img class="fr-fic fr-fil fr-dib inline-image"
+                        src="vehicle_body_guides.png"
+                        width="269" height="247" data-attachment="[object Object]" data-id="69082880149" /></p>
+        <p dir="ltr"><u dir="ltr">Attributes</u>:</p>
+        <ol>
+                <li dir="ltr"><span dir="ltr"><strong>'Ctrls Scale'</strong>&nbsp;- Scale all the node ctrls. Note that
+                                the attachments&nbsp;<strong><a
+                                                href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000440777"
+                                                target="_blank" rel="noopener noreferrer">'Ctrls
+                                                Settings'</a></strong>&nbsp;and&nbsp;<strong><a
+                                                href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000440812"
+                                                target="_blank"
+                                                rel="noopener noreferrer">'CtrlsShape'</a></strong>&nbsp;will override
+                                this.&nbsp;<a dir="ltr" href="https://youtu.be/-1fpRw6oJME?t=31" target="_blank"
+                                        rel="noopener noreferrer"><strong>[Video]</strong></a></span></li>
+                <li dir="ltr"><span dir="ltr"><strong>'Expose RotateOrder</strong><strong>'</strong>&nbsp;- Exposes all
+                                the ctrls '<u>RotateOrder</u>' attribute in the Channel Box.&nbsp;<a dir="ltr"
+                                        href="https://youtu.be/-1fpRw6oJME?t=149" target="_blank"
+                                        rel="noopener noreferrer"><strong>[Video]</strong></a></span></li>
+                <li dir="ltr"><strong dir="ltr">'Secondary Ctrls'&nbsp;</strong>- Secondary ctrls are added under some
+                        ctrls to help prevent gimbal lock.
+                        <p dir="ltr"><span dir="ltr">A visibility attribute is added to the parent ctrl.&nbsp;<a
+                                                dir="ltr" href="https://youtu.be/-1fpRw6oJME?t=157" target="_blank"
+                                                rel="noopener noreferrer"><strong>[Video]</strong></a></span></p>
+                </li>
+                <li>
+                        <p dir="ltr"><strong>'Tilt'</strong>&nbsp;- Add a tilt ctrl enable tilting the entire vehicle
+                                from side to side and back and forth.</p>
+                </li>
+                <li>
+                        <p dir="ltr"><strong>'Handling'</strong>&nbsp;- Add '<em>oversteer</em>' and
+                                '<em>understeer</em>' attributes to the '<em dir="ltr">driver_ctrl</em>'.</p>
+                </li>
+                <li>
+                        <p dir="ltr"><strong>'Shake'</strong>&nbsp;- Add shake attributes to the 'driver_ctrl' to
+                                simulate engine or road vibrations affecting the car.</p>
+                </li>
+                <li>
+                        <p dir="ltr"><strong>'Shake Up Down Amount'&nbsp;</strong>- Specify the range of vertical
+                                shaking the vehicle will experience in Maya units.</p>
+                </li>
+                <li>
+                        <p dir="ltr"><strong>'Shake Rotate Amount'</strong>&nbsp;- In degrees, specify the range the
+                                vehicle shake for 'front_back' and 'left_right'.</p>
+                </li>
+                <li>
+                        <p dir="ltr"><em>{As of version: 1.06.03}</em>&nbsp;<strong>'Add Four
+                                        Wheels'</strong>&nbsp;-&nbsp;This feature adds four wheels to the vehicle, each
+                                with its own suspension system that affects the body. Re-templating is required to
+                                position the wheel guides correctly.<br />[Since the wheels are both driven by and drive
+                                the Vehicle Body, the suspension system for the wheels must be created within the
+                                'Vehicle Body' node and cannot be placed on a separate node.]</p>
+                </li>
+                <li>
+                        <p dir="ltr"><span dir="ltr"><strong dir="ltr">'Suspension Upper Limit'</strong>&nbsp;- The
+                                        limit each wheel can move up before affecting the vehicle body. The animator can
+                                        modify this limit for each wheel through the '<em>wheel_bottom_ctrl</em>' using
+                                        the '<em>suspension_up_limit</em>' attribute.</span></p>
+                </li>
+                <li>
+                        <p dir="ltr"><span dir="ltr"><strong dir="ltr">'Suspension Lower Limit'</strong>&nbsp;- The
+                                        limit each wheel can move down before affecting the vehicle body. The animator
+                                        can modify this limit for each wheel through the '<em>wheel_bottom_ctrl</em>'
+                                        using the '<em>suspension_down_limit</em>' attribute.</span></p>
+                </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p dir="ltr"><u dir="ltr">Connections</u>:</p>
+        <ul>
+                <li dir="ltr"><strong>'Input'</strong>&nbsp;- Drives the entire node.</li>
+                <li dir="ltr"><strong>'Body Output'</strong>&nbsp;- An output located at the 'center_jnt'.</li>
+                <li dir="ltr"><strong>'Front Wheels Output'</strong>&nbsp;- An output specifically for the front wheels.
+                        This output is influenced by the '<em>front_steer_ctrl</em>', '<em>oversteer</em>', and
+                        '<em>understeer</em>' attributes.</li>
+                <li dir="ltr"><span dir="ltr"><strong>'Back Wheels Output'</strong>&nbsp;- An output for the remaining
+                                back wheels. This output is influenced by the '<em>back_steer_ctrl</em>'.</span></li>
+        </ul>
+        <p>&nbsp;</p>
+        <p dir="ltr">&nbsp;</p>
+        <p dir="ltr">&nbsp;</p>
+        <p dir="ltr">_____________________________________________</p>
+        <p dir="ltr">Get Arise at:&nbsp;<a dir="ltr"
+                        href="https://www.ariserigging.com/">https://www.ariserigging.com</a></p>
+</div>

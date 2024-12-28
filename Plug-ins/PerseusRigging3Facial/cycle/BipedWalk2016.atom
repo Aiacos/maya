@@ -1,0 +1,5790 @@
+atomVersion 1.0;
+mayaVersion 2016;
+mayaSceneFile E:/PerseusFacial/9603/AnimTest/Char-walk.mb;
+timeUnit film;
+linearUnit cm;
+angularUnit deg;
+startTime 0;
+endTime 24;
+startUnitless 3.4028235e+038;
+endUnitless -3.4028235e+038;
+animLayers {   BaseAnimation  name_WalkCycle }
+animLayer {
+  BaseAnimation 0 0;
+  static mt mute 0;
+  { 0 }
+  static lo lock 1;
+  { 0 }
+  static sl solo 2;
+  { 0 }
+  static ovrd override 3;
+  { 1 }
+  static pthg passthrough 4;
+  { 1 }
+  static pref preferred 5;
+  { 0 }
+  static wgth weight 6;
+  { 1 }
+  static ram rotationAccumulationMode 7;
+  { 0 }
+  static sam scaleAccumulationMode 8;
+  { 1 }
+}
+animLayer {
+  name_WalkCycle 0 0;
+  static mt mute 0;
+  { 0 }
+  static lo lock 1;
+  { 0 }
+  static sl solo 2;
+  { 0 }
+  static ovrd override 3;
+  { 1 }
+  static pthg passthrough 4;
+  { 1 }
+  static pref preferred 5;
+  { 1 }
+  static wgth weight 6;
+  { 1 }
+  static ram rotationAccumulationMode 7;
+  { 0 }
+  static sam scaleAccumulationMode 8;
+  { 1 }
+}
+dagNode {
+  name_all_anim 1 21;
+  static rotate.rx rotateX 0;
+  { 0 }
+  static rotate.ry rotateY 1;
+  { 0 }
+  static rotate.rz rotateZ 2;
+  { 0 }
+  static translate.tx translateX 3;
+  { 0 }
+  static translate.ty translateY 4;
+  { 0 }
+  static translate.tz translateZ 5;
+  { 0 }
+  static v visibility 6;
+  { 1 }
+  static scale.sy globalScale 7;
+  { 1 }
+}
+dagNode {
+  name_settings_anim 2 1;
+  anim neck_state neck_state 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      6 1 spline step 1 1 0;
+      12 1 spline step 1 1 0;
+      18 1 spline step 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+  anim tail_state tail_state 1 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 linear linear 1 1 0;
+      6 0 spline step 1 1 0;
+      12 0 spline step 1 1 0;
+      18 0 spline step 1 1 0;
+      24 0 linear linear 1 1 0;
+    }
+  }
+  anim l_leg_state l_leg_state 2 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 linear linear 1 1 0;
+      6 1 linear linear 1 1 0;
+      12 1 linear linear 1 1 0;
+      18 1 spline step 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+  anim l_leg_kneeVis l_leg_kneeVis 3 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 linear linear 1 1 0;
+      6 0 linear linear 1 1 0;
+      12 0 linear linear 1 1 0;
+      18 0 spline step 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim r_leg_state r_leg_state 4 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      6 1 spline step 1 1 0;
+      12 1 linear linear 1 1 0;
+      18 1 linear linear 1 1 0;
+      24 1 linear linear 1 1 0;
+    }
+  }
+  anim r_leg_kneeVis r_leg_kneeVis 5 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 spline step 1 1 0;
+      12 0 linear linear 1 1 0;
+      18 0 linear linear 1 1 0;
+      24 0 linear linear 1 1 0;
+    }
+  }
+  anim l_arm_state l_arm_state 6 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 spline step 1 1 0;
+      12 0 spline step 1 1 0;
+      18 0 spline step 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim l_lowArm_state l_lowArm_state 7 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      6 1 spline step 1 1 0;
+      12 1 spline step 1 1 0;
+      18 1 spline step 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+  anim l_fk_arm_orient l_fk_arm_orient 8 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 spline step 1 1 0;
+      12 0 spline step 1 1 0;
+      18 0 spline step 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim l_ik_arm_parent l_ik_arm_parent 9 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 2 auto auto 1 1 0;
+      6 2 spline step 1 1 0;
+      12 2 spline step 1 1 0;
+      18 2 spline step 1 1 0;
+      24 2 auto auto 1 1 0;
+    }
+  }
+  anim r_arm_state r_arm_state 10 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 linear linear 1 1 0;
+      6 0 spline step 1 1 0;
+      12 0 spline step 1 1 0;
+      18 0 spline step 1 1 0;
+      24 0 linear linear 1 1 0;
+    }
+  }
+  anim r_lowArm_state r_lowArm_state 11 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 linear linear 1 1 0;
+      6 1 spline step 1 1 0;
+      12 1 spline step 1 1 0;
+      18 1 spline step 1 1 0;
+      24 1 linear linear 1 1 0;
+    }
+  }
+  anim r_fk_arm_orient r_fk_arm_orient 12 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 spline step 1 1 0;
+      12 0 spline step 1 1 0;
+      18 0 spline step 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim r_ik_arm_parent r_ik_arm_parent 13 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 2 auto auto 1 1 0;
+      6 2 spline step 1 1 0;
+      12 2 spline step 1 1 0;
+      18 2 spline step 1 1 0;
+      24 2 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_body_anim 4 8;
+  anim rotate.rotateZ rotateZ 0 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -2.0327077 auto auto 1 1 0;
+      6 -2.0327077 auto auto 1 1 0;
+      9 -2.0327077 auto auto 1 1 0;
+      12 -2.0327077 auto auto 1 1 0;
+      18 -2.0327077 auto auto 1 1 0;
+      21 -2.0327077 fixed fixed 1 1 0 0 1 0 1;
+      24 -2.0327077 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      9 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      21 0 fixed fixed 1 1 0 0 1 0 1;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      9 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      21 0 fixed fixed 1 1 0 0 1 0 1;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateZ translateZ 3 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0.41509468 auto auto 1 1 0;
+      9 -3.3995188 auto auto 1 1 0;
+      12 -4.0117828 flat flat 1 1 0;
+      21 -0.27660493 fixed fixed 1 1 0 -22.683176 1 -22.396716 1;
+      24 0.41509468 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateX translateX 4 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0.52942596 auto auto 1 1 0;
+      3 -1.1566717 fixed fixed 1 1 0 -40.135749 1 -40.229688 1;
+      6 -4.0329535 fixed fixed 1 1 0 -46.61726 1 49.510525 1;
+      9 -1.2885616 auto auto 1 1 0;
+      12 0.28370599 auto auto 1 1 0;
+      15 -1.2403994 auto auto 1 1 0;
+      18 -4.0325051 fixed fixed 1 1 0 -46.700039 1 49.640708 1;
+      21 -1.2204846 auto auto 1 1 0;
+      24 0.52942596 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateY translateY 5 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -10.614124 auto auto 1 1 0;
+      6 -10.614124 auto auto 1 1 0;
+      9 -10.614124 auto auto 1 1 0;
+      12 -10.614124 auto auto 1 1 0;
+      18 -10.614124 auto auto 1 1 0;
+      21 -10.614124 fixed fixed 1 1 0 0 1 0 1;
+      24 -10.614124 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_front1_torso_anim 5 2;
+  anim rotate.rotateZ rotateZ 0 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_front2_torso_anim 6 2;
+  anim rotate.rotateZ rotateZ 0 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_shoulder_anim 8 9;
+  anim rotate.rotateX rotateX 0 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 12.720048 auto auto 1 1 0;
+      3 6.661264 auto auto 1 1 0;
+      6 -2.2304461 auto auto 1 1 0;
+      7 -3.5780502 fixed fixed 1 1 0 -46.646654 1 -46.526726 1;
+      12 -5.0106515 auto auto 1 1 0;
+      15 -0.50339077 auto auto 1 1 0;
+      18 5.9408479 auto auto 1 1 0;
+      19 7.4174585 auto auto 1 1 0;
+      24 12.720048 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 2.8516583 auto auto 1 1 0;
+      3 1.3861085 auto auto 1 1 0;
+      6 0.22405003 auto auto 1 1 0;
+      7 -0.1265547 auto auto 1 1 0;
+      12 -2.5973919 auto auto 1 1 0;
+      15 -1.7847568 auto fixed 1 1 0 24.687476 1;
+      18 0.22404993 auto auto 1 1 0;
+      19 0.83644901 auto fixed 1 1 0 29.689224 1;
+      24 2.8516583 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 3.9860774 auto auto 1 1 0;
+      3 5.9448626 fixed fixed 1 1 0 33.256297 1 29.694644 1;
+      6 2.4587464 auto auto 1 1 0;
+      7 1.3306602 fixed fixed 1 1 0 -27.767072 1 -23.800335 1;
+      12 3.2020398 auto auto 1 1 0;
+      15 5.5754785 fixed fixed 1 1 0 39.643197 1 37.011033 1;
+      18 2.4587472 auto auto 1 1 0;
+      19 1.3853835 fixed fixed 1 1 0 -23.256179 1 -18.160249 1;
+      24 3.9860774 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateX translateX 3 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateY translateY 4 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateZ translateZ 5 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_neck_base_ik_anim 10 4;
+  anim visibility visibility 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateX translateX 1 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateY translateY 2 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateZ translateZ 3 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 4 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 5 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 6 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim scale.scaleX scaleX 7 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+  anim scale.scaleY scaleY 8 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+  anim scale.scaleZ scaleZ 9 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_neck_base_fk_anim 9 2;
+  anim visibility visibility 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 spline step 1 1 0;
+      12 0 spline step 1 1 0;
+      18 0 spline step 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 3 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateX translateX 4 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 10.550661 auto auto 1 1 0;
+      24 10.550661 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateY translateY 5 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateZ translateZ 6 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_neck_1_fk_anim 10 2;
+  anim visibility visibility 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 spline step 1 1 0;
+      12 0 spline step 1 1 0;
+      18 0 spline step 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 3 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_neck_2_fk_anim 11 2;
+  anim visibility visibility 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 spline step 1 1 0;
+      12 0 spline step 1 1 0;
+      18 0 spline step 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 3 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_head_fk_anim 12 1;
+  anim rotate.rotateX rotateX 0 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim scale.scaleX scaleX 3 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+  anim scale.scaleY scaleY 4 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+  anim scale.scaleZ scaleZ 5 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+  anim visibility visibility 6 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_back_torso_anim 5 2;
+  anim rotate.rotateZ rotateZ 0 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_hip_anim 7 5;
+  anim translate.translateX translateX 0 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateY translateY 1 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateZ translateZ 2 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 3 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -8.1047794 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 10.60417 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 -8.1047794 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 4 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -0.68201736 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 -1.4919954 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 -0.68201736 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 5 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -3.098685 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 -6.8570947 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 -3.098685 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_torso_anim 6 2;
+  anim rotate.rotateY rotateY 0 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateX translateX 2 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto fixed 1 1 0 0 1;
+      6 0 fixed auto 1 1 0 0 1;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateY translateY 3 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto fixed 1 1 0 0 1;
+      6 0 fixed auto 1 1 0 0 1;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateZ translateZ 4 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0.4392543 auto auto 1 1 0;
+      6 1.6002263 auto auto 1 1 0;
+      12 -1.3996887 auto auto 1 1 0;
+      18 -1.9191864 auto auto 1 1 0;
+      24 0.4392543 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_l_knee_anim 5 2;
+  anim stretch stretch 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateX translateX 1 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateY translateY 2 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateZ translateZ 3 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_l_foot_anim 5 2;
+  anim roll roll 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -20.8 linear linear 1 1 0;
+      2 0 linear linear 1 1 0;
+      6 0 linear linear 1 1 0;
+      12 36.3 linear linear 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 -20.8 auto auto 1 1 0;
+    }
+  }
+  anim toeLift toeLift 1 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 45 linear linear 1 1 0;
+      2 45 linear linear 1 1 0;
+      6 45 linear linear 1 1 0;
+      12 45 linear linear 1 1 0;
+      18 45 auto auto 1 1 0;
+      24 45 auto auto 1 1 0;
+    }
+  }
+  anim toeStraight toeStraight 2 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 75 linear linear 1 1 0;
+      2 75 linear linear 1 1 0;
+      6 75 linear linear 1 1 0;
+      12 75 linear linear 1 1 0;
+      18 75 auto auto 1 1 0;
+      24 75 auto auto 1 1 0;
+    }
+  }
+  anim lean lean 3 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 linear linear 1 1 0;
+      2 0 linear linear 1 1 0;
+      6 0 linear linear 1 1 0;
+      12 0 linear linear 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim side side 4 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 linear linear 1 1 0;
+      2 0 linear linear 1 1 0;
+      6 0 linear linear 1 1 0;
+      12 0 linear linear 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim toeSpin toeSpin 5 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 linear linear 1 1 0;
+      2 0 linear linear 1 1 0;
+      6 0 linear linear 1 1 0;
+      12 0 linear linear 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim toeWiggle toeWiggle 6 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 linear linear 1 1 0;
+      2 0 linear linear 1 1 0;
+      6 0 linear linear 1 1 0;
+      12 0 linear linear 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim kneeSpin kneeSpin 7 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 linear linear 1 1 0;
+      2 0 linear linear 1 1 0;
+      6 0 linear linear 1 1 0;
+      12 0 linear linear 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim upLegLength upLegLength 8 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 linear linear 1 1 0;
+      2 1 linear linear 1 1 0;
+      6 1 linear linear 1 1 0;
+      12 1 linear linear 1 1 0;
+      18 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+  anim lowLegLength lowLegLength 9 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 linear linear 1 1 0;
+      2 1 linear linear 1 1 0;
+      6 1 linear linear 1 1 0;
+      12 1 linear linear 1 1 0;
+      18 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 10 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 linear linear 1 1 0;
+      2 0 linear linear 1 1 0;
+      6 0 linear linear 1 1 0;
+      12 0 linear linear 1 1 0;
+      18 26.806363 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 11 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 linear linear 1 1 0;
+      2 0 linear linear 1 1 0;
+      6 0 linear linear 1 1 0;
+      12 0 linear linear 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 12 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 linear linear 1 1 0;
+      2 0 linear linear 1 1 0;
+      6 0 linear linear 1 1 0;
+      12 0 linear linear 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateX translateX 13 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -3.8885179 linear linear 1 1 0;
+      2 -3.8885179 linear linear 1 1 0;
+      6 -3.8885179 linear linear 1 1 0;
+      12 -3.8885179 linear linear 1 1 0;
+      18 0.090910412 auto auto 1 1 0;
+      24 -3.8885179 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateY translateY 14 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 linear linear 1 1 0;
+      2 0 linear linear 1 1 0;
+      6 0 linear linear 1 1 0;
+      12 0 linear linear 1 1 0;
+      18 3.9545981 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateZ translateZ 15 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 20.470453 linear linear 1 1 0;
+      2 18.306115 linear linear 1 1 0;
+      6 -0.77488928 linear linear 1 1 0;
+      12 -13.229914 linear linear 1 1 0;
+      18 2.1760087 auto auto 1 1 0;
+      24 20.470453 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_l_fk_upLeg_anim 5 2;
+  anim length length 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 3 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_l_fk_lowLeg_anim 6 2;
+  anim length length 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 3 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_l_fk_foot_anim 7 2;
+  anim length length 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 3 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_l_fk_toe_anim 8 2;
+  anim length length 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 3 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_r_knee_anim 5 2;
+  anim stretch stretch 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateX translateX 1 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateY translateY 2 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateZ translateZ 3 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_r_foot_anim 5 2;
+  anim roll roll 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 37.5 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      11 -30.7 linear linear 1 1 0;
+      13 0 linear linear 1 1 0;
+      18 0 linear linear 1 1 0;
+      24 37.5 linear linear 1 1 0;
+    }
+  }
+  anim toeLift toeLift 1 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 45 auto auto 1 1 0;
+      6 45 auto auto 1 1 0;
+      11 45 linear linear 1 1 0;
+      13 45 linear linear 1 1 0;
+      18 45 linear linear 1 1 0;
+      24 45 linear linear 1 1 0;
+    }
+  }
+  anim toeStraight toeStraight 2 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 75 auto auto 1 1 0;
+      6 75 auto auto 1 1 0;
+      11 75 linear linear 1 1 0;
+      13 75 linear linear 1 1 0;
+      18 75 linear linear 1 1 0;
+      24 75 linear linear 1 1 0;
+    }
+  }
+  anim lean lean 3 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      11 0 linear linear 1 1 0;
+      13 0 linear linear 1 1 0;
+      18 0 linear linear 1 1 0;
+      24 0 linear linear 1 1 0;
+    }
+  }
+  anim side side 4 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      11 0 linear linear 1 1 0;
+      13 0 linear linear 1 1 0;
+      18 0 linear linear 1 1 0;
+      24 0 linear linear 1 1 0;
+    }
+  }
+  anim toeSpin toeSpin 5 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      11 0 linear linear 1 1 0;
+      13 0 linear linear 1 1 0;
+      18 0 linear linear 1 1 0;
+      24 0 linear linear 1 1 0;
+    }
+  }
+  anim toeWiggle toeWiggle 6 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      11 0 linear linear 1 1 0;
+      13 0 linear linear 1 1 0;
+      18 0 linear linear 1 1 0;
+      24 0 linear linear 1 1 0;
+    }
+  }
+  anim kneeSpin kneeSpin 7 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      11 0 linear linear 1 1 0;
+      13 0 linear linear 1 1 0;
+      18 0 linear linear 1 1 0;
+      24 0 linear linear 1 1 0;
+    }
+  }
+  anim upLegLength upLegLength 8 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      6 1 auto auto 1 1 0;
+      11 1 linear linear 1 1 0;
+      13 1 linear linear 1 1 0;
+      18 1 linear linear 1 1 0;
+      24 1 linear linear 1 1 0;
+    }
+  }
+  anim lowLegLength lowLegLength 9 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      6 1 auto auto 1 1 0;
+      11 1 linear linear 1 1 0;
+      13 1 linear linear 1 1 0;
+      18 1 linear linear 1 1 0;
+      24 1 linear linear 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 10 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 34.110393 auto auto 1 1 0;
+      11 0 linear linear 1 1 0;
+      13 0 linear linear 1 1 0;
+      18 0 linear linear 1 1 0;
+      24 0 linear linear 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 11 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      11 0 linear linear 1 1 0;
+      13 0 linear linear 1 1 0;
+      18 0 linear linear 1 1 0;
+      24 0 linear linear 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 12 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      11 0 linear linear 1 1 0;
+      13 0 linear linear 1 1 0;
+      18 0 linear linear 1 1 0;
+      24 0 linear linear 1 1 0;
+    }
+  }
+  anim translate.translateX translateX 13 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 3.9420574 auto auto 1 1 0;
+      6 0.54203327 auto auto 1 1 0;
+      11 3.9420574 linear linear 1 1 0;
+      13 3.9420574 linear linear 1 1 0;
+      18 3.9420574 linear linear 1 1 0;
+      24 3.9420574 linear linear 1 1 0;
+    }
+  }
+  anim translate.translateY translateY 14 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 5.1290805 auto auto 1 1 0;
+      11 0 linear linear 1 1 0;
+      13 0 linear linear 1 1 0;
+      18 0 linear linear 1 1 0;
+      24 0 linear linear 1 1 0;
+    }
+  }
+  anim translate.translateZ translateZ 15 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -15.473234 auto auto 1 1 0;
+      6 1.0075409 auto auto 1 1 0;
+      11 22.697683 linear linear 1 1 0;
+      13 18.971342 linear linear 1 1 0;
+      18 2.6371526 linear linear 1 1 0;
+      24 -15.473234 linear linear 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_r_fk_upLeg_anim 5 2;
+  anim length length 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 3 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_r_fk_lowLeg_anim 6 2;
+  anim length length 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 3 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_r_fk_foot_anim 7 2;
+  anim length length 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 3 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_r_fk_toe_anim 8 2;
+  anim length length 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 3 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_l_upArm_orient_anim 7 6;
+  anim rotate.rotateX rotateX 0 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_l_fk_upArm_anim 8 2;
+  anim length length 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      6 1 auto auto 1 1 0;
+      12 1 auto auto 1 1 0;
+      18 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -15.858 auto auto 1 1 0;
+      6 -2.029 auto auto 1 1 0;
+      12 4.971 auto auto 1 1 0;
+      18 -3.716 auto auto 1 1 0;
+      24 -15.858 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -16.175 auto auto 1 1 0;
+      6 6.782 auto auto 1 1 0;
+      12 28.708 auto auto 1 1 0;
+      18 7.949 auto auto 1 1 0;
+      24 -16.175 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 3 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -76.641197 auto auto 1 1 0;
+      6 -81.84768 auto auto 1 1 0;
+      12 -83.727999 auto auto 1 1 0;
+      18 -80.972639 auto auto 1 1 0;
+      24 -76.641197 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_l_fk_lowArm_anim 9 2;
+  anim length length 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      3 1 auto auto 1 1 0;
+      8 1 auto auto 1 1 0;
+      14 1 auto auto 1 1 0;
+      19 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -2.992 auto auto 1 1 0;
+      3 -4.676 auto auto 1 1 0;
+      8 -4.2358847 auto auto 1 1 0;
+      14 -1.695 auto auto 1 1 0;
+      19 -0.901 auto auto 1 1 0;
+      24 -2.992 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 12.408069 auto auto 1 1 0;
+      3 -3.8437575 auto auto 1 1 0;
+      8 0.71055332 auto auto 1 1 0;
+      14 23.515351 auto auto 1 1 0;
+      19 30.249041 auto auto 1 1 0;
+      24 12.408069 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 3 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -6.455 auto auto 1 1 0;
+      3 -5.364 auto auto 1 1 0;
+      8 -5.7172222 auto auto 1 1 0;
+      14 -6.908 auto auto 1 1 0;
+      19 -5.523 auto auto 1 1 0;
+      24 -6.455 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_l_fk_hand_anim 10 3;
+  anim rotate.rotateX rotateX 0 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      4 0.072 auto auto 1 1 0;
+      8 0.576 auto auto 1 1 0;
+      12 7.484 auto auto 1 1 0;
+      16 6.252 auto auto 1 1 0;
+      19 7.196 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 20.247 auto auto 1 1 0;
+      4 -7.833 auto auto 1 1 0;
+      8 0.797 auto auto 1 1 0;
+      12 -10.163 auto auto 1 1 0;
+      16 4.64 auto auto 1 1 0;
+      19 13.399 auto auto 1 1 0;
+      24 20.247 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      4 0.117 auto auto 1 1 0;
+      8 0.937 auto auto 1 1 0;
+      12 4.797 auto auto 1 1 0;
+      16 4.7370859 auto auto 1 1 0;
+      19 2.752331 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_l_shoulder_anim 5 2;
+  anim rotate.rotateX rotateX 0 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0.47592658 auto auto 1 1 0;
+      2 0.46494862 auto auto 1 1 0;
+      5 0.91469274 auto auto 1 1 0;
+      6 0.65169378 auto auto 1 1 0;
+      8 -0.11228109 auto auto 1 1 0;
+      11 -0.10675713 auto auto 1 1 0;
+      12 -0.10678347 auto auto 1 1 0;
+      14 -0.10678347 auto auto 1 1 0;
+      17 -0.39698747 auto auto 1 1 0;
+      18 -0.39698747 auto auto 1 1 0;
+      20 0.31026678 auto auto 1 1 0;
+      23 0.31185793 auto auto 1 1 0;
+      24 0.47592658 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0.33315284 auto auto 1 1 0;
+      2 1.5300326 auto auto 1 1 0;
+      5 4.8819339 auto auto 1 1 0;
+      6 4.9033056 auto auto 1 1 0;
+      8 3.7511732 auto auto 1 1 0;
+      11 0.97929906 auto auto 1 1 0;
+      12 -0.19452858 auto auto 1 1 0;
+      14 -2.0481128 auto auto 1 1 0;
+      17 -4.6111122 auto auto 1 1 0;
+      18 -4.896279 auto auto 1 1 0;
+      20 -3.6112766 auto auto 1 1 0;
+      23 0.45332981 auto auto 1 1 0;
+      24 0.33315284 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1.6094562 auto auto 1 1 0;
+      2 1.2661165 auto auto 1 1 0;
+      5 3.5595415 auto auto 1 1 0;
+      6 2.2184719 auto auto 1 1 0;
+      8 -1.8030996 auto auto 1 1 0;
+      11 1.4493825 auto auto 1 1 0;
+      12 1.3337662 auto auto 1 1 0;
+      14 1.1262768 auto auto 1 1 0;
+      17 2.7399131 auto auto 1 1 0;
+      18 1.2874878 auto auto 1 1 0;
+      20 -2.1247658 auto auto 1 1 0;
+      23 1.5037181 auto auto 1 1 0;
+      24 1.6094562 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_l_ik_elbow_anim 5 3;
+  anim stretch stretch 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim length length 1 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 100 auto auto 1 1 0;
+      24 100 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateX translateX 2 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0.00023253467 auto auto 1 1 0;
+      24 0.00023253467 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateY translateY 3 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1.0295947e-008 auto auto 1 1 0;
+      24 1.0295947e-008 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateZ translateZ 4 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -0.62303374 auto auto 1 1 0;
+      24 -0.62303374 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 5 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 2.1188252e-006 auto auto 1 1 0;
+      24 2.1188252e-006 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 6 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0.062115535 auto auto 1 1 0;
+      24 0.062115535 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 7 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_l_fk_hand_elbow_anim 6 1;
+  anim rotate.rotateX rotateX 0 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -2.1174875e-006 auto auto 1 1 0;
+      24 -2.1174875e-006 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto fixed 1 1 0 0 1;
+      24 0 fixed auto 1 1 0 0 1;
+    }
+  }
+  anim rotate.rotateZ rotateZ 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -7.5315238e-008 auto auto 1 1 0;
+      24 -7.5315238e-008 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_l_ik_hand_anim 5 1;
+  anim translate.translateX translateX 0 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0.00023150699 auto auto 1 1 0;
+      24 0.00023150699 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateY translateY 1 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -9.6170384e-008 auto auto 1 1 0;
+      24 -9.6170384e-008 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateZ translateZ 2 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -1.3573283e-006 auto auto 1 1 0;
+      24 -1.3573283e-006 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 3 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 4 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0.062115535 auto auto 1 1 0;
+      24 0.062115535 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 5 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_l_fingers_anim 5 6;
+  anim bend bend 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim side side 1 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim curl curl 2 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0.6 auto auto 1 1 0;
+      24 0.6 auto auto 1 1 0;
+    }
+  }
+  anim thumbCurl thumbCurl 3 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim scrunch scrunch 4 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim thumbScrunch thumbScrunch 5 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim relax relax 6 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 5.5 auto auto 1 1 0;
+      24 5.5 auto auto 1 1 0;
+    }
+  }
+  anim cup cup 7 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim spread spread 8 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim midSpread midSpread 9 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim thumbSpread thumbSpread 10 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim twist twist 11 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim lean lean 12 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_l_middle_anim 6 1;
+  anim curl curl 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim scrunch scrunch 1 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim spread spread 2 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim twist twist 3 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim lean lean 4 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_1 bend_1 5 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_2 bend_2 6 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_3 bend_3 7 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_4 bend_4 8 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim length length 9 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      6 1 auto auto 1 1 0;
+      12 1 auto auto 1 1 0;
+      18 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_l_ring_anim 6 1;
+  anim curl curl 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim scrunch scrunch 1 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim spread spread 2 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim twist twist 3 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim lean lean 4 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_1 bend_1 5 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_2 bend_2 6 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_3 bend_3 7 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_4 bend_4 8 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim length length 9 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      6 1 auto auto 1 1 0;
+      12 1 auto auto 1 1 0;
+      18 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_l_pinky_anim 6 1;
+  anim curl curl 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim scrunch scrunch 1 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim spread spread 2 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim twist twist 3 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim lean lean 4 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_1 bend_1 5 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_2 bend_2 6 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_3 bend_3 7 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_4 bend_4 8 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim length length 9 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      6 1 auto auto 1 1 0;
+      12 1 auto auto 1 1 0;
+      18 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_l_pointer_anim 6 1;
+  anim curl curl 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim scrunch scrunch 1 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim spread spread 2 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim twist twist 3 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim lean lean 4 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_1 bend_1 5 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_2 bend_2 6 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_3 bend_3 7 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_4 bend_4 8 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim length length 9 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      6 1 auto auto 1 1 0;
+      12 1 auto auto 1 1 0;
+      18 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_l_thumb_anim 6 1;
+  anim curl curl 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 2.6 auto auto 1 1 0;
+      24 2.6 auto auto 1 1 0;
+    }
+  }
+  anim scrunch scrunch 1 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim spread spread 2 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -6.1 auto auto 1 1 0;
+      24 -6.1 auto auto 1 1 0;
+    }
+  }
+  anim orbit orbit 3 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 8.5 auto auto 1 1 0;
+      24 8.5 auto auto 1 1 0;
+    }
+  }
+  anim twist twist 4 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_1 bend_1 5 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_2 bend_2 6 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_3 bend_3 7 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim length length 8 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_r_upArm_orient_anim 7 6;
+  anim rotate.rotateX rotateX 0 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_r_fk_upArm_anim 8 2;
+  anim rotate.rotateX rotateX 0 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 5.181259 auto auto 1 1 0;
+      6 -1.1490781 auto auto 1 1 0;
+      12 -23.901881 auto auto 1 1 0;
+      18 -9.323982 auto auto 1 1 0;
+      24 5.181259 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 7.7554763 auto auto 1 1 0;
+      6 2.678438 auto auto 1 1 0;
+      12 8.4641603 auto auto 1 1 0;
+      18 6.6877162 auto auto 1 1 0;
+      24 7.7554763 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -85.31945 auto auto 1 1 0;
+      6 -85.805789 auto auto 1 1 0;
+      12 -90.732572 auto auto 1 1 0;
+      18 -84.690443 auto auto 1 1 0;
+      24 -85.31945 auto auto 1 1 0;
+    }
+  }
+  static length length 0;
+  { 1 }
+}
+dagNode {
+  name_r_fk_lowArm_anim 9 2;
+  anim rotate.rotateX rotateX 0 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0.38711758 auto auto 1 1 0;
+      6 -1.7624366 auto auto 1 1 0;
+      12 0.38711758 auto auto 1 1 0;
+      18 0.94025522 auto auto 1 1 0;
+      24 0.38711758 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 8.3942176 auto auto 1 1 0;
+      6 26.55311 auto auto 1 1 0;
+      12 8.3942176 auto auto 1 1 0;
+      18 -1.3273535 auto auto 1 1 0;
+      24 8.3942176 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -3.31 auto auto 1 1 0;
+      6 -3.206 auto auto 1 1 0;
+      12 -3.31 auto auto 1 1 0;
+      18 -3.198 auto auto 1 1 0;
+      24 -3.31 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_r_fk_hand_anim 10 3;
+  anim rotate.rotateX rotateX 0 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -0.49883138 auto auto 1 1 0;
+      14 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      21 -1.406096 auto auto 1 1 0;
+      24 -0.49883138 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -11.601627 auto auto 1 1 0;
+      3 -10.298398 auto auto 1 1 0;
+      8 10.122328 auto auto 1 1 0;
+      14 -14.952665 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      21 -12.538615 auto auto 1 1 0;
+      24 -11.601627 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -1.6940919 auto auto 1 1 0;
+      14 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      21 -2.3857957 auto auto 1 1 0;
+      24 -1.6940919 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_r_shoulder_anim 5 2;
+  anim rotate.rotateX rotateX 0 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0.45563051 auto auto 1 1 0;
+      2 0.45636327 auto auto 1 1 0;
+      5 0.16781385 auto auto 1 1 0;
+      6 0.16781385 auto auto 1 1 0;
+      8 0.90635739 auto auto 1 1 0;
+      11 0.90635739 auto auto 1 1 0;
+      12 0.90635739 auto auto 1 1 0;
+      14 0.90635739 auto auto 1 1 0;
+      17 0.91426139 auto auto 1 1 0;
+      18 0.91426139 auto auto 1 1 0;
+      20 0.91426139 auto auto 1 1 0;
+      23 0.91426139 auto auto 1 1 0;
+      24 0.45563051 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0.43654217 auto auto 1 1 0;
+      2 1.587981 auto auto 1 1 0;
+      5 4.3654734 auto auto 1 1 0;
+      6 4.7932236 auto auto 1 1 0;
+      8 4.0898939 auto auto 1 1 0;
+      11 1.4702102 auto auto 1 1 0;
+      12 0.89987662 auto auto 1 1 0;
+      14 -1.0962911 auto auto 1 1 0;
+      17 -3.3266116 auto auto 1 1 0;
+      18 -3.4303563 auto auto 1 1 0;
+      20 -2.289689 auto auto 1 1 0;
+      23 0.35409047 auto auto 1 1 0;
+      24 0.43654217 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -0.59917418 auto auto 1 1 0;
+      2 -0.25817143 auto auto 1 1 0;
+      5 -2.6626822 auto auto 1 1 0;
+      6 -1.3794316 auto auto 1 1 0;
+      8 2.4710728 auto auto 1 1 0;
+      11 -0.76930687 auto auto 1 1 0;
+      12 -0.76930687 auto auto 1 1 0;
+      14 -0.31974663 auto auto 1 1 0;
+      17 -1.8072448 auto auto 1 1 0;
+      18 -0.78700108 auto auto 1 1 0;
+      20 2.9201674 auto auto 1 1 0;
+      23 -0.74390528 auto auto 1 1 0;
+      24 -0.59917418 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_r_ik_elbow_anim 5 3;
+  anim stretch stretch 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim length length 1 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 100 auto auto 1 1 0;
+      24 100 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateX translateX 2 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -0.00023259564 auto auto 1 1 0;
+      24 -0.00023259564 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateY translateY 3 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -1.2165702e-008 auto auto 1 1 0;
+      24 -1.2165702e-008 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateZ translateZ 4 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -0.62303678 auto auto 1 1 0;
+      24 -0.62303678 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 5 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -2.5026078e-006 auto auto 1 1 0;
+      24 -2.5026078e-006 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 6 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -0.062108871 auto auto 1 1 0;
+      24 -0.062108871 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 7 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_r_fk_hand_elbow_anim 6 1;
+  anim rotate.rotateX rotateX 0 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto fixed 1 1 0 0 1;
+      24 0 fixed auto 1 1 0 0 1;
+    }
+  }
+  anim rotate.rotateY rotateY 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto fixed 1 1 0 0 1;
+      24 0 fixed auto 1 1 0 0 1;
+    }
+  }
+  anim rotate.rotateZ rotateZ 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 8.8956789e-008 auto auto 1 1 0;
+      24 8.8956789e-008 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_r_ik_hand_anim 5 1;
+  anim translate.translateX translateX 0 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -0.00023140953 auto auto 1 1 0;
+      24 -0.00023140953 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateY translateY 1 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -1.159667e-008 auto auto 1 1 0;
+      24 -1.159667e-008 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateZ translateZ 2 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -8.3958217e-007 auto auto 1 1 0;
+      24 -8.3958217e-007 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 3 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -2.5026078e-006 auto auto 1 1 0;
+      24 -2.5026078e-006 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 4 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -0.062108871 auto auto 1 1 0;
+      24 -0.062108871 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 5 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_r_fingers_anim 5 6;
+  anim bend bend 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim side side 1 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim curl curl 2 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim thumbCurl thumbCurl 3 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim scrunch scrunch 4 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim thumbScrunch thumbScrunch 5 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim relax relax 6 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 6.6 auto auto 1 1 0;
+      6 6.6 auto auto 1 1 0;
+      12 6.6 auto auto 1 1 0;
+      18 6.6 auto auto 1 1 0;
+      24 6.6 auto auto 1 1 0;
+    }
+  }
+  anim cup cup 7 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim spread spread 8 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim midSpread midSpread 9 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim thumbSpread thumbSpread 10 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -18.3 auto auto 1 1 0;
+      6 -18.3 auto auto 1 1 0;
+      12 -18.3 auto auto 1 1 0;
+      18 -18.3 auto auto 1 1 0;
+      24 -18.3 auto auto 1 1 0;
+    }
+  }
+  anim twist twist 11 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim lean lean 12 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_r_middle_anim 6 1;
+  anim curl curl 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim scrunch scrunch 1 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim spread spread 2 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim twist twist 3 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim lean lean 4 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_1 bend_1 5 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_2 bend_2 6 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_3 bend_3 7 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_4 bend_4 8 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim length length 9 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      6 1 auto auto 1 1 0;
+      12 1 auto auto 1 1 0;
+      18 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_r_ring_anim 6 1;
+  anim curl curl 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -1.6 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 -1.6 auto auto 1 1 0;
+    }
+  }
+  anim scrunch scrunch 1 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim spread spread 2 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim twist twist 3 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim lean lean 4 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_1 bend_1 5 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_2 bend_2 6 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_3 bend_3 7 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_4 bend_4 8 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim length length 9 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      6 1 auto auto 1 1 0;
+      12 1 auto auto 1 1 0;
+      18 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_r_pinky_anim 6 1;
+  anim curl curl 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim scrunch scrunch 1 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim spread spread 2 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim twist twist 3 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim lean lean 4 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_1 bend_1 5 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_2 bend_2 6 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_3 bend_3 7 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_4 bend_4 8 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim length length 9 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      6 1 auto auto 1 1 0;
+      12 1 auto auto 1 1 0;
+      18 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_r_pointer_anim 6 1;
+  anim curl curl 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0.6 auto auto 1 1 0;
+      24 0.6 auto auto 1 1 0;
+    }
+  }
+  anim scrunch scrunch 1 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim spread spread 2 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim twist twist 3 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim lean lean 4 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_1 bend_1 5 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_2 bend_2 6 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_3 bend_3 7 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_4 bend_4 8 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim length length 9 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_r_thumb_anim 6 1;
+  anim curl curl 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 2.6 auto auto 1 1 0;
+      24 2.6 auto auto 1 1 0;
+    }
+  }
+  anim scrunch scrunch 1 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim spread spread 2 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 4 auto auto 1 1 0;
+      24 4 auto auto 1 1 0;
+    }
+  }
+  anim orbit orbit 3 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 7.1 auto auto 1 1 0;
+      24 7.1 auto auto 1 1 0;
+    }
+  }
+  anim twist twist 4 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_1 bend_1 5 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_2 bend_2 6 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim bend_3 bend_3 7 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim length length 8 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1 auto auto 1 1 0;
+      24 1 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_head_ik_anim 5 5;
+  anim spineWorld spineWorld 0 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      15 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim lockRotation lockRotation 1 name_WalkCycle;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      15 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -1.8905239 auto auto 1 1 0;
+      3 0.86939571 auto auto 1 1 0;
+      6 -4.3170917 auto auto 1 1 0;
+      10 0.3542842 fixed fixed 1 1 0 29.158808 1 27.170479 1;
+      12 1.0082769 fixed fixed 1 1 0 7.4807527 1 6.90125 1;
+      15 0.3542842 spline spline 1 1 0;
+      18 -4.3170917 auto fixed 1 1 0 3.6073251 1;
+      22 1.0068635 auto auto 1 1 0;
+      24 -1.8905239 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 3 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -10.202584 auto auto 1 1 0;
+      6 2.7698768 fixed fixed 1 1 0 25.231605 1 21.876363 1;
+      12 1.6194006 auto auto 1 1 0;
+      15 -3.4418864 auto auto 1 1 0;
+      18 -8.5724222 auto auto 1 1 0;
+      24 -10.202584 fixed auto 1 1 0 -0.093028417 1;
+    }
+  }
+  anim rotate.rotateZ rotateZ 4 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto fixed 1 1 0 0 1;
+      6 0 fixed fixed 1 1 0 0 1 0 1;
+      12 0 fixed fixed 1 1 0 0 1 0 1;
+      15 0 fixed fixed 1 1 0 0 1 0 1;
+      18 0 fixed fixed 1 1 0 0 1 0 1;
+      24 0 fixed auto 1 1 0 0 1;
+    }
+  }
+  anim translate.translateX translateX 5 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      15 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateY translateY 6 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      15 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateZ translateZ 7 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      15 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  cached twist twist 0;
+  { -10.202584 -9.3071107 -7.0487925 -4.0697823 -1.0122319 1.4817048 2.7698768 3.0433827 3.0841718 2.9272061 2.6074477 2.1598583 1.6194006 0.42902781 -1.5025808 -3.4418864 -5.3600453 -7.2858958 -8.5724222 -9.2146084 -9.6620581 -9.9496768 -10.112368 -10.185035 -10.202584  }
+}
+dagNode {
+  name_neck1_ik_anim 4 2;
+  anim translate.translateX translateX 0 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateY translateY 1 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateZ translateZ 2 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 3 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 4 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 5 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_neck2_ik_anim 4 2;
+  anim translate.translateX translateX 0 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateY translateY 1 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateZ translateZ 2 name_WalkCycle;
+  animData {
+    input time;
+    output linear;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateX rotateX 3 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 4 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 5 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_tail_base_ik_anim 5 4;
+  static rotate.rx rotateX 0;
+  { 0 }
+  static rotate.ry rotateY 1;
+  { 0 }
+  static rotate.rz rotateZ 2;
+  { 0 }
+  static scale.sx scaleX 3;
+  { 1 }
+  static scale.sy scaleY 4;
+  { 1 }
+  static scale.sz scaleZ 5;
+  { 1 }
+  static translate.tx translateX 6;
+  { 0 }
+  static translate.ty translateY 7;
+  { 0 }
+  static translate.tz translateZ 8;
+  { 0 }
+  static v visibility 9;
+  { 0 }
+}
+dagNode {
+  name_end_ik_anim 6 5;
+  static automaticTwist automaticTwist 0;
+  { 1 }
+  static lockRotation lockRotation 1;
+  { 0 }
+  static rotate.rx rotateX 2;
+  { 0 }
+  static rotate.ry rotateY 3;
+  { 0 }
+  static rotate.rz rotateZ 4;
+  { 0 }
+  static spineWorld spineWorld 5;
+  { 0 }
+  static translate.tx translateX 6;
+  { 0 }
+  static translate.ty translateY 7;
+  { 0 }
+  static translate.tz translateZ 8;
+  { 0 }
+  static twist twist 9;
+  { 0 }
+}
+dagNode {
+  name_tail1_ik_anim 5 2;
+  static rotate.rx rotateX 0;
+  { 0 }
+  static rotate.ry rotateY 1;
+  { 0 }
+  static rotate.rz rotateZ 2;
+  { 0 }
+  static translate.tx translateX 3;
+  { 0 }
+  static translate.ty translateY 4;
+  { 0 }
+  static translate.tz translateZ 5;
+  { 0 }
+}
+dagNode {
+  name_tail2_ik_anim 5 2;
+  static rotate.rx rotateX 0;
+  { 0 }
+  static rotate.ry rotateY 1;
+  { 0 }
+  static rotate.rz rotateZ 2;
+  { 0 }
+  static translate.tx translateX 3;
+  { 0 }
+  static translate.ty translateY 4;
+  { 0 }
+  static translate.tz translateZ 5;
+  { 0 }
+}
+dagNode {
+  name_tail_base_fk_anim 4 2;
+  anim rotate.rotateX rotateX 0 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0.30682126 auto auto 1 1 0;
+      12 -6.1681411 auto auto 1 1 0;
+      24 0.30682126 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -2.7085806 auto auto 1 1 0;
+      12 8.1745943 auto auto 1 1 0;
+      24 -2.7085806 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -85.993432 auto auto 1 1 0;
+      12 -89.343974 auto auto 1 1 0;
+      24 -85.993432 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_tail_1_fk_anim 5 2;
+  anim rotate.rotateX rotateX 0 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1.9858457 linear linear 1 1 0;
+      8 3.2562949 auto auto 1 1 0;
+      17 1.351193 auto auto 1 1 0;
+      24 1.9858457 linear linear 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -2.9101948 linear linear 1 1 0;
+      8 -4.3656381 auto auto 1 1 0;
+      17 2.9334643 auto auto 1 1 0;
+      24 -2.9101948 linear linear 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0.43021398 linear linear 1 1 0;
+      8 1.1078237 auto auto 1 1 0;
+      17 3.9339373 auto auto 1 1 0;
+      24 0.43021398 linear linear 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_tail_2_fk_anim 6 2;
+  anim rotate.rotateX rotateX 0 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1.9858457 linear linear 1 1 0;
+      8 3.2562949 auto auto 1 1 0;
+      17 1.351193 auto auto 1 1 0;
+      24 1.9858457 linear linear 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -2.9101948 linear linear 1 1 0;
+      8 -4.3656381 auto auto 1 1 0;
+      17 2.9334643 auto auto 1 1 0;
+      24 -2.9101948 linear linear 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0.43021398 linear linear 1 1 0;
+      8 1.1078237 auto auto 1 1 0;
+      17 3.9339373 auto auto 1 1 0;
+      24 0.43021398 linear linear 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_tail_3_fk_anim 7 2;
+  anim rotate.rotateX rotateX 0 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 1.9858457 linear linear 1 1 0;
+      8 3.2562949 auto auto 1 1 0;
+      17 1.351193 auto auto 1 1 0;
+      24 1.9858457 linear linear 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -2.9101948 linear linear 1 1 0;
+      8 -4.3656381 auto auto 1 1 0;
+      17 2.9334643 auto auto 1 1 0;
+      24 -2.9101948 linear linear 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0.43021398 linear linear 1 1 0;
+      8 1.1078237 auto auto 1 1 0;
+      17 3.9339373 auto auto 1 1 0;
+      24 0.43021398 linear linear 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_tail_4_fk_anim 8 2;
+  anim rotate.rotateX rotateX 0 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 -2.7101725 auto auto 1 1 0;
+      6 4.1496824 auto auto 1 1 0;
+      12 4.2308338 auto auto 1 1 0;
+      18 -2.7462851 auto auto 1 1 0;
+      24 -2.7101725 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 5.9197285 auto auto 1 1 0;
+      6 -2.9170464 auto auto 1 1 0;
+      12 -4.6920446 auto auto 1 1 0;
+      18 7.6654346 auto auto 1 1 0;
+      24 5.9197285 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 2.0283516 auto auto 1 1 0;
+      6 2.7416435 auto auto 1 1 0;
+      12 0.73244698 auto auto 1 1 0;
+      18 -1.4810349 auto auto 1 1 0;
+      24 2.0283516 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_end_fk_anim 9 1;
+}
+dagNode {
+  name_l_ear_base_anim 3 2;
+  anim rotate.rotateX rotateX 0 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_l_ear_1_anim 4 2;
+  anim rotate.rotateX rotateX 0 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_r_ear_base_anim 3 2;
+  anim rotate.rotateX rotateX 0 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}
+dagNode {
+  name_r_ear_1_anim 4 2;
+  anim rotate.rotateX rotateX 0 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateY rotateY 1 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+  anim rotate.rotateZ rotateZ 2 name_WalkCycle;
+  animData {
+    input time;
+    output angular;
+    weighted 0;
+    preInfinity cycle;
+    postInfinity cycle;
+    keys {
+      0 0 auto auto 1 1 0;
+      6 0 auto auto 1 1 0;
+      12 0 auto auto 1 1 0;
+      18 0 auto auto 1 1 0;
+      24 0 auto auto 1 1 0;
+    }
+  }
+}

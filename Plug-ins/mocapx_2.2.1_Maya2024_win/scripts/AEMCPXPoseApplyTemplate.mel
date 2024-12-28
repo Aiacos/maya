@@ -1,0 +1,18 @@
+global proc AEMCPXPoseApplyTemplate( string $nodeName ){
+    
+    editorTemplate -beginScrollLayout;
+
+	editorTemplate -beginLayout "controls" -collapse false;
+
+        editorTemplate -addControl "weight";
+
+        editorTemplate -addControl "rest";
+
+	editorTemplate -endLayout;
+
+    editorTemplate -label "Incoming pose values" -addControl "values";
+
+	editorTemplate -addExtraControls;
+
+	editorTemplate -endScrollLayout;
+}

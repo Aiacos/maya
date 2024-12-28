@@ -219,6 +219,24 @@
                                                 "requiredPlugins": [
                                                     "modelingToolkit"
                                                 ]
+                                            },
+                                            {
+                                                "objectName": "ngSkinTools2_mainWindow",
+                                                "title": "ngSkinTools 2.0.44",
+                                                "uiScript": "python(\"import ngSkinTools2; ngSkinTools2.workspace_control_main_window()\");",
+                                                "retain": false,
+                                                "deleteLater": true,
+                                                "loadImmediately": false,
+                                                "checkPlugins": false,
+                                                "actLikeMayaUIElement": false,
+                                                "layoutDirectionCallback": "",
+                                                "layoutDirection": "horizontal",
+                                                "tabDirection": 3,
+                                                "closed": false,
+                                                "widthProperty": "free",
+                                                "heightProperty": "free",
+                                                "controlWidth": 199,
+                                                "controlHeight": 1811
                                             }
                                         ]
                                     }
@@ -347,6 +365,26 @@
                     }
                 ]
             }
+        }
+    ],
+    "closedControls": [
+        {
+            "objectName": "scriptEditorPanel1Window",
+            "posX": 250,
+            "posY": 200,
+            "controlHeight": 325,
+            "controlWidth": 475,
+            "widthProperty": "free",
+            "heightProperty": "free"
+        },
+        {
+            "objectName": "CharcoalEditor2Window",
+            "posX": 250,
+            "posY": 200,
+            "controlHeight": 793,
+            "controlWidth": 921,
+            "widthProperty": "free",
+            "heightProperty": "free"
         }
     ]
 }
