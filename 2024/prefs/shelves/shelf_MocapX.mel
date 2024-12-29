@@ -102,7 +102,7 @@ global proc shelf_MocapX () {
         -sourceType "python" 
         -commandRepeatable 1
         -flat 1
-        -mi "Create new Attribute Collection" ( "<function DynamicButton.bound_callback.<locals>.unbound at 0x000001D2C5999A20>" )
+        -mi "Create new Attribute Collection" ( "<function DynamicButton.bound_callback.<locals>.unbound at 0x000002D549A77640>" )
         -mip 0
     ;
     shelfButton

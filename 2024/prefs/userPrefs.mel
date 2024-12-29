@@ -39,7 +39,7 @@ optionVar -cat "Color Management"
 
 // Files/Projects
 optionVar -cat "Files/Projects"
- -sv "lastLocalWS" "C:/Users/unilo/Documents/maya/projects/default"
+ -sv "lastLocalWS" "Z:/WORKsync/00_Work/Projects/Prism/TestProject"
  ;
 
 // Graph Editor
@@ -80,7 +80,7 @@ optionVar -cat "Interface"
  -iv "hasBeenRestored" 0
  -iv "isFirstTimeRunningMaya" 0
  -sv "mayaMode" "modelingMenuSet"
- -iv "splashScreenNumberOfMessagesOnLastStartup" 54
+ -iv "splashScreenNumberOfMessagesOnLastStartup" 57
  ;
 
 // Marking Menus
@@ -187,11 +187,12 @@ optionVar -cat "Security"
  -sva "SafeModeUserSetupHash" "C:/Program Files/Autodesk/Maya2024/plug-ins/MASH/scripts/userSetup.py=4001226999440219105"
  -sva "SafeModeUserSetupHash" "C:/Users/unilo/Documents/workspace/DevPyLib/userSetup.py=9794527571784795502"
  -sva "SafeModeUserSetupHash" "C:/ProgramData/Prism2/plugins/Maya/Integration/scripts/userSetup.py=5780881424476426491"
+ -sva "SafeModeUserSetupHash" "C:/Users/unilo/Documents/maya/2024/scripts/userSetup.py=5780881424476426491"
  ;
 
 // Shelves
 optionVar -cat "Shelves"
- -iv "numShelves" 21
+ -iv "numShelves" 22
  -iv "selectedShelf" 3
  -sv "shelfAlign1" "left"
  -sv "shelfAlign10" "left"
@@ -207,6 +208,7 @@ optionVar -cat "Shelves"
  -sv "shelfAlign2" "left"
  -sv "shelfAlign20" "left"
  -sv "shelfAlign21" "left"
+ -sv "shelfAlign22" "left"
  -sv "shelfAlign3" "left"
  -sv "shelfAlign4" "left"
  -sv "shelfAlign5" "left"
@@ -221,13 +223,14 @@ optionVar -cat "Shelves"
  -sv "shelfFile13" "shelf_Arnold"
  -sv "shelfFile14" "shelf_MASH"
  -sv "shelfFile15" "shelf_MotionGraphics"
- -sv "shelfFile16" "shelf_Prism"
- -sv "shelfFile17" "shelf_Shotsculpt"
- -sv "shelfFile18" "shelf_XGen"
- -sv "shelfFile19" "shelf__3DelightV4"
+ -sv "shelfFile16" "shelf_Shotsculpt"
+ -sv "shelfFile17" "shelf_XGen"
+ -sv "shelfFile18" "shelf__3DelightV4"
+ -sv "shelfFile19" "shelf_ngSkinTools2"
  -sv "shelfFile2" "shelf_Surfaces"
- -sv "shelfFile20" "shelf_ngSkinTools2"
- -sv "shelfFile21" "shelf_MocapX"
+ -sv "shelfFile20" "shelf_MocapX"
+ -sv "shelfFile21" "shelf_Arise"
+ -sv "shelfFile22" "shelf_Prism"
  -sv "shelfFile3" "shelf_Polygons"
  -sv "shelfFile4" "shelf_Sculpting"
  -sv "shelfFile5" "shelf_UVEditing"
@@ -248,6 +251,7 @@ optionVar -cat "Shelves"
  -iv "shelfLoad2" 1
  -iv "shelfLoad20" 1
  -iv "shelfLoad21" 1
+ -iv "shelfLoad22" 1
  -iv "shelfLoad3" 1
  -iv "shelfLoad4" 0
  -iv "shelfLoad5" 0
@@ -262,13 +266,14 @@ optionVar -cat "Shelves"
  -sv "shelfName13" "Arnold"
  -sv "shelfName14" "MASH"
  -sv "shelfName15" "MotionGraphics"
- -sv "shelfName16" "Prism"
- -sv "shelfName17" "Shotsculpt"
- -sv "shelfName18" "XGen"
- -sv "shelfName19" "_3DelightV4"
+ -sv "shelfName16" "Shotsculpt"
+ -sv "shelfName17" "XGen"
+ -sv "shelfName18" "_3DelightV4"
+ -sv "shelfName19" "ngSkinTools2"
  -sv "shelfName2" "Surfaces"
- -sv "shelfName20" "ngSkinTools2"
- -sv "shelfName21" "MocapX"
+ -sv "shelfName20" "MocapX"
+ -sv "shelfName21" "Arise"
+ -sv "shelfName22" "Prism"
  -sv "shelfName3" "Polygons"
  -sv "shelfName4" "Sculpting"
  -sv "shelfName5" "UVEditing"
