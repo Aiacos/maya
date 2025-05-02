@@ -17,7 +17,7 @@ class CalamariRigAction(object):
         self.name = "Calamari Rig"
         self.info = (
             "Exports a rig that slices skinned meshes to segments and parent under joints.\n"
-            "Used as a fast animation rig."
+            "Used as a fast animation rig. (Only meshes under 'geometry_grp' will be sliced.)\n"
         )
         self.position = 1200
         self.is_checked = False
