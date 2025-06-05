@@ -1,0 +1,16 @@
+global proc AEAdnEdgeEvaluatorTemplate ( string $nodeName )
+{
+  editorTemplate -beginScrollLayout;
+    editorTemplate -beginLayout "Time Attributes" -collapse 0;
+      editorTemplate -label "Initialization Time"
+        -annotation "Set the time in which the system will initialize the rest edge distances."
+        -addControl "initializationTime";
+    editorTemplate -endLayout;
+
+    editorTemplate -beginLayout "Compression Remap" -collapse 1;
+      AEaddRampControl($nodeName + ".compressionRemap");
+    editorTemplate -endLayout;
+
+    editorTemplate -addExtraControls;
+  editorTemplate -endScrollLayout;
+}

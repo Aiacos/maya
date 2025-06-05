@@ -1,0 +1,34 @@
+global proc AEAdnRemapTemplate ( string $nodeName )
+{
+  editorTemplate -beginScrollLayout;
+    editorTemplate -beginLayout "Remap Value Attributes" -collapse 0;
+      editorTemplate
+        -annotation "Input value to remap."
+        -addControl "input";
+      AEaddRampControl($nodeName + ".remap");
+    editorTemplate -endLayout;
+
+    editorTemplate -beginLayout "Input and Output Ranges" -collapse 0;
+      editorTemplate
+        -annotation "Lower limit of the range used to map the input value before evaluating it on the ramp attribute."
+        -addControl "inputMin";
+      editorTemplate
+        -annotation "Upper limit of the range used to map the input value before evaluating it on the ramp attribute."
+        -addControl "inputMax";
+      editorTemplate
+        -annotation "Lower limit of the range to map the value returned by the ramp attribute and calculate the final remapped value."
+        -addControl "outputMin";
+      editorTemplate
+        -annotation "Upper limit of the range to map the value returned by the ramp attribute and calculate the final remapped value."
+        -addControl "outputMax";
+    editorTemplate -endLayout;
+
+    editorTemplate -beginLayout "Output" -collapse 0;
+      editorTemplate
+        -annotation "Output remapped value."
+        -addControl "output";
+    editorTemplate -endLayout;
+
+  editorTemplate -addExtraControls;
+  editorTemplate -endScrollLayout;
+}
