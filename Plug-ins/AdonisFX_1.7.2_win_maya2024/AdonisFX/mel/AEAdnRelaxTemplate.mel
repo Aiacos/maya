@@ -1,0 +1,50 @@
+global proc AEAdnRelaxTemplate ( string $nodeName )
+{
+  editorTemplate -beginScrollLayout;
+
+    // Settings section
+    editorTemplate -beginLayout "Settings" -collapse 0;
+      editorTemplate -label "Iterations"
+        -annotation ("Sets the number of iterations to compute." +
+                     "\nSmoothing and relaxation are applied in each iteration, " +
+                     "\nwhile pushing in and pushing out are applied only in the last iteration.")
+        -addControl "iterations";
+      editorTemplate -label "Pin"
+        -annotation "Determines if the vertices on the boundaries are pinned."
+        -addControl "pin";
+      
+      editorTemplate -label "Smooth"
+        -annotation ("Sets the amount of smoothing to apply in the range [0, 1].")
+        -addControl "smooth";
+      editorTemplate -label "Relax"
+        -annotation ("Sets the amount of relaxation to apply in the range [0, 1].")
+        -addControl "relax";
+      
+      editorTemplate -label "Push In Ratio"
+        -annotation ("Sets the correction applicable by the push in strategy.")
+        -addControl "pushInRatio";
+      editorTemplate -label "Push In Threshold"
+        -annotation ("Sets the maximum correction applicable by the push in strategy. " +
+                     "\nThis threshold is ignored if the value is 0.0 or lower.")
+        -addControl "pushInThreshold";
+      editorTemplate -label "Push Out Ratio"
+        -annotation ("Sets the correction applicable by the push out strategy.")
+        -addControl "pushOutRatio";
+      editorTemplate -label "Push Out Threshold"
+        -annotation ("Sets the maximum correction applicable by the push out strategy. " +
+                     "\nThis threshold is ignored if the value is 0.0 or lower.")
+        -addControl "pushOutThreshold";
+    editorTemplate -endLayout;
+
+    // Deformer Attributes section
+    editorTemplate -beginLayout "Deformer Attributes" -collapse 0;
+      editorTemplate -label "Envelope"
+        -annotation "Specifies the deformation scale factor."
+        -addControl "envelope";
+    editorTemplate -endLayout;
+
+    // Extra attributes
+    editorTemplate -addExtraControls;
+
+  editorTemplate -endScrollLayout;
+}

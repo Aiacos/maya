@@ -1,0 +1,552 @@
+global proc AEAdnGluePointMassModeNew( string $attrName )
+{
+  // Create an option menu for the point mass mode.
+  attrEnumOptionMenuGrp
+    -l "Point Mass Mode"
+    -annotation ("Defines how masses should be used in the solver:" +
+                 "\nBy Density estimates the mass value by multiplying the Density * Volume." +
+                 "\nBy Uniform Value sets a uniform mass value.")
+    -columnAlign 1 "right"
+    -at $attrName
+    AdnGluePointMassModeEnumOptionMenu;
+}
+
+global proc AEAdnGluePointMassModeReplace( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  // Disable the point mass mode option menu if the attribute is not present.
+  if ( `attributeQuery -node $nodeName[0] -exists "pointMassMode"` )
+    attrEnumOptionMenuGrp -e -enable true -attribute $attrName AdnGluePointMassModeEnumOptionMenu;
+  else
+    attrEnumOptionMenuGrp -e -enable false AdnGluePointMassModeEnumOptionMenu;
+}
+
+global proc AEAdnGluePointMassChanged( string $nodeName )
+{
+  // Read the values
+  string $attr = ($nodeName + ".pointMassMode");
+  int $pointMassMode = `getAttr $attr`;
+
+  // Enable/disable density slider
+  if ( `attrFieldSliderGrp -exists "AdnGlueDensitySliderGrp"` )
+  {
+    // NOTE: We have to change this entry if we ever reorder the pointMassMode menu
+    $kByDensity = 0;
+    attrFieldSliderGrp -e -enable ($pointMassMode == $kByDensity) AdnGlueDensitySliderGrp;
+  }
+}
+
+global proc AEAdnGlueDensityNew( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  // Create a custom slider for the density.
+  attrFieldSliderGrp
+    -l "Density"
+    -annotation ("Sets the density value in kg/m3 to be able to estimate mass values with By Density mode. " +
+                 "The value is internally converted to g/cm3.")
+    -columnAlign 1 "right"
+    -at $attrName
+    -enable true
+    AdnGlueDensitySliderGrp;
+}
+
+global proc AEAdnGlueDensityReplace( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  // Disable the density if the attribute is not present.
+  if ( `attributeQuery -node $nodeName[0] -exists "density"` )
+    attrFieldSliderGrp -e -enable true -attribute $attrName AdnGlueDensitySliderGrp;
+  else
+    attrFieldSliderGrp -e -enable false AdnGlueDensitySliderGrp;
+}
+
+global proc AEAdnGlueDebugColorChanged(string $nodeName)
+{
+  // Callback method for the color widget on the attribute template.
+  // Will update the deformer values based on the widget.
+  float $rgbValues[];
+  $rgbValues = `colorSliderGrp -q -rgb AdnGlueDebugColorWidgetGrp`;
+
+  setAttr ($nodeName + ".debugColorRed")   $rgbValues[0];
+  setAttr ($nodeName + ".debugColorGreen") $rgbValues[1];
+  setAttr ($nodeName + ".debugColorBlue")  $rgbValues[2];
+}
+
+global proc AEAdnGlueDebugColorNew( string $attrName )
+{
+  // This method is called when the attribute editor is opened the first time.
+  // Creates a color slider group.
+  // Assigns callback method to color slider group and defaults to a red color.
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  string $changeCommand = ("AEAdnGlueDebugColorChanged(\"" + $nodeName[0] + "\")");
+
+  colorSliderGrp
+    -l "Color"
+    -annotation "Set the draw color for debug purposes."
+    -rgb 1 0 0
+    -cc $changeCommand
+    AdnGlueDebugColorWidgetGrp;
+}
+
+global proc AEAdnGlueDebugColorReplace( string $attrName )
+{
+  // Method called every time we change between deformers of the same type.
+  // Will update the references to now update the new deformer.
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  string $changeCommand = ("AEAdnGlueDebugColorChanged(\"" + $nodeName[0] + "\")");
+  float $component_r = `getAttr ($nodeName[0] + ".debugColorRed")`;
+  float $component_g = `getAttr ($nodeName[0] + ".debugColorGreen")`;
+  float $component_b = `getAttr ($nodeName[0] + ".debugColorBlue")`;
+
+  colorSliderGrp
+    -e
+    -rgb $component_r $component_g $component_b
+    -cc $changeCommand
+    AdnGlueDebugColorWidgetGrp;
+}
+
+global proc AEAdnGlueSubstepsNew( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  attrFieldSliderGrp 
+    -l "Substeps"
+    -annotation "Number of solver substeps for one single time delta (only if dynamic is enabled)."
+    -columnAlign 1 "right"
+    -at $attrName
+    -enable false
+    AdnGlueSubstepsGrp;
+}
+
+global proc AEAdnGlueSubstepsReplace( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  if ( `attributeQuery -node $nodeName[0] -exists "substeps"` )
+    attrFieldSliderGrp -e -enable true -attribute $attrName AdnGlueSubstepsGrp;
+  else
+    attrFieldSliderGrp -e -enable false AdnGlueSubstepsGrp;
+}
+
+global proc AEAdnGlueGravityNew( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  attrFieldSliderGrp 
+    -l "Gravity"
+    -annotation "Sets the magnitude in m/s2 of the gravity acceleration. The value is internally converted to cm/s2 (only if dynamic is enabled)."
+    -columnAlign 1 "right"
+    -at $attrName
+    -enable false
+    AdnGlueGravityGrp;
+}
+
+global proc AEAdnGlueGravityReplace( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  if ( `attributeQuery -node $nodeName[0] -exists "gravity"` )
+    attrFieldSliderGrp -e -enable true -attribute $attrName AdnGlueGravityGrp;
+  else
+    attrFieldSliderGrp -e -enable false AdnGlueGravityGrp;
+}
+
+global proc AEAdnGlueGravityDirectionNew( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  attrFieldGrp  
+    -l "Gravity Direction"
+    -annotation "Sets the direction of the gravity acceleration (only if dynamic is enabled)."
+    -columnAlign 1 "right"
+    -at $attrName
+    -enable false
+    AdnGlueGravityDirectionGrp;
+}
+
+global proc AEAdnGlueGravityDirectionReplace( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  if ( `attributeQuery -node $nodeName[0] -exists "gravityDirection"` )
+    attrFieldGrp -e -enable true -attribute $attrName AdnGlueGravityDirectionGrp;
+  else
+    attrFieldGrp -e -enable false AdnGlueGravityDirectionGrp;
+}
+
+global proc AEAdnGlueSoftConstraintsOverrideNew( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  attrFieldSliderGrp 
+    -l "Soft Constraints"
+    -annotation "If its value is equal or greater than 0.0, it will override the global stiffness for soft constraints (only if dynamic is enabled)."
+    -columnAlign 1 "right"
+    -at $attrName
+    -enable false
+    AdnGlueSoftConstraintsOverrideGrp;
+}
+
+global proc AEAdnGlueSoftConstraintsOverrideReplace( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  if ( `attributeQuery -node $nodeName[0] -exists "softStiffnessOverride"` )
+    attrFieldSliderGrp -e -enable true -attribute $attrName AdnGlueSoftConstraintsOverrideGrp;
+  else
+    attrFieldSliderGrp -e -enable false AdnGlueSoftConstraintsOverrideGrp;
+}
+
+global proc AEAdnGlueGlobalDampingNew( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  attrFieldSliderGrp 
+    -l "Global Damp. Multiplier"
+    -annotation "Sets the scaling factor applied to the global damping of every point (only if dynamic is enabled)."
+    -columnAlign 1 "right"
+    -at $attrName
+    -enable false
+    AdnGlueGlobalDampingGrp;
+}
+
+global proc AEAdnGlueGlobalDampingReplace( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  if ( `attributeQuery -node $nodeName[0] -exists "globalDampingMultiplier"` )
+    attrFieldSliderGrp -e -enable true -attribute $attrName AdnGlueGlobalDampingGrp;
+  else
+    attrFieldSliderGrp -e -enable false AdnGlueGlobalDampingGrp;
+}
+
+global proc AEAdnGlueInertiaDamperNew( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  attrFieldSliderGrp 
+    -l "Inertia Damper"
+    -annotation "Sets the linear damping applied to the dynamics of every point (only if dynamic is enabled).\nRange 0 to 1."
+    -columnAlign 1 "right"
+    -at $attrName
+    -enable false
+    AdnGlueInertiaDamperGrp;
+}
+
+global proc AEAdnGlueInertiaDamperReplace( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  if ( `attributeQuery -node $nodeName[0] -exists "inertiaDamper"` )
+    attrFieldSliderGrp -e -enable true -attribute $attrName AdnGlueInertiaDamperGrp;
+  else
+    attrFieldSliderGrp -e -enable false AdnGlueInertiaDamperGrp;
+}
+
+global proc AEAdnGlueAttenuationVelocityFactorNew( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  attrFieldSliderGrp 
+    -l "Attenuation Vel. Factor"
+    -annotation ("Sets the attenuation factor that drives how much velocity attenuation is" +
+                 "\napplied based on a matrix provided to the plug 'AttenuationMatrix' (only if dynamic is enabled).\nRange 0 to 1.")
+    -columnAlign 1 "right"
+    -at $attrName
+    -enable false
+    AdnGlueAttenuationVelocityFactorGrp;
+}
+
+global proc AEAdnGlueAttenuationVelocityFactorReplace( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  if ( `attributeQuery -node $nodeName[0] -exists "attenuationVelocityFactor"` )
+    attrFieldSliderGrp -e -enable true -attribute $attrName AdnGlueAttenuationVelocityFactorGrp;
+  else
+    attrFieldSliderGrp -e -enable false AdnGlueAttenuationVelocityFactorGrp;
+}
+
+global proc AEAdnGlueSubstepsInterpolationExponentNew( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  attrFieldSliderGrp 
+    -l "Substeps Interpolation Exp."
+    -annotation ("Sets the exponential factor to weight the interpolation at each substep (only if dynamic is enabled)." + 
+                 "\nA value of 0.0 disables the interpolation: input geometry targets and attenuation matrix are not interpolated." +
+                 "\nA value of 1.0 applies linear interpolation (input geometry targets and attenuation matrix) between previous and current frame " +
+                 "\nbased on a linear weight, i.e. weight = substep / num_substeps." +
+                 "\nA value between 0.0 and 1.0 applies exponential interpolation (input geometry targets and attenuation matrix) between previous " +
+                 "\nand current frame based on a exponential weight, i.e. weight = (substep / num_substeps) ^ exponent.")
+    -columnAlign 1 "right"
+    -at $attrName
+    -enable false
+    AdnGlueSubstepsInterpolationExponentGrp;
+}
+
+global proc AEAdnGlueSubstepsInterpolationExponentReplace( string $attrName )
+{
+  string $nodeName[];
+  tokenize($attrName, ".", $nodeName);
+
+  if ( `attributeQuery -node $nodeName[0] -exists "substepsInterpolationExponent"` )
+    attrFieldSliderGrp -e -enable true -attribute $attrName AdnGlueSubstepsInterpolationExponentGrp;
+  else
+    attrFieldSliderGrp -e -enable false AdnGlueSubstepsInterpolationExponentGrp;
+}
+
+global proc AEAdnGlueHandleDynamicUI( string $nodeName )
+{
+  if ( `attributeQuery -node $nodeName -exists "dynamic"` )
+  {
+    $dynamic = `getAttr ($nodeName + ".dynamic")`;
+
+    // Disable dynamic attributes if the solver runs in static mode
+    if ( `attrFieldSliderGrp -exists "AdnGlueSubstepsGrp"` )
+      attrFieldSliderGrp -e -enable $dynamic AdnGlueSubstepsGrp;
+      
+    if ( `attrFieldSliderGrp -exists "AdnGlueGravityGrp"` )
+      attrFieldSliderGrp -e -enable $dynamic AdnGlueGravityGrp;
+      
+    if ( `attrFieldGrp -exists "AdnGlueGravityDirectionGrp"` )
+      attrFieldGrp -e -enable $dynamic AdnGlueGravityDirectionGrp;
+
+    if ( `attrFieldSliderGrp -exists "AdnGlueSoftConstraintsOverrideGrp"` )
+      attrFieldSliderGrp -e -enable $dynamic AdnGlueSoftConstraintsOverrideGrp;
+
+    if ( `attrFieldSliderGrp -exists "AdnGlueGlobalDampingGrp"` )
+      attrFieldSliderGrp -e -enable $dynamic AdnGlueGlobalDampingGrp;
+
+    if ( `attrFieldSliderGrp -exists "AdnGlueInertiaDamperGrp"` )
+      attrFieldSliderGrp -e -enable $dynamic AdnGlueInertiaDamperGrp;
+
+    if ( `attrFieldSliderGrp -exists "AdnGlueAttenuationVelocityFactorGrp"` )
+      attrFieldSliderGrp -e -enable $dynamic AdnGlueAttenuationVelocityFactorGrp;
+
+    if ( `attrFieldSliderGrp -exists "AdnGlueSubstepsInterpolationExponentGrp"` )
+      attrFieldSliderGrp -e -enable $dynamic AdnGlueSubstepsInterpolationExponentGrp;
+  }
+}
+
+global proc AEAdnGlueTemplate ( string $nodeName )
+{
+  editorTemplate -beginScrollLayout;
+
+    // Solver Attributes section
+    editorTemplate -beginLayout "Solver Attributes" -collapse 0;
+      editorTemplate -label "Enable"
+        -annotation "Flag to toggle the solver execution."
+        -interruptOptimize
+        -addControl "enable";
+      editorTemplate -label "Dynamic"
+        -annotation ("If enabled the solver runs in dynamic mode; if disabled it runs in static mode." + 
+                     "\nIn dynamic mode, the solver applies substeps, gravity, damping and soft constraints to follow the input " +
+                     "\ngeometries and update velocities over time. In static mode, the solver does not compute velocities over " +
+                     "\ntime (substeps, gravity, damping and soft constraints skipped) and it starts directly from the input " +
+                     "\ngeometry positions at each frame.")
+        -interruptOptimize
+        -addControl "dynamic" "AEAdnGlueHandleDynamicUI";
+      editorTemplate -callCustom
+        "AEAdnGlueSubstepsNew"
+        "AEAdnGlueSubstepsReplace"
+        "substeps";
+      editorTemplate -label "Iterations"
+        -annotation ("Sets the number of solver iterations." +
+                     "\nHigher values produce more accurate results but may impact the performance.")
+        -addControl "iterations";
+      editorTemplate -label "Stiffness"
+        -annotation "Sets the global stiffness of the solver."
+        -addControl "stiffness";
+      editorTemplate -label "Volume Preservation"
+          -annotation "Sets total volume preservation factor."
+          -addControl "volumePreservation";
+      editorTemplate -label "Bypass"
+        -annotation ("If true update the output mesh with the input mesh information without solving." +
+                     "\nIf false read the input mesh data, solve and update the output mesh data.")
+        -interruptOptimize
+        -addControl "bypass";
+    editorTemplate -endLayout;
+
+    editorTemplate -beginLayout "Time Attributes" -collapse 0;
+      editorTemplate -label "Preroll Start Time"
+        -annotation "Sets the frame at which the preroll begins to initialize the solver."
+        -addControl "prerollStartTime";
+      editorTemplate -label "Current Time"
+        -annotation "Current frame of the simulation."
+        -addControl "currentTime";
+    editorTemplate -endLayout;
+
+    editorTemplate -beginLayout "Scale Attributes";
+      editorTemplate -label "Time Scale"
+        -annotation "Sets the scaling factor applied to the simulation time step."
+        -addControl "timeScale";
+      editorTemplate -label "Space Scale"
+        -annotation "Sets the scaling factor applied to the masses and/or the forces."
+        -addControl "spaceScale";
+      editorTemplate -label "Space Scale Mode"
+        -annotation "Determines if the spatial scaling affects the masses, the forces, or both. Forces can be affected only if dynamic is enabled."
+        -addControl "spaceScaleMode";
+    editorTemplate -endLayout;
+
+    editorTemplate -beginLayout "Gravity";
+      editorTemplate -callCustom
+        "AEAdnGlueGravityNew"
+        "AEAdnGlueGravityReplace"
+        "gravity";
+      editorTemplate -callCustom
+        "AEAdnGlueGravityDirectionNew"
+        "AEAdnGlueGravityDirectionReplace"
+        "gravityDirection";
+    editorTemplate -endLayout;
+
+    // Advanced Settings section
+    editorTemplate -beginLayout "Advanced Settings" -collapse 1;
+       // Advanced Override Stiffness subsection
+      editorTemplate -beginLayout "Override Constraint Stiffness" -collapse 1;
+        editorTemplate -label "Glue"
+          -annotation "If its value is equal or greater than 0.0, it will override the global stiffness for glue constraints."
+          -addControl "glueStiffnessOverride";
+      editorTemplate -callCustom
+        "AEAdnGlueSoftConstraintsOverrideNew"
+        "AEAdnGlueSoftConstraintsOverrideReplace"
+        "softStiffnessOverride";
+        editorTemplate -label "Distance Constraints"
+          -annotation "If its value is equal or greater than 0.0, it will override the global stiffness for distance constraints."
+          -addControl "distanceStiffnessOverride";
+        editorTemplate -label "Shape Preservation"
+          -annotation "If its value is equal or greater than 0.0, it will override the global stiffness for shape preservation constraints."
+          -addControl "shapeStiffnessOverride";
+        editorTemplate -label "Volume Constraints"
+          -annotation "If its value is equal or greater than 0.0, it will override the global stiffness for volume constraints."
+          -addControl "volumeStiffnessOverride";
+      editorTemplate -endLayout;
+      editorTemplate -beginLayout "Mass Properties" -collapse 1;
+        // Advanced Mass Properties subsection
+        editorTemplate
+          -addControl "pointMassMode" "AEAdnGluePointMassChanged"
+          -suppress
+          -callCustom "AEAdnGluePointMassModeNew" "AEAdnGluePointMassModeReplace" "pointMassMode";
+        editorTemplate -callCustom
+          "AEAdnGlueDensityNew"
+          "AEAdnGlueDensityReplace"
+          "density";
+        editorTemplate -label "Global Mass Multiplier"
+          -annotation "Sets the scaling factor applied to the mass of every point."
+          -addControl "globalMassMultiplier";
+      editorTemplate -endLayout;
+      editorTemplate -beginLayout "Dynamic Properties" -collapse 1;
+        editorTemplate -label "Triangulate Mesh"
+          -annotation "Use the internally triangulated mesh to build constraints."
+          -addControl "triangulateMesh";
+      editorTemplate -callCustom
+        "AEAdnGlueGlobalDampingNew"
+        "AEAdnGlueGlobalDampingReplace"
+        "globalDampingMultiplier";
+      editorTemplate -callCustom
+        "AEAdnGlueInertiaDamperNew"
+        "AEAdnGlueInertiaDamperReplace"
+        "inertiaDamper";
+        editorTemplate -label "Glue Multiplier"
+          -annotation "Sets the scaling factor applied to the glue constraint weight of every point."
+          -addControl "glueMultiplier";
+        editorTemplate -label "Max Glue Distance"
+          -annotation "Sets the maximum constraint creation distance between geometries on initialization."
+          -addControl "maxGlueDistance";
+        editorTemplate -label "Compression Multiplier"
+          -annotation "Sets the scaling factor applied to the compression resistance of every point."
+          -addControl "compressionMultiplier";
+        editorTemplate -label "Stretching Multiplier"
+          -annotation "Sets the scaling factor applied to the stretching resistance of every point."
+          -addControl "stretchingMultiplier";
+      editorTemplate -callCustom
+        "AEAdnGlueAttenuationVelocityFactorNew"
+        "AEAdnGlueAttenuationVelocityFactorReplace"
+        "attenuationVelocityFactor";
+      editorTemplate -callCustom
+        "AEAdnGlueSubstepsInterpolationExponentNew"
+        "AEAdnGlueSubstepsInterpolationExponentReplace"
+        "substepsInterpolationExponent";
+      editorTemplate -endLayout;
+      editorTemplate -beginLayout "Self Collisions Properties" -collapse 1;
+        // Self Collisions Properties subsection
+        editorTemplate -label "Self Collisions"
+          -annotation "Toggles the self-collisions on or off. It is recommended to enable dynamic mode to allow self-collisions solving."
+          -addControl "selfCollisions";
+        editorTemplate -label "Self Collisions Iterations"
+          -annotation "Sets the number of iterations for the self-collision correction."
+          -addControl "scIterations";
+        editorTemplate -label "Point Radius Mode"
+          -annotation ("Determines how the point radius is computed for self-collisions:" +
+                       "\nUniform Value, uses the uniform value to estimate the radius;" +
+                       "\nAverage Edge, uses the average edge length of the connected edges per vertex;" +
+                       "\nMinimum Edge, uses the minimum edge length of the connected edges per vertex.")
+          -addControl "scPointRadiusMode";
+        editorTemplate -label "Point Radius Scale"
+          -annotation "Sets the scaling factor applied to the point radius. It uses the value directly if Uniform Value is selected."
+          -addControl "scPointRadiusScale";
+        editorTemplate -label "Search Radius"
+          -interruptOptimize
+          -annotation ("Sets the search radius for the self-collision detection." +
+                       "\nIt is used to determine the maximum distance to search for self-collisions." +
+                       "\nIf a value lower than 0.0 is used the search radius will be estimated from the number of substeps " + 
+                       "and the average edge length of the whole mesh. " +
+                       "A value greater than 0.0 will represent a search radius in scene units.")
+          -addControl "scSearchRadius";
+      editorTemplate -endLayout;
+    editorTemplate -endLayout;
+
+    // Node Attributes section
+    editorTemplate -beginLayout "Node Attributes" -collapse 1;
+      editorTemplate
+        -label "Envelope"
+        -addControl "envelope";
+    editorTemplate -endLayout;
+
+    // Debug section
+    editorTemplate -beginLayout "Debug" -collapse 1;
+      editorTemplate -label "Debug"
+        -annotation "Toggles visualization of debugger."
+        -addControl "debug";
+      editorTemplate -label "Feature"
+        -annotation "Sets the feature to debug."
+        -addControl "debugFeature";
+      editorTemplate -label "Width Scale"
+        -annotation "Sets the scaling factor applied to the width of the debug lines."
+        -addControl "debugWidth";
+      editorTemplate -callCustom
+        "AEAdnGlueDebugColorNew"
+        "AEAdnGlueDebugColorReplace"
+        "debugColor";
+    editorTemplate -endLayout;
+
+  // suppressed attributes
+
+  editorTemplate -addExtraControls;
+  editorTemplate -endScrollLayout;
+}

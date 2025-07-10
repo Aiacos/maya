@@ -1,0 +1,48 @@
+global proc AEAdnLocatorDistanceTemplate ( string $nodeName )
+{
+  editorTemplate -beginScrollLayout;
+    editorTemplate -beginLayout "Input" -collapse 0;
+      editorTemplate -beginLayout "By Position" -collapse 1;
+        editorTemplate
+          -annotation "Coordinates in world space defining the start position."
+          -addControl "startPosition";
+        editorTemplate
+          -annotation "Coordinates in world space defining the end position."
+          -addControl "endPosition";
+      editorTemplate -endLayout;
+      editorTemplate -beginLayout "By Matrix" -collapse 1;
+        editorTemplate
+          -annotation "Start matrix in world space."
+          -addControl "startMatrix";
+        editorTemplate
+          -annotation "End matrix in world space."
+          -addControl "endMatrix";
+      editorTemplate -endLayout;
+    editorTemplate -endLayout;
+
+    editorTemplate -beginLayout "Activation Values" -collapse 0;
+      editorTemplate -label "Distance"
+        -annotation "Activation value based on the distance between the start and end position."
+        -addControl "activationDistance";
+      editorTemplate -label "Velocity"
+        -annotation "Activation value based on the velocity which is the result of the change in the distance over time."
+        -addControl "activationVelocity";
+      editorTemplate -label "Acceleration"
+        -annotation "Activation value based on the acceleration which is the result of the change in the velocity over time."
+        -addControl "activationAcceleration";
+    editorTemplate -endLayout;
+
+    editorTemplate -beginLayout "Draw" -collapse 0;
+      editorTemplate
+        -annotation "Scales the size of the locator."
+        -addControl "scale";
+      editorTemplate
+        -annotation "Determines the activation value to be displayed:\ndistance;\nvelocity;\nacceleration."
+        -addControl "drawOutput";
+    editorTemplate -endLayout;
+
+    // suppressed attributes
+
+  editorTemplate -addExtraControls;
+  editorTemplate -endScrollLayout;
+}
