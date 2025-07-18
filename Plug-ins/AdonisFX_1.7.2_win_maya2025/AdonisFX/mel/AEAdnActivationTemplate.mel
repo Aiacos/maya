@@ -1,0 +1,22 @@
+global proc AEAdnActivationTemplate(string $nodeName)
+{
+    editorTemplate -beginScrollLayout;
+      // Add a collapsible list of inputs
+      editorTemplate -label "Inputs"
+        -annotation ("Input activations on which to apply the selected operations. Operations:" +
+                     "\n(0): Override; (1): Add; (2): Subtract; (3): Multiply; (4): Divide")
+        -addControl "inputs";
+      
+      // Add controls for min and max output value
+      editorTemplate -beginLayout "Output Range" -collapse 0;    
+        editorTemplate -label "Output Min"
+          -annotation "Minimum supported output activation value."
+          -addControl "minOutValue";
+        editorTemplate -label "Output Max"
+          -annotation "Maximum supported output activation value."
+          -addControl "maxOutValue";
+      editorTemplate -endLayout;
+
+      editorTemplate -addExtraControls;
+    editorTemplate -endScrollLayout;
+}

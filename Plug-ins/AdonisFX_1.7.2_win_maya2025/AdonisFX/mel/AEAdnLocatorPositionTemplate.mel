@@ -1,0 +1,39 @@
+global proc AEAdnLocatorPositionTemplate ( string $nodeName )
+{
+  editorTemplate -beginScrollLayout;
+    editorTemplate -beginLayout "Input" -collapse 0;
+      editorTemplate -beginLayout "By Position" -collapse 1;
+        editorTemplate
+          -annotation "Coordinates in world space defining the position."
+          -addControl "position";
+      editorTemplate -endLayout;
+      editorTemplate -beginLayout "By Matrix" -collapse 1;
+        editorTemplate
+          -annotation "Position matrix in world space."
+          -addControl "positionMatrix";
+      editorTemplate -endLayout;
+    editorTemplate -endLayout;
+
+    editorTemplate -beginLayout "Activation Values" -collapse 0;
+      editorTemplate -label "Velocity"
+        -annotation "Activation value based on the velocity which is the result of the change in the position over time."
+        -addControl "activationVelocity";
+      editorTemplate -label "Acceleration"
+        -annotation "Activation value based on the acceleration which is the result of the change in the velocity over time."
+        -addControl "activationAcceleration";
+    editorTemplate -endLayout;
+
+    editorTemplate -beginLayout "Draw" -collapse 0;
+      editorTemplate
+        -annotation "Scales the size of the locator."
+        -addControl "scale";
+      editorTemplate
+        -annotation "Determines the activation value to be displayed:\nvelocity;\nacceleration."
+        -addControl "drawOutput";
+    editorTemplate -endLayout;
+
+    // suppressed attributes
+
+  editorTemplate -addExtraControls;
+  editorTemplate -endScrollLayout;
+}
