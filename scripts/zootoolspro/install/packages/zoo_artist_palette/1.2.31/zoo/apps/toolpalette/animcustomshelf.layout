@@ -1,0 +1,53 @@
+{
+  "showInHostShelf": false,
+  "shelves": [
+    {
+      "name": "AnimShelf",
+      "children": [
+        {
+              "type": "toolset",
+              "id": "jointTool"
+            },
+            {
+              "type": "toolset",
+              "id": "constraintToolbox"
+            },
+        {
+          "type": "separator"
+        },
+        {
+          "id": "zoo.sliderTest",
+          "type": "slider",
+          "children": [
+            {
+              "id": "zoo.preferencesui",
+              "type": "action"
+            },
+            {
+              "id": "zoo.hotkeyeditorui",
+              "type": "action"
+            },
+            {
+              "id": "zoo.packages.installZip",
+              "type": "action"
+            },
+            {
+              "id": "zoo.triggers.state",
+              "type": "action"
+            },
+            {
+              "id": "zoo.help.tooltips",
+              "type": "action"
+            },
+            {
+              "id": "create3dcharacters",
+              "label": "Create3dCharacters.com",
+              "icon": "webpage"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

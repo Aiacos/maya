@@ -1,0 +1,44 @@
+{
+  "toolsetGroups": [
+    {
+      "type": "hiveArtistUi",
+      "name": "Hive Artist UI",
+      "color": [
+        115,
+        187,
+        211
+      ],
+      "hidden": true,
+      "hueShift": 0,
+      "toolsets": [
+        "hiveArtistSettings",
+        "colorOverrides",
+        "controlCreator",
+        "editControls",
+        "jointTool",
+        "jointsToHiveGuides",
+        "universalBipedBuilder",
+        "riggingMisc",
+        "skinningUtilities",
+        "hiveFbxRigExport",
+        "hiveMaRigExport",
+        "hiveMayaReferenceExport",
+        "hiveGuideAlignMirror",
+        "addCustomRig",
+        "skeletonToSkinProxy",
+        "hiveCharacterizer",
+        "skinProxyToRig",
+        "buildRigFromSkeleton",
+        "jointsOnCurve",
+        "constraintToolbox",
+        "transferSkinWeights",
+        "smoothSkin",
+        "brSkinTransferExport",
+        "matchBakeAnim",
+        "mocapFeetRetargeter",
+        "zooRenamer",
+        "selectionSets"
+      ]
+    }
+  ]
+}

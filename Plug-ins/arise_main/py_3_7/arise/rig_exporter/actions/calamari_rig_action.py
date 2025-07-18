@@ -9,6 +9,7 @@ from arise.utils.decorators_utils import simple_catch_error_dec
 from arise.utils.tagging_utils import get_maya_nodes_with_tag, get_all_tagged_ctrl_item, MODELS_GRP_NAME
 
 CATEGORY = "arise_base_main_ctrl_tag"
+PREFIX_TO_REMOVE = "io_"
 
 
 class CalamariRigAction(object):
@@ -113,6 +114,16 @@ class CalamariRigAction(object):
                 mc.parent(dup_mesh, joint)
 
         mc.delete(geo_grp[0])
+
+        # Remove all tagged attributes.
+        for node in mc.ls(long=True):
+            for attr in mc.listAttr(node, userDefined=True) or []:
+                if attr.startswith(PREFIX_TO_REMOVE):
+
+                    try:
+                        mc.deleteAttr("{0}.{1}".format(node, attr))
+                    except Exception as e:
+                        pass
 
         mc.file(rename=calamari_path)
         mc.file(

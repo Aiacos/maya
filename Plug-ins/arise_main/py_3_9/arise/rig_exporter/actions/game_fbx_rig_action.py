@@ -11,6 +11,7 @@ from arise.utils.tagging_utils import (
 )
 
 CATEGORY = "arise_base_main_ctrl_tag"
+PREFIX_TO_REMOVE = "io_"
 
 
 class GameFbxRigAction(object):
@@ -67,6 +68,16 @@ class GameFbxRigAction(object):
 
         if not mc.listRelatives(skeleton_grp, children=True):
             return "Empty 'skeleton_grp'. Aborting FBX export"
+
+        # Remove all tagged attributes.
+        for node in mc.ls(long=True):
+            for attr in mc.listAttr(node, userDefined=True) or []:
+                if attr.startswith(PREFIX_TO_REMOVE):
+
+                    try:
+                        mc.deleteAttr("{0}.{1}".format(node, attr))
+                    except Exception as e:
+                        pass
 
         mc.select(clear=True)
         mc.select(geo_grp[0])

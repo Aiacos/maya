@@ -129,7 +129,7 @@
                                 {
                                     "tabWidget": {
                                         "selectedIndex": 0,
-                                        "controlWidth": 1961,
+                                        "controlWidth": 1833,
                                         "controlHeight": 1249,
                                         "collapsed": false,
                                         "controls": [
@@ -148,7 +148,7 @@
                                                 "closed": false,
                                                 "widthProperty": "free",
                                                 "heightProperty": "free",
-                                                "controlWidth": 1961,
+                                                "controlWidth": 1833,
                                                 "controlHeight": 1249,
                                                 "initCallback": "mainPaneStateCallback",
                                                 "stateString": "global string $gMainPane; paneLayout -edit -configuration single $gMainPane;if(`modelPanel -exists modelPanel4`){ modelPanel -edit -parent $gMainPane modelPanel4; paneLayout -edit -setPane modelPanel4 1 $gMainPane;}"
@@ -158,8 +158,8 @@
                                 },
                                 {
                                     "tabWidget": {
-                                        "selectedIndex": 0,
-                                        "controlWidth": 260,
+                                        "selectedIndex": 3,
+                                        "controlWidth": 388,
                                         "controlHeight": 1249,
                                         "collapsed": false,
                                         "controls": [
@@ -219,6 +219,24 @@
                                                 "requiredPlugins": [
                                                     "modelingToolkit"
                                                 ]
+                                            },
+                                            {
+                                                "objectName": "ngSkinTools2_mainWindow",
+                                                "title": "ngSkinTools 2.4.0",
+                                                "uiScript": "python(\"import ngSkinTools2; ngSkinTools2.workspace_control_main_window()\");",
+                                                "retain": false,
+                                                "deleteLater": true,
+                                                "loadImmediately": false,
+                                                "checkPlugins": false,
+                                                "actLikeMayaUIElement": false,
+                                                "layoutDirectionCallback": "",
+                                                "layoutDirection": "horizontal",
+                                                "tabDirection": 3,
+                                                "closed": false,
+                                                "widthProperty": "free",
+                                                "heightProperty": "free",
+                                                "controlWidth": 388,
+                                                "controlHeight": 1249
                                             }
                                         ]
                                     }
@@ -347,6 +365,26 @@
                     }
                 ]
             }
+        }
+    ],
+    "closedControls": [
+        {
+            "objectName": "scriptEditorPanel1Window",
+            "posX": 250,
+            "posY": 200,
+            "controlHeight": 325,
+            "controlWidth": 475,
+            "widthProperty": "free",
+            "heightProperty": "free"
+        },
+        {
+            "objectName": "CharcoalEditor2Window",
+            "posX": 254,
+            "posY": 204,
+            "controlHeight": 1445,
+            "controlWidth": 1958,
+            "widthProperty": "free",
+            "heightProperty": "free"
         }
     ]
 }

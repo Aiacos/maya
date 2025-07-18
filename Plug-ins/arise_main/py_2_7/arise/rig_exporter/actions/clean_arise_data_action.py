@@ -6,11 +6,12 @@ from arise.utils.decorators_utils import simple_catch_error_dec
 from arise.utils.tagging_utils import get_maya_nodes_with_tag, ROOT_FOLDER_NAME
 from arise.utils.constant_variables import AUTOSAVE_ATTR
 
+
 class CleanAriseDataAction(object):
     """Clean Arise data from scene. delete stored Arise saved scene to make the scene smaller. """
     def __init__(self):
         self.name = "Clean Arise Data"
-        self.info = "Reduce the exported rig file size by deleting Arise Saved scene data"
+        self.info = "Reduce the exported rig file size by deleting Arise Saved scene data."
         self.position = 250
         self.is_checked = False
         self.post_action = False

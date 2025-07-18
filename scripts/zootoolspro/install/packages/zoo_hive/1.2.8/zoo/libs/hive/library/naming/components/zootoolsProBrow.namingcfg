@@ -1,0 +1,123 @@
+{
+  "name": "zootoolsProGlobalBrowComponent",
+  "description": "Hive Brow Component Naming convention, use the Id Field to Change the control, joint names.",
+  "rules": [],
+  "fields": [
+    {
+      "name": "id",
+      "description": "Control, guide, joint, in/out node id names to use",
+      "permissions": [
+        {
+          "name": "main"
+        },
+        {
+          "name": "railsMain"
+        },
+        {
+          "name": "primaryInner"
+        },
+        {
+          "name": "primaryMid"
+        },
+        {
+          "name": "primaryOuter"
+        },
+        {
+          "name": "secondaryInner"
+        },
+        {
+          "name": "secondaryInnerTweaker"
+        },
+        {
+          "name": "secondaryMid"
+        },
+        {
+          "name": "secondaryOuter"
+        },
+        {
+          "name": "tweakerTangentIn"
+        },
+        {
+          "name": "tweakerTangentOut"
+        },
+        {
+          "name": "midTangentIn"
+        },
+        {
+          "name": "midTangentOut"
+        },
+        {
+          "name": "outerTangentIn"
+        },
+        {
+          "name": "bind00"
+        },
+        {
+          "name": "bind01"
+        },
+        {
+          "name": "bind02"
+        },
+        {
+          "name": "bind03"
+        },
+        {
+          "name": "bind04"
+        },
+        {
+          "name": "bind05"
+        },
+        {
+          "name": "bind06"
+        },
+        {
+          "name": "bind07"
+        },
+        {
+          "name": "bind08"
+        },
+        {
+          "name": "bind09"
+        },
+        {
+          "name": "bind010"
+        },
+        {
+          "name": "bind011"
+        },
+        {
+          "name": "bind012}"
+        }
+      ],
+      "table": {
+        "main": "main",
+        "railsMain": "railsMain",
+        "primaryInner": "primaryInner",
+        "primaryMid": "primaryMid",
+        "primaryOuter": "primaryOuter",
+        "secondaryInner": "secondaryInner",
+        "secondaryInnerTweaker": "secondaryInnerTweaker",
+        "secondaryMid": "secondaryMid",
+        "secondaryOuter": "secondaryOuter",
+        "tweakerTangentIn": "tweakerTangentIn",
+        "tweakerTangentOut": "tweakerTangentOut",
+        "midTangentIn": "midTangentIn",
+        "midTangentOut": "midTangentOut",
+        "outerTangentIn": "outerTangentIn",
+        "bind00": "bind00",
+        "bind01": "bind01",
+        "bind02": "bind02",
+        "bind03": "bind03",
+        "bind04": "bind04",
+        "bind05": "bind05",
+        "bind06": "bind06",
+        "bind07": "bind07",
+        "bind08": "bind08",
+        "bind09": "bind09",
+        "bind010": "bind010",
+        "bind011": "bind011",
+        "bind012": "bind012"
+      }
+    }
+  ]
+}

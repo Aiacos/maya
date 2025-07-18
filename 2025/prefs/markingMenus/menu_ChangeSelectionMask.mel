@@ -6,7 +6,6 @@
         -tearOff 0
         -command "setSelectMode nurbsModeling NURBS" 
         -optionBox 0
-        -header 0
         -enable 1
         -visible 1
         -data 0
@@ -28,7 +27,6 @@
         -tearOff 0
         -command "setSelectMode hierarchy Hierarchy" 
         -optionBox 0
-        -header 0
         -enable 1
         -visible 1
         -data 0
@@ -50,7 +48,6 @@
         -tearOff 0
         -command "setSelectMode animation Animation" 
         -optionBox 0
-        -header 0
         -enable 1
         -visible 1
         -data 0
@@ -72,7 +69,6 @@
         -tearOff 0
         -command "setSelectMode deformations Deformations" 
         -optionBox 0
-        -header 0
         -enable 1
         -visible 1
         -data 0
@@ -94,7 +90,6 @@
         -tearOff 0
         -command "setSelectMode dynamics Dynamics" 
         -optionBox 0
-        -header 0
         -enable 1
         -visible 1
         -data 0
@@ -116,7 +111,6 @@
         -tearOff 0
         -command "setSelectMode polyModeling Polygons" 
         -optionBox 0
-        -header 0
         -enable 1
         -visible 1
         -data 0
@@ -138,7 +132,6 @@
         -tearOff 0
         -command "setSelectMode rendering Rendering" 
         -optionBox 0
-        -header 0
         -enable 1
         -visible 1
         -data 0
@@ -160,7 +153,6 @@
         -tearOff 0
         -command "if ( `selectMode -q -component` ) { setSelectMode objects Objects; } \t\t\t else { setSelectMode components Components; }" 
         -optionBox 0
-        -header 0
         -enable 1
         -visible 1
         -data 0

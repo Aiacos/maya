@@ -1,0 +1,116 @@
+{
+  "id": "browMidPointNoRot",
+  "name": "browMidPointNoRot",
+  "metaData": {},
+  "nodes": [
+    {
+      "id": "innerTranslateOnly",
+      "data": {
+        "name": "innerTranslateOnly",
+        "type": "pickMatrix",
+        "attributes": [
+          {
+            "isDynamic": false,
+            "name": "useScale",
+            "default": true,
+            "Type": 0,
+            "value": false
+          },
+          {
+            "isDynamic": false,
+            "name": "useShear",
+            "default": true,
+            "Type": 0,
+            "value": false
+          },
+          {
+            "isDynamic": false,
+            "name": "useRotate",
+            "default": true,
+            "Type": 0,
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "midPoint",
+      "data": {
+        "name": "midPoint",
+        "type": "blendMatrix"
+      }
+    },
+    {
+      "id": "controlLocalMatrix",
+      "data": {
+        "name": "controlLocalMatrix",
+        "type": "multMatrix"
+      }
+    },
+    {
+      "id": "outputTr",
+      "data": {
+        "name": "outputTr",
+        "type": "pickMatrix",
+        "attributes": [
+          {
+            "isDynamic": false,
+            "name": "useScale",
+            "default": true,
+            "Type": 0,
+            "value": false
+          },
+          {
+            "isDynamic": false,
+            "name": "useShear",
+            "default": true,
+            "Type": 0,
+            "value": false
+          }
+        ]
+      }
+    }
+  ],
+  "connections": [
+    {
+      "sourcePlug": "outputMatrix",
+      "source": "innerTranslateOnly",
+      "destinationPlug": "inputMatrix",
+      "destination": "midPoint"
+    },
+    {
+      "sourcePlug": "outputMatrix",
+      "source": "midPoint",
+      "destinationPlug": "matrixIn[0]",
+      "destination": "controlLocalMatrix"
+    },
+    {
+      "sourcePlug": "matrixSum",
+      "source": "controlLocalMatrix",
+      "destinationPlug": "inputMatrix",
+      "destination": "outputTr"
+    }
+  ],
+  "inputs": {
+    "innerControlLocalMatrix": [
+      "innerTranslateOnly:inputMatrix"
+    ],
+    "outerControlLocalMatrix": [
+      "midPoint:target[0].targetMatrix"
+    ],
+    "blendSR": [
+      "midPoint:target[0].useScale",
+      "midPoint:target[0].useShear",
+      "midPoint:target[0].useRotate"
+    ],
+    "blendWeight": [
+      "midPoint:target[0].weight"
+    ],
+    "railsMainLocalMatrix": [
+      "controlLocalMatrix:matrixIn[1]"
+    ]
+  },
+  "outputs": {
+    "outputMatrix": "outputTr:outputMatrix"
+  }
+}
