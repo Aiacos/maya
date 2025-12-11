@@ -38,10 +38,6 @@ class BaseNodeAction(object):
 
         main_window (IORMainWindow): Arise main window
         """
-        print("\n#########################################################")
-        print("########## Action: 'Base Node Settings' START. ##########")
-        print("#########################################################\n")
-
         base_nodes_ctrls = []
         for ctrl in get_all_tagged_ctrl_item():
 
@@ -56,15 +52,12 @@ class BaseNodeAction(object):
                 attr = "{0}.{1}".format(ctrl, attr)
 
                 if not mc.objExists(attr):
-                    print("does not exist")
                     continue
 
                 if mc.getAttr(attr, lock=True):
-                    print("locked")
                     continue
 
                 if mc.listConnections(attr, source=True, destination=False):
-                    print("connected")
                     continue
 
                 mc.setAttr(attr, value)

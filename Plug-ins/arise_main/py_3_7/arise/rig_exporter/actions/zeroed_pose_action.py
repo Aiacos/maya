@@ -28,10 +28,6 @@ class ZeroedPoseAction(object):
     @simple_catch_error_dec
     def run_action(_):
         """Run set bind pose. """
-        print("\n#########################################################")
-        print("####### Action: 'Set Ctrls To Zeroed Pose' START. #######")
-        print("#########################################################\n")
-
         apply_zero_pose_all()
 
         return "----"

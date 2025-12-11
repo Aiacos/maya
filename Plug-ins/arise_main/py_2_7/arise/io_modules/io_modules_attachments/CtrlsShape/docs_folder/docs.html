@@ -1,47 +1,118 @@
-<h1 class="readonly threshold-input-field kbase-content__title"><span
-        class="kbase-content__title--readonly collab-annotatable" data-test-id="article-title">CtrlsShape</span></h1>
+<h2 class="readonly threshold-input-field kbase-content__title"><strong><span data-test-id="article-title"
+                        class="kbase-content__title--readonly collab-annotatable"
+                        id="article_title">CtrlsShape</span></strong></h2>
 <div class="text__content kbase-content__description" dir="ltr">
-    <p dir="ltr"><span dir="ltr">With '<em>CtrlsShape</em>', you have the ability to manually modify the shape of
-            ctrls.<br />However, make sure to save your modifications on the attachment.</span></p>
-    <p dir="ltr"><u>Steps</u>:</p>
-    <ol>
-        <li dir="ltr">Right-click hold on a ctrl in the Maya scene and choose&nbsp;<strong>'Control Vertex'</strong>.
-        </li>
-        <li dir="ltr">Modify the ctrl CVs.</li>
-        <li dir="ltr"><span dir="ltr">When done, go to the attachment settings in the Arise&nbsp;<em><a dir="ltr"
-                        href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000425053"
-                        target="_blank" rel="noopener noreferrer"><strong>Attribute Editor</strong></a></em>, and
-                press&nbsp;<strong>'Save Modifications'</strong>.<br /><img class="fr-fic fr-fil fr-dib inline-image"
-                    src="btns_image.png"
-                    width="244" height="49" data-attachment="[object Object]" data-id="69003514600" /></span></li>
-    </ol>
-    <p dir="ltr"><u dir="ltr">Notes</u>:</p>
-    <ul>
-        <li dir="ltr">You can only modify the position of existing CVs; you cannot add or remove CVs or shapes.</li>
-        <li dir="ltr">Please note that '<em>CtrlsShape</em>' only saves modifications made to ctrls belonging to the
-            node the attachment is on. If you make changes to ctrls on other nodes, they won't be saved.</li>
-        <li dir="ltr">After adding a&nbsp;'<em>CtrlsShape</em>'&nbsp;to a node, changes to the parent node '<em>Ctrls
-                Scale</em>' attribute will be ignored.</li>
-        <li dir="ltr">After adding a&nbsp;'<em>CtrlsShape</em>'&nbsp;to a node,&nbsp;changes&nbsp;to some of the
-            attributes in&nbsp;<a dir="ltr"
-                href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000440777" target="_blank"
-                rel="noopener noreferrer"><strong>'<em>CtrlsSettings</em>'</strong></a><span dir="ltr"> will be
-                ignored.</span></li>
-    </ul>
-    <p><span dir="ltr">As of version&nbsp;<em dir="ltr">1.01.00</em>, a '<em>Scale Ctrls</em>' slider is available in
-            the '<em><strong><a href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000434169"
-                        target="_blank" rel="noopener noreferrer">Helper Tools</a></strong></em>' menu that allows you
-            to scale selected ctrls or all the ctrls in the scene if none are selected. Remember to save your
-            modifications after using this feature.</span></p>
-    <p dir="ltr">To further streamline the process, you can use the '<em><strong><a
-                    href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000834208"
-                    target="_blank" rel="noopener noreferrer">Batch</a></strong></em>' &gt; '<em>Add CtrlsShape To
-            Selected Nodes</em>' option to add this attachment to multiple nodes at once. Then, use the '<em><strong><a
-                    href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000834208"
-                    target="_blank" rel="noopener noreferrer">Batch</a></strong></em>' &gt; '<em>Save All CtrlsShape
-            Attachments</em>' option to save all your modifications with a single click. This can save you a lot of time
-        and effort.</p>
-    <p dir="ltr"><span dir="ltr">_____________________________________________</span></p>
-    <p dir="ltr">Get Arise at:&nbsp;<a dir="ltr" href="https://www.ariserigging.com/" target="_blank"
-            rel="noopener noreferrer"><span dir="ltr">www.ariserigging.com</span></a></p>
+        <p dir="ltr"><span>The 'CtrlsShape' attachment allows you to manually modify the shapes of the ctrls belonging
+                        to the node it&rsquo;s placed on.<br /><br /></span><span></span></p>
+        <p dir="ltr"><span></span></p>
+        <span><strong data-end="621" data-start="598">Alternative Methods:</strong></span>
+        <p data-end="669" data-start="623"><span>You can also adjust ctrl size and shapes using:</span></p>
+        <ul>
+                <li data-end="733" data-start="672"><span>The&nbsp;<strong data-end="691" data-start="676">Ctrls
+                                        Scale</strong>&nbsp;attribute (available on most nodes), or</span></li>
+                <li data-end="733" data-start="672"><span></span><span>The&nbsp;<strong data-end="757"
+                                        data-start="740"><a dir="ltr"
+                                                href="https://newaccount1619350932681.freshdesk.com/a/solutions/articles/69000440777"
+                                                rel="noopener noreferrer"
+                                                target="_blank">CtrlsSettings</a></strong>&nbsp;attachment.</span></li>
+        </ul>
+        <p><span></span></p>
+        <p><span></span></p>
+        <span><strong>Full Curve Data (New in v1.13.00):</strong></span>
+        <p><span>As of version&nbsp;<em>1.13.00</em>, CtrlsShape can store full NURBS curve data for each
+                        ctrl.<br /></span><span>Enabling the new checkbox &ldquo;Store Full Curve Data&rdquo; lets you
+                        modify ctrl shapes beyond simply moving existing CVs, you can: </span><span>replace or delete
+                        shapes, </span><span>add or remove CVs, and </span><span>create entirely new shapes.</span></p>
+        <p dir="ltr"><span><strong data-end="1143" data-start="1134">Note:</strong>&nbsp;Enabling this option slightly
+                        increases build time, and&nbsp;<code data-end="1207" data-start="1200">.ions</code>&nbsp;files
+                        will be a bit larger.&nbsp;</span></p>
+        <p data-identifyelement="475" dir="ltr"><span>&nbsp;</span></p>
+        <p data-identifyelement="475" dir="ltr"><strong data-end="1271" data-start="1237"><span
+                                style="text-decoration: underline;">Option A &ndash; Modify Existing
+                                CVs</span>:</strong></p>
+        <ol>
+                <li data-end="1351" data-start="1275"><span>In Maya,&nbsp;<strong data-end="1308"
+                                        data-start="1284">right-click and hold</strong>&nbsp;on a ctrl and
+                                select&nbsp;<strong data-end="1348" data-start="1330">Control Vertex</strong>.</span>
+                </li>
+                <li data-end="1351" data-start="1275"><span></span><span>Move the existing CVs to adjust the
+                                shape.</span></li>
+                <li data-end="1351" data-start="1275"><span>In the Arise Attribute Editor, open the&nbsp;<strong
+                                        data-end="1457" data-start="1443">CtrlsShape</strong>&nbsp;attachment and
+                                press&nbsp;<strong data-end="1501" data-start="1479">Save
+                                        Modifications<br /></strong></span><span><img
+                                        src="btns_image.png"
+                                        class="fr-fic fr-fil fr-dib inline-image" data-attachment="[object Object]"
+                                        data-id="69003514600" data-identifyelement="493" /></span></li>
+        </ol>
+        <p data-end="1605" data-start="1508" dir="ltr"><span>With this option, you can only reposition existing CVs, you
+                        cannot add, remove, or replace shapes.</span></p>
+        <p><span>&nbsp;</span></p>
+        <p><span></span></p>
+        <span><strong data-end="1662" data-start="1617"><span style="text-decoration: underline;">Option B &ndash; Full
+                                Shape Editing (v1.13.00+)</span>:</strong></span>
+        <ol>
+                <li data-end="1744" data-start="1666" dir="ltr"><span>Modify the ctrl shape freely: Replace shapes,
+                                delete CVs, or create new ones.</span></li>
+                <li data-end="1744" data-start="1666" dir="ltr"><span>In the&nbsp;<strong data-end="1769"
+                                        data-start="1755">CtrlsShape</strong>&nbsp;attachment settings,
+                                enable&nbsp;<strong data-end="1823" data-start="1798">Store Full Curve
+                                        Data</strong>.</span></li>
+                <li data-end="1744" data-start="1666" dir="ltr"><span>Press&nbsp;<strong data-end="1858"
+                                        data-start="1836">Save Modifications</strong>.</span></li>
+        </ol>
+        <p data-end="1861" data-start="1830" dir="ltr"><span>This option may slightly affect build time.</span></p>
+        <p data-end="1861" data-start="1830" dir="ltr"><span></span></p>
+        <p data-end="1861" data-start="1830" dir="ltr"><span></span></p>
+        <span><strong data-end="1891" data-start="1872"><span style="text-decoration: underline;">Important
+                                Notes</span>:</strong></span>
+        <ul>
+                <li data-end="2054" data-start="1895"><span><strong data-end="1905" data-start="1895">Scope:</strong><br
+                                        data-start="1905" data-end="1908" />CtrlsShape only saves modifications to ctrls
+                                belonging to the node it&rsquo;s attached to.<br data-start="1994"
+                                        data-end="1997" />Changes made to ctrls on other nodes will not be saved.</span>
+                </li>
+                <li data-end="2054" data-start="1895"><strong data-end="2094" data-start="2058">Interaction with Other
+                                Features:</strong><span><strong data-end="2094" data-start="2058"></strong></span>
+                        <ul>
+                                <li data-end="2054" data-start="1895">After adding a&nbsp;<strong data-end="2130"
+                                                data-start="2116">CtrlsShape</strong>, changes to the parent
+                                        node&rsquo;s&nbsp;<strong data-end="2176" data-start="2161">Ctrls
+                                                Scale</strong>&nbsp;attribute will be ignored.</li>
+                                <li data-end="2054" data-start="1895">Some attributes in&nbsp;<strong data-end="2246"
+                                                data-start="2229">CtrlsSettings</strong>&nbsp;may also be ignored after
+                                        adding this attachment.</li>
+                        </ul>
+                </li>
+                <li data-end="2054" data-start="1895"><span><strong data-end="2334" data-start="2300">Helper Tools
+                                        (since v1.01.00):</strong><br data-start="2334" data-end="2337" />A&nbsp;<strong
+                                        data-end="2356" data-start="2341">Scale Ctrls</strong>&nbsp;slider in
+                                the&nbsp;<em data-end="2385" data-start="2371">Helper Tools</em>&nbsp;menu lets you
+                                scale selected ctrls or all ctrls in the scene if none are selected.<br
+                                        data-start="2468" data-end="2471" />Remember to&nbsp;<strong data-end="2512"
+                                        data-start="2485">save your
+                                        modifications</strong>&nbsp;afterward.</span><span></span><span></span></li>
+                <li data-end="2054" data-start="1895"><span>After making any changes, make sure to save your
+                                modifications directly from the attachment.</span></li>
+        </ul>
+        <p data-identifyelement="530"><span>&nbsp;</span></p>
+        <p data-identifyelement="530"><span></span></p>
+        <span><strong data-end="2552" data-start="2534"><span style="text-decoration: underline;">Batch
+                                Workflow</span>:</strong></span>
+        <p data-end="2583" data-start="2554"><span>To streamline large projects:</span></p>
+        <ul>
+                <li data-end="2583" data-start="2554"><span>Use&nbsp;<strong data-end="2634" data-start="2590">Batch
+                                        --&gt; Add CtrlsShape To Selected Nodes</strong>&nbsp;to apply the attachment to
+                                multiple nodes at once.</span></li>
+                <li data-end="2583" data-start="2554"><span>Use&nbsp;<strong data-end="2737" data-start="2694">Batch
+                                        --&gt; Save All CtrlsShape Attachments</strong>&nbsp;to save all ctrl
+                                modifications in one click.</span></li>
+        </ul>
+        <p data-end="2868" data-start="2784" dir="ltr"><span>These options can significantly reduce repetitive work when
+                        handling multiple nodes.</span></p>
+        <p data-identifyelement="543"><span>&nbsp;</span></p>
+        <p data-identifyelement="552" dir="ltr"><span>_____________________________________________</span></p>
+        <p data-identifyelement="554" dir="ltr"><span>Get Arise at:&nbsp;</span><a data-identifyelement="556" dir="ltr"
+                        href="https://www.ariserigging.com/" rel="noopener noreferrer" target="_blank"><span
+                                data-identifyelement="557" dir="ltr">www.ariserigging.com</span></a></p>
 </div>

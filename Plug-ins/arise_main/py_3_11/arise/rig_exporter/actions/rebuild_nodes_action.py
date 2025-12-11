@@ -33,10 +33,6 @@ class RebuildNodesAction(object):
 
         main_window (IORMainWindow): Arise main window
         """
-        print("\n#########################################################")
-        print("############# Action: 'Rebuild Nodes' START. ############")
-        print("#########################################################\n")
-
         results = main_window.scene_ptr.build_manager.build_nodes(nodes=main_window.scene_ptr.enabled_nodes)
 
         if results:

@@ -43,10 +43,6 @@ class CalamariRigAction(object):
 
         save_path (str): full save path
         """
-        print("\n#########################################################")
-        print("############ Action: 'Calamari Rig' START. ##############")
-        print("#########################################################\n")
-
         path, ext = os.path.abspath(save_path).rsplit(".", 1)
         calamari_path = "{0}_calamari.{1}".format(path, ext)
 

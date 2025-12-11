@@ -28,10 +28,6 @@ class BindPoseAction(object):
     @simple_catch_error_dec
     def run_action(_):
         """Run set bind pose. """
-        print("\n#########################################################")
-        print("######## Action: 'Set Ctrls To Bind Pose' START. ########")
-        print("#########################################################\n")
-
         apply_bind_pose_all(silent=False, only_trans=True)
 
         return "----"

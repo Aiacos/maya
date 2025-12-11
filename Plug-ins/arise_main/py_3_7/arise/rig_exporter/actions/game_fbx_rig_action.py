@@ -45,10 +45,6 @@ class GameFbxRigAction(object):
 
         save_path (str): full save path
         """
-        print("\n#########################################################")
-        print("########## Action: 'Export Game FBX rig' START. #########")
-        print("#########################################################\n")
-
         path = os.path.abspath(save_path).rsplit(".", 1)[0]
         fbx_path = "{0}.fbx".format(path)
         fbx_path = fbx_path.replace("\\", "/")

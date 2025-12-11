@@ -32,10 +32,6 @@ class CleanAriseDataAction(object):
     @simple_catch_error_dec
     def run_action(_):
         """Delete save scene attribute on root rig group. """
-        print("\n#########################################################")
-        print("########## Action: 'Clean Arise Data' START. ###########")
-        print("#########################################################\n")
-
         root_grp = get_maya_nodes_with_tag(ROOT_FOLDER_NAME)
 
         if not root_grp or not mc.objExists(root_grp[0]):
