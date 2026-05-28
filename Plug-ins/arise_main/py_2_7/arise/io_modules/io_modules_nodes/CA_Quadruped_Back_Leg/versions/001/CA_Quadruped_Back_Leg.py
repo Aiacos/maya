@@ -731,8 +731,7 @@ class CA_Quadruped_Back_Leg(node_data.NodeData):
             rotation_order=0,  # xyz.
         )
 
-        if self.fk_toes_secondary:
-            secondary_ctrls_setup([self.fk_toes_ctrl], [self.fk_toes_secondary])
+        secondary_ctrls_setup([self.fk_toes_ctrl], [self.fk_toes_secondary])
 
         ## FK features.
         if self.fk_translate_ctrls_attr.value:
