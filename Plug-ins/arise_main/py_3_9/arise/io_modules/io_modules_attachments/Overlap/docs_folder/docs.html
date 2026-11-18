@@ -1,0 +1,89 @@
+<div class="readonly threshold-input-field kbase-content__title">
+    <h1 class="readonly threshold-input-field kbase-content__title"><span data-test-id="article-title"
+            class="kbase-content__title--readonly" id="article_title">Overlap</span></h1>
+    <div class="text__content kbase-content__description" dir="ltr">
+        <p dir="ltr"><span><em>(As of version 1.15.00)</em></span></p>
+        <p dir="ltr"><span><strong>Experimental</strong> - this attachment is experimental. Its behavior, attributes and
+                results may change in future versions.</span></p>
+        <p dir="ltr"><span dir="ltr">'Overlap' adds secondary motion on top of the node's joints: lag, follow through
+                and overshoot, like floppy ears, tails, antennas or capes.<br /></span><span dir="ltr">Unlike
+                'MakeDynamic' it does not use nHair or any simulation. The whole effect is built from Maya
+                nodes only (no expressions) and, since it does not store any state between frames, behaves exactly
+                the same when scrubbing, jumping in time, playing back or baking.</span></p>
+        <p dir="ltr"><span><u>How it works</u>:</span></p>
+        <p dir="ltr"><span>For every overlap joint, the history of the driving joint is read a few frames back in time
+                (using 'frameCache' nodes) and filtered with the sampled response of a damped spring. The result is
+                where the joint 'wants' to be. The overlap joints then aim at those positions while keeping the
+                length of their bones. Rotating or moving the node's ctrls makes the chain trail behind and overshoot
+                before it settles on the animation. When nothing moves, the overlap joints sit exactly on the
+                animation.</span></p>
+        <p dir="ltr"><span><u>Attributes</u>:</span></p>
+        <ul>
+            <li dir="ltr"><span dir="ltr"><strong dir="ltr">'Switch Skinning Tag'</strong><span>&nbsp;</span>- Switch
+                    the skinning tag to                     the new overlap joints (_OVL).</span></li>
+            <li dir="ltr"><span dir="ltr"><strong>'Enable Joints Color'</strong><span>&nbsp;</span>- Enable changing
+                                        the color of the new overlap joints.</span></li>
+            <li dir="ltr"><span dir="ltr"><strong>'Joints Color'</strong><span>&nbsp;</span>- Specify the color of the
+                                        new overlap joints.</span></li>
+                                <li dir="ltr"><span><strong>'Overlap Joints'</strong>&nbsp;-</span>
+                <ul>
+                                        <li><span>'<u>create_overlap_joint</u>' - When checked, creates an overlap joint for this
+                            joint.</span></li>
+                    <li><span>'<u>parent_joint</u>' - Specify the joint that is the previous link in the chain. A chain
+                            needs at least 2 joints and a joint cannot be the parent of more than one joint. The first
+                            joint of each chain follows the animation (its pivot does not move).</span></li>
+                </ul>
+            </li>
+            <li dir="ltr"><span><strong>'Reset Changes'</strong>&nbsp;- Remove any             changes made to the 'Overlap Joints'
+                    table.</span></li>
+                        <li dir="ltr"><span><strong>'Overlap Ctrl Parent'</strong>&nbsp;- Under which ctrl to parent the
+                                'overlap' ctrl.</span></li>
+                        <li dir="ltr"><span><strong>'Overlap Ctrl Offset'</strong>&nbsp;- Position offset of the 'overlap' ctrl
+                    from its parent ctrl.</span></li>
+                        <li dir="ltr"><span><strong>'Overlap Output'</strong>&nbsp;- A driver attribute that follows the tip joint
+                    of the (first) chain.</span></li>
+            <li dir="ltr"><span><strong>'Ctrl Defaults'</strong>&nbsp;- The starting values of the attributes found on
+                                the 'overlap' ctrl (see below).</span></li>
+            <li dir="ltr"><span><strong>'Spring'</strong>&nbsp;- (Requires a rebuild)
+                    <ul>
+                        <li><span>'<u>Samples</u>' - 16 or 8 past frames sampled per joint. 8 is lighter to evaluate
+                                but is a coarser spring.</span></li>
+                        <li><span>'<u>Fast Period</u>' - Period of the spring, in frames, when the ctrl 'lag' is 0.
+                                Lower values are quicker and tighter.</span></li>
+                        <li><span>'<u>Slow Period</u>' - Period of the spring, in frames, when the ctrl 'lag' is 1.
+                                Higher values are slower and heavier.</span></li>
+                        <li><span>'<u>Damping</u>' - How fast the spring settles. 1.0 does not overshoot at all, lower
+                                values overshoot and bounce more. The history used is limited to 36 frames so very
+                                low values are cut short.</span></li>
+                    </ul>
+                </span></li>
+        </ul>
+        <p dir="ltr"><span><u>The 'overlap' ctrl attributes</u>:</span></p>
+        <ul>
+            <li dir="ltr"><span><strong>'strength'</strong>&nbsp;- 0 turns the effect off, 1 is full overlap. It can
+                    be keyed to disable the effect in parts of the animation.</span></li>
+            <li dir="ltr"><span><strong>'lag'</strong>&nbsp;- Blends the spring between the 'Fast Period' (0) and
+                    the 'Slow Period' (1).</span></li>
+            <li dir="ltr"><span><strong>'falloff'</strong>&nbsp;- How much more the tip moves than the base of the
+                    chain. 0 moves all joints the same.</span></li>
+            <li dir="ltr"><span><strong>'max_swing'</strong>&nbsp;- Limit for how far a joint is pulled away from the
+                    animation, relative to the length of its bone. Prevents fast animation from folding the
+                    chain.</span></li>
+        </ul>
+        <p dir="ltr"><span><u>Notes</u>:</span></p>
+        <ul>
+            <li dir="ltr"><span>Only joints tagged as 'skinning_jnt' appear in the 'Overlap Joints' table. If a joint is
+                    missing, tag it as a 'skinning_jnt' using the 'JointsSettings' attachment.</span></li>
+            <li dir="ltr"><span>The last joint of a chain uses a hidden locator, placed under it, that extends the chain
+                    to give it a bone.</span></li>
+            <li dir="ltr"><span>Overlap reacts to the animation of the ctrls. It does not collide and has no
+                    gravity.</span></li>
+            <li dir="ltr"><span>Overlap can be slow when active, especially on long chains or with 16 samples. Setting
+                    the 'strength' attribute                     on the 'overlap' ctrl to 0 turns the effect off.</span></li>
+                                <li dir="ltr"><span>Do not use 'Overlap' together with 'MakeDynamic' on the same node.</span></li>
+        </ul>
+        <p dir="ltr"><span>_____________________________________________</span></p>
+        <p dir="ltr"><span>Get Arise at:&nbsp;<a dir="ltr"
+                    href="https://www.ariserigging.com/">https://www.ariserigging.com</a></span></p>
+    </div>
+</div>
